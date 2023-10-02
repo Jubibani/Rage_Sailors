@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://behgi0ix7dmot"]
+
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_gn0o7"]
+[ext_resource type="Script" path="res://scripts/Gameover.gd" id="1_ypiao"]
+[ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="2_d5slv"]
+[ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="4_nrwss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s56n7"]
+size = Vector2(48, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbbho"]
+size = Vector2(48, 48)
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ypiao")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.203922, 0.498039, 0.0352941)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 138.0
+offset_right = 766.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("1_gn0o7")
+theme_override_font_sizes/font_size = 150
+text = "Game Over"
+
+[node name="retry" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(436, 362)
+scale = Vector2(4.875, 2.45833)
+texture_normal = ExtResource("2_d5slv")
+texture_pressed = ExtResource("4_nrwss")
+shape = SubResource("RectangleShape2D_s56n7")
+
+[node name="again" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 376.0
+offset_right = 612.0
+offset_bottom = 451.0
+theme_override_fonts/font = ExtResource("1_gn0o7")
+theme_override_font_sizes/font_size = 90
+text = "Again
+"
+
+[node name="menu" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(438, 493)
+scale = Vector2(4.77083, 2.35417)
+texture_normal = ExtResource("2_d5slv")
+texture_pressed = ExtResource("4_nrwss")
+shape = SubResource("RectangleShape2D_pbbho")
+
+[node name="menu2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 501.0
+offset_right = 617.0
+offset_bottom = 651.0
+theme_override_fonts/font = ExtResource("1_gn0o7")
+theme_override_font_sizes/font_size = 90
+text = "Menu
+ "
+
+[connection signal="released" from="ColorRect/retry" to="." method="_on_retry_released"]
+[connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]

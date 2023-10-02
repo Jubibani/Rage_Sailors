@@ -1,0 +1,204 @@
+[gd_scene load_steps=34 format=3 uid="uid://bxby1dcpjypq1"]
+
+[ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
+[ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="2_h1rpl"]
+[ext_resource type="PackedScene" uid="uid://p71xwawyruxj" path="res://modules/module1.tscn" id="2_okyaa"]
+[ext_resource type="PackedScene" uid="uid://3sve2nrss2io" path="res://modules/module2.tscn" id="3_bw6ud"]
+[ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="4_jqq52"]
+[ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
+[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="5_koj35"]
+[ext_resource type="PackedScene" uid="uid://bwcd0ddn06jlj" path="res://modules/module6.tscn" id="7_6r4ya"]
+[ext_resource type="PackedScene" uid="uid://d2tj7rgnpyjob" path="res://modules/module7.tscn" id="8_jadkv"]
+[ext_resource type="PackedScene" uid="uid://ca4j2j3gk4wlj" path="res://modules/module8.tscn" id="9_q8gjc"]
+[ext_resource type="PackedScene" uid="uid://bn7jf803mnduo" path="res://modules/module9.tscn" id="10_bpcuu"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
+[ext_resource type="PackedScene" uid="uid://bj3djjm7st51" path="res://modules/module10.tscn" id="11_o30jq"]
+[ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="14_dl5ge"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="16_adygd"]
+[ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="17_0eti2"]
+[ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="17_c41jn"]
+[ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="18_dbp7u"]
+[ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
+[ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="21_put8f"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="22_s0lgn"]
+[ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="23_e6jtn"]
+[ext_resource type="PackedScene" uid="uid://ed7ftb6kxg1s" path="res://scenes/Global_Music.tscn" id="25_cxtst"]
+[ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
+
+[sub_resource type="Sky" id="Sky_vftai"]
+sky_material = SubResource("ProceduralSkyMaterial_rn0po")
+
+[sub_resource type="Environment" id="Environment_0n70x"]
+background_mode = 2
+sky = SubResource("Sky_vftai")
+ambient_light_source = 3
+fog_enabled = true
+fog_light_color = Color(0.54902, 0.792157, 1, 1)
+fog_light_energy = 0.82
+fog_density = 0.1076
+fog_aerial_perspective = 0.7
+fog_sky_affect = 0.759
+volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tsol"]
+size = Vector3(0.620956, 0.249291, 0.585958)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pnkp"]
+size = Vector3(0.279869, 0.323652, 0.802732)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ticod"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eelpb"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uivif"]
+size = Vector2(49, 49)
+
+[node name="MainGame" type="Node3D"]
+script = ExtResource("1_wnv5v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
+light_energy = 3.0
+shadow_enabled = true
+shadow_blur = 1.617
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0n70x")
+
+[node name="level" type="Node3D" parent="."]
+script = ExtResource("11_m4f8i")
+modules = Array[PackedScene]([ExtResource("2_okyaa"), ExtResource("3_bw6ud"), ExtResource("4_gsb83"), ExtResource("5_koj35"), ExtResource("2_h1rpl"), ExtResource("7_6r4ya"), ExtResource("8_jadkv"), ExtResource("9_q8gjc"), ExtResource("10_bpcuu"), ExtResource("11_o30jq")])
+
+[node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
+transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 0, -0.9, -1.50996e-07, -7.54979e-08, -14.1373, 0.191373, 0.000805855)
+script = ExtResource("4_jqq52")
+
+[node name="Camera3D" type="Camera3D" parent="shipPlayer"]
+transform = Transform3D(-0.999707, 0.011213, 0.0214475, 0.0213071, 0.828051, 0.560248, 0.0114775, -0.560541, 0.828047, 0.21274, 4.63173, -7.7931)
+current = true
+fov = 90.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(-1, 0, 0, 0, -1, -1.01644e-20, 0, -1.01644e-20, -1, -0.328882, 0.174895, -9.60655)
+shape = SubResource("BoxShape3D_3tsol")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 1.50996e-07, -1.32005e-14, 1, -0.323255, 0.183014, -10.1092)
+shape = SubResource("BoxShape3D_2pnkp")
+
+[node name="menu" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.372549)
+position = Vector2(16, 32)
+scale = Vector2(3.16667, 1.5)
+texture_normal = ExtResource("17_c41jn")
+texture_pressed = ExtResource("18_dbp7u")
+shape = SubResource("RectangleShape2D_ticod")
+
+[node name="menu2" type="Label" parent="shipPlayer"]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 153.0
+offset_bottom = 99.0
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "menu"
+
+[node name="leftt" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(8, 808)
+scale = Vector2(4.79167, 2.9375)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("17_0eti2")
+shape = SubResource("RectangleShape2D_eelpb")
+action = "left"
+
+[node name="<-" type="Label" parent="shipPlayer"]
+offset_left = 80.0
+offset_top = 832.0
+offset_right = 156.0
+offset_bottom = 915.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 100
+text = "<-"
+
+[node name="rightt" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(656, 808)
+scale = Vector2(4.85417, 2.97917)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("17_0eti2")
+shape = SubResource("RectangleShape2D_uivif")
+action = "right"
+
+[node name="->" type="Label" parent="shipPlayer"]
+offset_left = 744.0
+offset_top = 832.0
+offset_right = 820.0
+offset_bottom = 915.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 100
+text = "->"
+
+[node name="jumpAudio" type="AudioStreamPlayer" parent="shipPlayer"]
+stream = ExtResource("20_w02wt")
+
+[node name="menuAudio" type="AudioStreamPlayer" parent="shipPlayer"]
+stream = ExtResource("26_tjj7e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(848, 128)
+scale = Vector2(0.104, 0.112)
+texture = ExtResource("21_put8f")
+
+[node name="x" type="Label" parent="Control"]
+modulate = Color(1, 0.819608, 0.392157, 1)
+layout_mode = 0
+offset_left = 800.0
+offset_top = 104.0
+offset_right = 832.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[node name="CollectedCoins" type="Label" parent="Control"]
+modulate = Color(1, 0.819608, 0.392157, 1)
+layout_mode = 0
+offset_left = 680.0
+offset_top = 96.0
+offset_right = 720.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("22_s0lgn")
+theme_override_font_sizes/font_size = 50
+text = "Q"
+script = ExtResource("23_e6jtn")
+
+[node name="Highschore" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 24.0
+offset_right = 1102.0
+offset_bottom = 127.0
+theme_override_fonts/font = ExtResource("22_s0lgn")
+theme_override_font_sizes/font_size = 60
+text = "Highscore "
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("25_cxtst")]
+
+[connection signal="released" from="shipPlayer/menu" to="." method="_on_menu_released"]
+[connection signal="pressed" from="shipPlayer/leftt" to="shipPlayer" method="_on_left_pressed"]
+[connection signal="pressed" from="shipPlayer/rightt" to="shipPlayer" method="_on_rightt_pressed"]

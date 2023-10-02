@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxby1dcpjypq1"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="4_jqq52"]
+[ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
+[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="5_koj35"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
+
+[sub_resource type="Sky" id="Sky_vftai"]
+sky_material = SubResource("ProceduralSkyMaterial_rn0po")
+
+[sub_resource type="Environment" id="Environment_0n70x"]
+background_mode = 2
+sky = SubResource("Sky_vftai")
+ambient_light_source = 3
+fog_enabled = true
+fog_light_color = Color(0.54902, 0.792157, 1, 1)
+fog_light_energy = 0.82
+fog_density = 0.1076
+fog_aerial_perspective = 0.7
+fog_sky_affect = 0.759
+volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tsol"]
+size = Vector3(0.824574, 0.961659, 0.397453)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pnkp"]
+size = Vector3(0.506577, 0.467018, 0.511198)
+
+[node name="MainGame" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
+light_energy = 3.0
+shadow_enabled = true
+shadow_blur = 1.617
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0n70x")
+
+[node name="level" type="Node3D" parent="."]
+script = ExtResource("11_m4f8i")
+modules = Array[PackedScene]([ExtResource("5_koj35")])
+
+[node name="shipPlayer" parent="level" instance=ExtResource("4_uw0nc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.191373, 0)
+script = ExtResource("4_jqq52")
+
+[node name="Camera3D" type="Camera3D" parent="level/shipPlayer"]
+transform = Transform3D(0.999707, -0.0112132, -0.0214474, 0.0213072, 0.828051, 0.560248, 0.0114774, -0.560541, 0.828047, -0.720153, 4.63173, -7.7931)
+current = true
+fov = 90.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/shipPlayer"]
+transform = Transform3D(1, -4.37088e-08, -4.41912e-08, 4.37088e-08, -0.0109779, 0.99994, -4.41912e-08, -0.99994, -0.0109779, -0.30653, 0.174895, -9.68197)
+shape = SubResource("BoxShape3D_3tsol")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="level/shipPlayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317028, 0.146862, -10.307)
+shape = SubResource("BoxShape3D_2pnkp")

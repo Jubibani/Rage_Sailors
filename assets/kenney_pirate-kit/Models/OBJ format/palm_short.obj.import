@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr1b66182mwvx"
+path="res://.godot/imported/palm_short.obj-7ef73215563ac166b713e8f85fb8ac87.mesh"
+
+[deps]
+
+files=["res://.godot/imported/palm_short.obj-7ef73215563ac166b713e8f85fb8ac87.mesh"]
+
+source_file="res://assets/kenney_pirate-kit/Models/OBJ format/palm_short.obj"
+dest_files=["res://.godot/imported/palm_short.obj-7ef73215563ac166b713e8f85fb8ac87.mesh", "res://.godot/imported/palm_short.obj-7ef73215563ac166b713e8f85fb8ac87.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qcmysdc04y1g"]
+
+[ext_resource type="PackedScene" uid="uid://3yyx5oap6ul5" path="res://assets/kenney_pirate-kit/Models/glTF format/boat_small.gltf" id="1_y4pun"]
+
+[node name="shipPlayer" instance=ExtResource("1_y4pun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.38231)

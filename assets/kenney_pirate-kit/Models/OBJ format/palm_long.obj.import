@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvbesu0jto4lp"
+path="res://.godot/imported/palm_long.obj-6c65902198d023bf7c65cf7e365e2f93.mesh"
+
+[deps]
+
+files=["res://.godot/imported/palm_long.obj-6c65902198d023bf7c65cf7e365e2f93.mesh"]
+
+source_file="res://assets/kenney_pirate-kit/Models/OBJ format/palm_long.obj"
+dest_files=["res://.godot/imported/palm_long.obj-6c65902198d023bf7c65cf7e365e2f93.mesh", "res://.godot/imported/palm_long.obj-6c65902198d023bf7c65cf7e365e2f93.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

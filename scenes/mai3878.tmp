@@ -1,0 +1,97 @@
+[gd_scene load_steps=23 format=3 uid="uid://bxby1dcpjypq1"]
+
+[ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="2_h1rpl"]
+[ext_resource type="PackedScene" uid="uid://p71xwawyruxj" path="res://modules/module1.tscn" id="2_okyaa"]
+[ext_resource type="PackedScene" uid="uid://3sve2nrss2io" path="res://modules/module2.tscn" id="3_bw6ud"]
+[ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="4_jqq52"]
+[ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
+[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="5_koj35"]
+[ext_resource type="PackedScene" uid="uid://bwcd0ddn06jlj" path="res://modules/module6.tscn" id="7_6r4ya"]
+[ext_resource type="PackedScene" uid="uid://d2tj7rgnpyjob" path="res://modules/module7.tscn" id="8_jadkv"]
+[ext_resource type="PackedScene" uid="uid://ca4j2j3gk4wlj" path="res://modules/module8.tscn" id="9_q8gjc"]
+[ext_resource type="PackedScene" uid="uid://bn7jf803mnduo" path="res://modules/module9.tscn" id="10_bpcuu"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
+[ext_resource type="PackedScene" uid="uid://bj3djjm7st51" path="res://modules/module10.tscn" id="11_o30jq"]
+[ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="14_dl5ge"]
+[ext_resource type="Texture2D" uid="uid://c4tm86e3ye6e0" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown_pressed.png" id="15_ybenn"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="16_adygd"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
+
+[sub_resource type="Sky" id="Sky_vftai"]
+sky_material = SubResource("ProceduralSkyMaterial_rn0po")
+
+[sub_resource type="Environment" id="Environment_0n70x"]
+background_mode = 2
+sky = SubResource("Sky_vftai")
+ambient_light_source = 3
+fog_enabled = true
+fog_light_color = Color(0.54902, 0.792157, 1, 1)
+fog_light_energy = 0.82
+fog_density = 0.1076
+fog_aerial_perspective = 0.7
+fog_sky_affect = 0.759
+volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tsol"]
+size = Vector3(0.824574, 0.961659, 0.397453)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pnkp"]
+size = Vector3(0.506577, 0.393882, 0.511198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3r6h7"]
+size = Vector2(50, 50)
+
+[node name="MainGame" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
+light_energy = 3.0
+shadow_enabled = true
+shadow_blur = 1.617
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0n70x")
+
+[node name="level" type="Node3D" parent="."]
+script = ExtResource("11_m4f8i")
+modules = Array[PackedScene]([ExtResource("2_okyaa"), ExtResource("3_bw6ud"), ExtResource("4_gsb83"), ExtResource("5_koj35"), ExtResource("2_h1rpl"), ExtResource("7_6r4ya"), ExtResource("8_jadkv"), ExtResource("9_q8gjc"), ExtResource("10_bpcuu"), ExtResource("11_o30jq")])
+
+[node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
+transform = Transform3D(4.37114e-08, 0, -1, 0, 1, 0, -1, 0, -4.37114e-08, -14.1427, 0.191373, 0)
+script = ExtResource("4_jqq52")
+
+[node name="Camera3D" type="Camera3D" parent="shipPlayer"]
+transform = Transform3D(-0.999707, 0.0112132, 0.0214474, 0.0213072, 0.828051, 0.560248, 0.0114774, -0.560541, 0.828047, 0.21274, 4.63173, -7.7931)
+current = true
+fov = 90.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(-1, 4.37088e-08, 4.41912e-08, 4.37088e-08, -0.0109779, 0.99994, -4.41912e-08, -0.99994, -0.0109779, -0.332156, 0.174895, -9.73693)
+shape = SubResource("BoxShape3D_3tsol")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(1, -8.74228e-08, 1.06581e-14, -8.74228e-08, -1, 0, -1.06581e-14, 8.47033e-22, 1, -0.336001, 0.175, -10.1129)
+shape = SubResource("BoxShape3D_2pnkp")
+
+[node name="- play" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.305882)
+offset_left = 438.0
+offset_top = 173.0
+offset_right = 689.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 100
+text = "- Drop -"
+
+[node name="play" type="TouchScreenButton" parent="- play"]
+modulate = Color(0.854902, 0.854902, 0.854902, 0.286275)
+position = Vector2(-42, 0)
+scale = Vector2(6.9375, 2.25)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("15_ybenn")
+shape = SubResource("RectangleShape2D_3r6h7")
+
+[connection signal="pressed" from="- play/play" to="shipPlayer" method="_on_play_pressed"]
+[connection signal="released" from="- play/play" to="shipPlayer" method="_on_play_released"]
