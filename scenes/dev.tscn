@@ -36,6 +36,7 @@ texture_pressed = ExtResource("2_xjd5s")
 shape = SubResource("RectangleShape2D_pvfoo")
 
 [node name="menu2" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 112.0
 offset_top = 64.0
 offset_right = 225.0

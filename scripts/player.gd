@@ -1,5 +1,5 @@
 extends CharacterBody3D
-const SPEED = 5.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 7
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -36,7 +36,7 @@ func _physics_process(delta):
 	if collision:
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
-			#get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+			get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")

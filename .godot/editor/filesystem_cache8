@@ -1,5 +1,6 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1695936319
+bdbec74c6e5bd72edee867077d70896c
+::res://::1696403769
+export_presets.cfg::TextFile::-1::1696403728::0::1::::<><>::
 icon.svg::CompressedTexture2D::8504181332622596320::1694417996::1694418004::1::::<><>::
 ::res://addons/::1695298488
 ::res://addons/admob/::1695292836
@@ -112,9 +113,8 @@ module1.obj::Mesh::5227770676477227218::1694478662::1695020876::1::::<><>::
 module2.obj::Mesh::413112130507605498::1694478662::1695020876::1::::<><>::
 module3.obj::Mesh::1154257883982640742::1694478662::1695020876::1::::<><>::
 module4.obj::Mesh::7269583109653621574::1694478662::1695020876::1::::<><>::
-::res://assets/::1695936860
+::res://assets/::1695936963
 coin.gltf::PackedScene::3868176599076766034::1695368769::1695368788::1::::<><>::
-Daco_4051355.png::CompressedTexture2D::3112621521756915244::1695936827::1695936909::1::::<><>::
 hud_coin.png::CompressedTexture2D::448870757542322625::1695367987::1695368788::1::::<><>::
 latest.png::CompressedTexture2D::7438147252091856542::1695891210::1695891352::1::::<><>::
 maps.png::CompressedTexture2D::4564791155384121031::1695891342::1695891352::1::::<><>::
@@ -136,7 +136,7 @@ riverBankedHillE.png::CompressedTexture2D::3346374299909332903::1354648526::1694
 riverBankedHillN.png::CompressedTexture2D::8579966692229978271::1354648526::1694844588::1::::<><>::
 riverBankedHillS.png::CompressedTexture2D::6360821784903550064::1354648526::1694844588::1::::<><>::
 riverBankedHillW.png::CompressedTexture2D::8595069826118695385::1354648526::1694844588::1::::<><>::
-riverBankedSlopeE.png::CompressedTexture2D::462389813450206108::1354648526::1694846910::1::::<><>::
+riverBankedSlopeE.png::CompressedTexture2D::462389813450206108::1354648526::1696403773::1::::<><>::
 riverBankedSlopeN.png::CompressedTexture2D::9131123412024360541::1354648526::1694844588::1::::<><>::
 riverBankedSlopeS.png::CompressedTexture2D::7121566903400527497::1354648526::1694844588::1::::<><>::
 riverBankedSlopeW.png::CompressedTexture2D::1280892090519538775::1354648526::1694844588::1::::<><>::
@@ -3106,14 +3106,14 @@ yellow_pressed.png::CompressedTexture2D::1574973575114402049::1427452856::169483
 spritesheetInfo.txt::TextFile::-1::1427451326::0::1::::<><>::
 UIpackSheet_magenta.png::CompressedTexture2D::6053778903480158403::1427453628::1694830388::1::::<><>::
 UIpackSheet_transparent.png::CompressedTexture2D::2727739433241525576::1427453624::1694830388::1::::<><>::
-::res://Collision models/::1695920149
+::res://Collision models/::1696403763
 boat_small.tscn::PackedScene::3029658150077806924::1695276774::0::1::::<><>::uid://3yyx5oap6ul5
 formation_large_stone.tscn::PackedScene::2998059970680677385::1695368183::0::1::::<><>::uid://6h51wm4t0hdy
 formation_stone.tscn::PackedScene::4054066297495462645::1695276774::0::1::::<><>::uid://ce2j3mrhexddn
 gameOver.tscn::PackedScene::8890027537740705905::1695278473::0::1::::<><>::
 Long.tscn::PackedScene::2861238810785235204::1695202314::0::1::::<><>::
 ship_dark.tscn::PackedScene::1221259681653121923::1695188528::0::1::::<><>::uid://csio340lvq6nr
-ship_player.tscn::PackedScene::1127922666863716306::1695920149::0::1::::<><>::uid://3yyx5oap6ul5::::res://assets/kenney_pirate-kit/Models/glTF format/boat_small.gltf
+ship_player.tscn::PackedScene::1127922666863716306::1696403763::0::1::::<><>::uid://3yyx5oap6ul5::::res://assets/kenney_pirate-kit/Models/glTF format/boat_small.gltf
 ship_wreck.tscn::PackedScene::5451125984251715687::1695188528::0::1::::<><>::uid://bimpbrbuhbp6c
 ::res://example/::1695297590
 ::res://example/boujie_water_shader/::1695297594
@@ -3126,10 +3126,10 @@ MapEnvironment.tres::Environment::749131510658937890::1695297590::0::1::::<><>::
 mountains.obj::Mesh::420896676503450072::1695297590::1695297594::1::::<><>::
 mountain_material.tres::StandardMaterial3D::7050318807362249672::1695297590::0::1::::<><>::uid://3kpp1l04oqfu
 ocean_floor.gd::GDScript::-1::1695297590::0::1::::<>MeshInstance3D<>::
-Sand.png::CompressedTexture2D::8741379992662034642::1695297590::1695297594::1::::<><>::
+Sand.png::CompressedTexture2D::8741379992662034642::1695297590::1696403774::1::::<><>::
 subdivcube.obj::Mesh::4739839316066879042::1695297590::1695297594::1::::<><>::
 underwater_fog.gd::GDScript::-1::1695297590::0::1::::<>FogVolume<>::
-UV_checker_grid_dark.png::CompressedTexture2D::3557814196156859334::1695297590::1695297594::1::::<><>::
+UV_checker_grid_dark.png::CompressedTexture2D::3557814196156859334::1695297590::1696403774::1::::<><>::
 visibility_range_lod_group.gd::GDScript::-1::1695297590::0::1::::<>Node3D<>::
 water_shader_examples.gd::GDScript::-1::1695297590::0::1::::<>Node3D<>::
 water_shader_examples.tscn::PackedScene::2416875730846953745::1695297590::0::1::::<><>::res://example/boujie_water_shader/water_shader_examples.gd<>uid://ignpdv10rx52
@@ -3146,16 +3146,16 @@ height4.tres::Resource/Resource::6395721723913868367::1695297590::0::1::::<><>::
 height5.tres::Resource/Resource::9214357156642203888::1695297590::0::1::::<><>::res://addons/boujie_water_shader/types/gerstner_wave.gd
 height_super.tres::Resource/Resource::8380313694060878896::1695297590::0::1::::<><>::res://addons/boujie_water_shader/types/gerstner_wave.gd
 ::res://example/boujie_water_shader/obelisk/::1695297594
-diffuse.tga::CompressedTexture2D::2133209283773664314::1695297590::1695297594::1::::<><>::
-normal.tga::CompressedTexture2D::6320736509435500376::1695297590::1695297594::1::::<><>::
+diffuse.tga::CompressedTexture2D::2133209283773664314::1695297590::1696403773::1::::<><>::
+normal.tga::CompressedTexture2D::6320736509435500376::1695297590::1696403774::1::::<><>::
 obelisk.tscn::PackedScene::8124559569114881782::1695297590::0::1::::<><>::uid://cj0csa11nva20
 obelisk_material.tres::StandardMaterial3D::4542590964959633073::1695297590::0::1::::<><>::uid://5nlv65oy8011
 pyramid_pillar.obj::Mesh::5456304023620243559::1695297590::1695297594::1::::<><>::
-specular.tga::CompressedTexture2D::3961355661558484567::1695297590::1695297594::1::::<><>::
-StoneFloorTexture.png::CompressedTexture2D::1986870324980735518::1695297590::1695297594::1::::<><>::
+specular.tga::CompressedTexture2D::3961355661558484567::1695297590::1696403773::1::::<><>::
+StoneFloorTexture.png::CompressedTexture2D::1986870324980735518::1695297590::1696403773::1::::<><>::
 ::res://example/boujie_water_shader/pedestal/::1695297594
-MetalPlates_Diffuse.tga::CompressedTexture2D::8701789697419922548::1695297590::1695297594::1::::<><>::
-MetalPlates_Normal_03.tga::CompressedTexture2D::4431644806558770375::1695297590::1695297594::1::::<><>::
+MetalPlates_Diffuse.tga::CompressedTexture2D::8701789697419922548::1695297590::1696403773::1::::<><>::
+MetalPlates_Normal_03.tga::CompressedTexture2D::4431644806558770375::1695297590::1696403774::1::::<><>::
 pedestal.tscn::PackedScene::6176990012844250141::1695297590::0::1::::<><>::uid://dm15sg1uklilb
 pedestal_material.tres::StandardMaterial3D::8057056006642057487::1695297590::0::1::::<><>::uid://dv8hg77du5mfk
 ::res://example/boujie_water_shader/uv_waves/::1695297590
@@ -3166,44 +3166,48 @@ Volt5x5.ttf::FontFile::4957223677862400118::1694745636::1694745642::1::::<><>::
 ::res://fonts/pixelfy/::1695297127
 Pixelfy.ttf::FontFile::8441145622259997376::1604545130::1695297127::1::::<><>::
 README!.txt::TextFile::-1::1600167238::0::1::::<><>::
-::res://modules/::1695920150
-module1.tscn::PackedScene::1120513614318185903::1695920149::0::1::::<><>::res://scripts/module.gd<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://dl1byj5susni2::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallB.obj
-module2.tscn::PackedScene::2003730060471804570::1695920150::0::1::::<><>::res://scripts/module.gd<>uid://85ogsnqoawfb::::res://assets/kenney_pirate-kit/Models/OBJ format/formationLarge_stone.obj<>uid://n53gs2p5m0j2::::res://assets/kenney_pirate-kit/Models/OBJ format/tower.obj<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://cvpuywbkitqs3::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallA.obj
-module3.tscn::PackedScene::9089438733422649777::1695920150::0::1::::<><>::res://scripts/module.gd<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj
-module4.tscn::PackedScene::7087052206557763817::1695920149::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_dark.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://rb2avqbm8mk1::::res://scenes/coin.tscn<>res://scripts/coin.gd
+::res://modules/::1696403763
+module1.tscn::PackedScene::1120513614318185903::1696403763::0::1::::<><>::res://scripts/module.gd<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://dl1byj5susni2::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallB.obj
+module2.tscn::PackedScene::2003730060471804570::1696403763::0::1::::<><>::res://scripts/module.gd<>uid://85ogsnqoawfb::::res://assets/kenney_pirate-kit/Models/OBJ format/formationLarge_stone.obj<>uid://n53gs2p5m0j2::::res://assets/kenney_pirate-kit/Models/OBJ format/tower.obj<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://cvpuywbkitqs3::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallA.obj
+module3.tscn::PackedScene::9089438733422649777::1696403763::0::1::::<><>::res://scripts/module.gd<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj
+module4.tscn::PackedScene::7087052206557763817::1696403763::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_dark.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://rb2avqbm8mk1::::res://scenes/coin.tscn<>res://scripts/coin.gd
 module5.tscn::PackedScene::6579346624067554645::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module6.tscn::PackedScene::3934930957893616651::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://dcvw03ri3orqp
 module7.tscn::PackedScene::9094188507750606801::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly
 module8.tscn::PackedScene::4833303507876082463::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module9.tscn::PackedScene::3365492894201265706::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module10.tscn::PackedScene::90474163805855410::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://dl1byj5susni2
-::res://scenes/::1695920150
+::res://scenes/::1696403763
 coin.gd::GDScript::-1::1695886399::0::1::::<>Area3D<>::
-coin.tscn::PackedScene::1196915206175311238::1695920149::0::1::::<><>::
-control.tscn::PackedScene::256995862949116344::1695920149::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/control.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://dd8dg0qo17231::::res://assets/latest.png<>uid://hkfbm7c42xbe::::res://sounds/main menu .mp3<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
-dev.tscn::PackedScene::2013794308086006563::1695920150::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf
-Gameover.tscn::PackedScene::2682006617361585687::1695920149::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/Gameover.gd<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png
-maingame.tscn::PackedScene::4004332264944006950::1695920149::0::1::::<><>::res://scripts/maingame.gd<>uid://c00c43s6bd7vd::::res://modules/module5.tscn<>uid://p71xwawyruxj::::res://modules/module1.tscn<>uid://3sve2nrss2io::::res://modules/module2.tscn<>uid://d2q8y0rtu2njt::::res://modules/module3.tscn<>res://scripts/player.gd<>uid://qcmysdc04y1g::::res://Collision models/ship_player.tscn<>uid://c78ayj4g08730::::res://modules/module4.tscn<>uid://bwcd0ddn06jlj::::res://modules/module6.tscn<>uid://d2tj7rgnpyjob::::res://modules/module7.tscn<>uid://ca4j2j3gk4wlj::::res://modules/module8.tscn<>uid://bn7jf803mnduo::::res://modules/module9.tscn<>res://scripts/level.gd<>uid://bj3djjm7st51::::res://modules/module10.tscn<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://6twnurdx5a2u::::res://sounds/flap.mp3<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>res://scripts/CollectedCoins.gd<>uid://brnfc3rtudjmu::::res://sounds/main bg.mp3<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
+coin.tscn::PackedScene::1196915206175311238::1696403763::0::1::::<><>::
+control.tscn::PackedScene::256995862949116344::1696403762::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/control.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://dd8dg0qo17231::::res://assets/latest.png<>uid://hkfbm7c42xbe::::res://sounds/main menu .mp3<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
+dev.tscn::PackedScene::2013794308086006563::1696403763::0::1::::<><>::uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/dev.gd<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
+Gameover.tscn::PackedScene::2682006617361585687::1696403763::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/Gameover.gd<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://c4rfpqk5jfk60::::res://sounds/Explosion Sound Effect.mp3
+Global_Music.tscn::PackedScene::288901381463590678::1696403763::0::1::::<><>::uid://brnfc3rtudjmu::::res://sounds/main bg.mp3<>res://scripts/Global_Music.gd
+maingame.tscn::PackedScene::4004332264944006950::1696403762::0::1::::<><>::res://scripts/maingame.gd<>uid://c00c43s6bd7vd::::res://modules/module5.tscn<>uid://p71xwawyruxj::::res://modules/module1.tscn<>uid://3sve2nrss2io::::res://modules/module2.tscn<>uid://d2q8y0rtu2njt::::res://modules/module3.tscn<>res://scripts/player.gd<>uid://qcmysdc04y1g::::res://Collision models/ship_player.tscn<>uid://c78ayj4g08730::::res://modules/module4.tscn<>uid://bwcd0ddn06jlj::::res://modules/module6.tscn<>uid://d2tj7rgnpyjob::::res://modules/module7.tscn<>uid://ca4j2j3gk4wlj::::res://modules/module8.tscn<>uid://bn7jf803mnduo::::res://modules/module9.tscn<>res://scripts/level.gd<>uid://bj3djjm7st51::::res://modules/module10.tscn<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://6twnurdx5a2u::::res://sounds/flap.mp3<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>res://scripts/CollectedCoins.gd<>uid://ed7ftb6kxg1s::::res://scenes/Global_Music.tscn<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
 ship.tscn::PackedScene::7586593883003766093::1695117235::0::1::::<><>::uid://bfqutw2m1mlpx
-::res://scripts/::1695896281
+::res://scripts/::1696403508
 Buttons.gd::GDScript::-1::1694833220::0::1::::<>Node<>::
 coin.gd::GDScript::-1::1695888634::0::1::::<>Area3D<>::
 CollectedCoins.gd::GDScript::-1::1695887855::0::1::::<>Label<>::
-control.gd::GDScript::-1::1695894472::0::1::::<>Control<>::
+control.gd::GDScript::-1::1696401518::0::1::::<>Control<>::
+dev.gd::GDScript::-1::1695939367::0::1::::<>Control<>::
 Exit.gd::GDScript::-1::1694420318::0::1::::<>Button<>::
-Gameover.gd::GDScript::-1::1695279546::0::1::::<>Control<>::
-GlobalScript.gd::GDScript::-1::1695887899::0::1::::<>Node<>::
+Gameover.gd::GDScript::-1::1696403273::0::1::::<>Control<>::
+GlobalScript.gd::GDScript::-1::1695937600::0::1::::<>Node<>::
+Global_Music.gd::GDScript::-1::1695937600::0::1::::<>AudioStreamPlayer<>::
 left.gd::GDScript::-1::1694746748::0::1::::<>Button<>::
-level.gd::GDScript::-1::1695280811::0::1::::<>Node3D<>::
-maingame.gd::GDScript::-1::1695896281::0::1::::<>Node3D<>::
+level.gd::GDScript::-1::1696403508::0::1::::<>Node3D<>::
+maingame.gd::GDScript::-1::1696402129::0::1::::<>Node3D<>::
 menu.gd::GDScript::-1::1694420792::0::1::::<>Button<>::
 module.gd::GDScript::-1::1695495628::0::1::::<>Node3D<>::
-player.gd::GDScript::-1::1695895532::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1696403341::0::1::::<>CharacterBody3D<>::
 scores.gd::GDScript::-1::1695115980::0::1::::<>Node<>::
 Start.gd::GDScript::-1::1695020110::0::1::::<>Button<>::
-::res://sounds/::1695896322
-button press.mp3::AudioStreamMP3::7467197889055947910::1695893948::1695894311::1::::<><>::
-flap.mp3::AudioStreamMP3::2216437396164665514::1695894223::1695894311::1::::<><>::
-main bg.mp3::AudioStreamMP3::3606776590699678408::1695893198::1695896277::1::::<><>::
-main menu .mp3::AudioStreamMP3::512271733609217130::1695893217::1695896322::1::::<><>::
-point.mp3::AudioStreamMP3::5406078939140369688::1695894235::1695894311::1::::<><>::
+::res://sounds/::1696403027
+button press.mp3::AudioStreamMP3::7467197889055947910::1695893948::1696403008::1::::<><>::
+Explosion Sound Effect.mp3::AudioStreamMP3::6843743483777508567::1696402747::1696402809::1::::<><>::
+flap.mp3::AudioStreamMP3::2216437396164665514::1695894223::1696403012::1::::<><>::
+main bg.mp3::AudioStreamMP3::3606776590699678408::1695893198::1696403020::1::::<><>::
+main menu .mp3::AudioStreamMP3::512271733609217130::1695893217::1696403022::1::::<><>::
+point.mp3::AudioStreamMP3::5406078939140369688::1695894235::1696403027::1::::<><>::

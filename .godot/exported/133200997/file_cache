@@ -1,0 +1,38 @@
+res://addons/admob/sample/Banner.tscn::12d7f1f2eb3f489482a0f3f5be84a439::1695292836::res://.godot/exported/133200997/export-7b379d1f69a08fe72dbb1d211ef35371-Banner.scn
+res://addons/admob/sample/Interstitial.tscn::07da1bdbfc0ba0576b95ef75b30cf8bf::1695292836::res://.godot/exported/133200997/export-30ea6de4a06e77b6ccaea90d39826f71-Interstitial.scn
+res://addons/admob/sample/Main.tscn::b0e7305591df5eece90c51f711566f10::1695292836::res://.godot/exported/133200997/export-15e0fb62eeacc758859def537b798deb-Main.scn
+res://addons/admob/sample/Rewarded.tscn::57d4c50e09495db9178f681d9576164c::1695292836::res://.godot/exported/133200997/export-1083074e4af7b54c99f6de67a56b0b81-Rewarded.scn
+res://addons/admob/sample/RewardedInterstitial.tscn::be4860a68a8079cd60c8dce99c76eff7::1695292836::res://.godot/exported/133200997/export-5a1a40263bc3ad837c542e1af1c58e6e-RewardedInterstitial.scn
+res://addons/admob/sample/Ump.tscn::c1b68f3b542fe2164b7e52dc85239be1::1695292836::res://.godot/exported/133200997/export-8f552b926fbfcab1e4f9f9d7de54b8b4-Ump.scn
+res://art/materials/grey.tres::577d758c906aaf62d8f638b9fab4c7d8::1694478662::res://.godot/exported/133200997/export-339fee7c132452a44ab5ee669929f39e-grey.res
+res://art/materials/red.tres::dbd5bee46de6c9a58136c4ccd663c5b7::1694478662::res://.godot/exported/133200997/export-b7d672b5847db8130d3113129072a63c-red.res
+res://Collision models/boat_small.tscn::4fc8e3973ea321b4764a0e9c7e8639d1::1695276774::res://.godot/exported/133200997/export-cba85ca35c6e6c573cfca71e14646a64-boat_small.scn
+res://Collision models/formation_large_stone.tscn::d10c2d09f4d0bbe59e5ee2187f19a566::1695368183::res://.godot/exported/133200997/export-4d7dfc54f2246c3b0d073a9d4a50fa84-formation_large_stone.scn
+res://Collision models/formation_stone.tscn::ea08f1ff7d05f2f23f2eb9056fc1c5c6::1695276774::res://.godot/exported/133200997/export-c66cf31fad6c30fe468501eda4e18c79-formation_stone.scn
+res://Collision models/gameOver.tscn::ffd3c2f0979d6f30d465c200a8708391::1695278473::res://.godot/exported/133200997/export-228c742b10d7f406980d6e14bcb76816-gameOver.scn
+res://Collision models/Long.tscn::f05078a50cfaa83497343eaef6224553::1695202314::res://.godot/exported/133200997/export-327ce1cb2f82587eaabfadcb6136b12a-Long.scn
+res://Collision models/ship_dark.tscn::4b287d5eebb856598c95b9443cda089b::1695188528::res://.godot/exported/133200997/export-727868632f7e2a8b3e4fdf0e3b55e330-ship_dark.scn
+res://Collision models/ship_player.tscn::fddf18fd91897539fce751e74e1adc5d::1696403763::res://.godot/exported/133200997/export-40944bd1ce4e585e1988c6151060f465-ship_player.scn
+res://Collision models/ship_wreck.tscn::1a5712ed280385aff7f9078a7b486a50::1695188528::res://.godot/exported/133200997/export-7d6444ed8a47f63f403eb786963ac3fc-ship_wreck.scn
+res://example/boujie_water_shader/obelisk/obelisk.tscn::96600caae23c2be1145ed51586a07490::1695297590::res://.godot/exported/133200997/export-08ddd198c369ca262a9812136c4b670c-obelisk.scn
+res://example/boujie_water_shader/obelisk/obelisk_material.tres::542049db38ec91868dba815bc6d5a5de::1695297590::res://.godot/exported/133200997/export-00d36ba12eeb9da7438a3f59d5804371-obelisk_material.res
+res://example/boujie_water_shader/pedestal/pedestal.tscn::e138c867873bd911f91b254e52ed3a5b::1695297590::res://.godot/exported/133200997/export-e7793a95b9b0cc1c4d61cd8b87a171df-pedestal.scn
+res://example/boujie_water_shader/pedestal/pedestal_material.tres::ac0ec72918ff34514480efaf86c68066::1695297590::res://.godot/exported/133200997/export-03dfb10703b771984fdca88f8b24f3f3-pedestal_material.res
+res://example/boujie_water_shader/MapEnvironment.tres::35705f2e0bf5d4353b9f8aed34d321cc::1695297590::res://.godot/exported/133200997/export-7ed07cbcaefd2bafdb5e9d7b158e1cc3-MapEnvironment.res
+res://example/boujie_water_shader/mountain_material.tres::be79b72ebee441071741eb49331b8e0a::1695297590::res://.godot/exported/133200997/export-0d403899bd983af3fc219374f5c99b7d-mountain_material.res
+res://modules/module1.tscn::3a9bd782213b70f10ab91d216cb14fd0::1696403763::res://.godot/exported/133200997/export-5366e1c8518c5726d0035e16c8a1c4e4-module1.scn
+res://modules/module2.tscn::2781ae0e6a83454abdb6f1c18bfbd7a9::1696403763::res://.godot/exported/133200997/export-b64f585d8a99142f30df041a369bdb30-module2.scn
+res://modules/module3.tscn::83603a4222304a51ce0b9a22627fbd14::1696403763::res://.godot/exported/133200997/export-ac97ae167b1cec2dca4d652c5d91623f-module3.scn
+res://modules/module4.tscn::48cc8effb0442852d342dbd6f8a8c206::1696403763::res://.godot/exported/133200997/export-672d68af5585bf6f2562908fa2d05ba4-module4.scn
+res://modules/module5.tscn::825cf8d306cb187753fe703e6b90613c::1695368182::res://.godot/exported/133200997/export-002890c2f11f56e54eeb05f1615ad5ec-module5.scn
+res://modules/module6.tscn::64e200dd6b188bd21bba525daf56e675::1695368182::res://.godot/exported/133200997/export-76d90031d5f233244f63120f5b917df7-module6.scn
+res://modules/module7.tscn::5ee217fe5c5d4d55f4a71f1a133a9d39::1695368182::res://.godot/exported/133200997/export-987d07e18f863ef66262d04043f2ac89-module7.scn
+res://modules/module8.tscn::410cedaae85c9952c783ca609471250f::1695368183::res://.godot/exported/133200997/export-2235208039e2a5c2840924725d9e1888-module8.scn
+res://modules/module9.tscn::546f2bba6dac17072317bc5a7cf658e9::1695368183::res://.godot/exported/133200997/export-457c6c685149c32e03972841faa1d3bb-module9.scn
+res://modules/module10.tscn::41d062ad142d44be1817691d05761822::1695368183::res://.godot/exported/133200997/export-3ee4a2a03f919245d05ce2d8848aaae9-module10.scn
+res://scenes/coin.tscn::70e3c1e7394f0b53bf266d95656e722d::1696403763::res://.godot/exported/133200997/export-96b2131180b71dd158e52c5527d22dd4-coin.scn
+res://scenes/control.tscn::effc995021ee612c4b455a3536add6ae::1696403762::res://.godot/exported/133200997/export-adab036241c7c8c2e7e1f14b22ab0617-control.scn
+res://scenes/dev.tscn::0d8cba3a4ee846a4bb9c72012e2d9743::1696403763::res://.godot/exported/133200997/export-d1673b7569672e5b8e7e1218e546fe77-dev.scn
+res://scenes/Gameover.tscn::2c039d3d7981befbf27caeac49fc3d56::1696403763::res://.godot/exported/133200997/export-a3fabdd65815912679e66ecaef35bc92-Gameover.scn
+res://scenes/Global_Music.tscn::3e6e3bc877e59eede16df60173b3573d::1696403763::res://.godot/exported/133200997/export-8eae97ff259e3fdef5e080e01f15fe16-Global_Music.scn
+res://scenes/maingame.tscn::33c1e3d94e820bd8f4165bdf861a6877::1696403762::res://.godot/exported/133200997/export-3f3fa1cfbda7eeb61cf846646d4f0f57-maingame.scn

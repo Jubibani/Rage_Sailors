@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://gt8q0r7x0uvk"
 path.s3tc="res://.godot/imported/riverBankedSlopeE.png-af2d3103328222d17bdb4e9bbb59f982.s3tc.ctex"
+path.etc2="res://.godot/imported/riverBankedSlopeE.png-af2d3103328222d17bdb4e9bbb59f982.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/kenney_isometric-roads-water/png/riverBankedSlopeE.png"
-dest_files=["res://.godot/imported/riverBankedSlopeE.png-af2d3103328222d17bdb4e9bbb59f982.s3tc.ctex"]
+dest_files=["res://.godot/imported/riverBankedSlopeE.png-af2d3103328222d17bdb4e9bbb59f982.s3tc.ctex", "res://.godot/imported/riverBankedSlopeE.png-af2d3103328222d17bdb4e9bbb59f982.etc2.ctex"]
 
 [params]
 

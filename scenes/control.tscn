@@ -134,13 +134,39 @@ theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 150
 text = "Maps"
 
+[node name="start3" type="AudioStreamPlayer" parent="ColorRect"]
+
+[node name="stay" type="Label" parent="ColorRect"]
+modulate = Color(0.815686, 0.482353, 0.352941, 1)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 1098.0
+offset_right = 987.0
+offset_bottom = 1294.0
+theme_override_fonts/font = ExtResource("1_3abb1")
+theme_override_font_sizes/font_size = 120
+text = "! The Game is
+ still in development !"
+
+[node name="stay2" type="Label" parent="ColorRect"]
+modulate = Color(1, 0.737255, 0.203922, 1)
+layout_mode = 0
+offset_left = 196.0
+offset_top = 1295.0
+offset_right = 1041.0
+offset_bottom = 1461.0
+theme_override_fonts/font = ExtResource("2_u02s4")
+theme_override_font_sizes/font_size = 80
+text = "! stay tuned !"
+
 [node name="Latest" type="Sprite2D" parent="."]
 position = Vector2(113, 1470)
 scale = Vector2(0.1105, 0.0847618)
 texture = ExtResource("6_us5p0")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MainMenuBG" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_l8v18")
+volume_db = -57.379
 
 [node name="buttonAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_udyeh")
