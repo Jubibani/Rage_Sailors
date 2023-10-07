@@ -1,25 +1,16 @@
 extends Label
 
 
-var coins = 0
+var coins:int = 0:
+	set (mod_value):
+		coins = mod_value
+		text = str(coins)
+
 
 func _ready() -> void:
-#	var global_script = load("res://scripts/GlobalScript.gd")
-#	#global_script.emit_signal("_on_body_entered", self, "_on_body_entered")
-	#GlobalScript.connect("collectCoin", self, "collectCoin")
-	text = str(coins)
-	
-#func collectCoin():
-#	coins += 1
-#	emit_signal("coinCollected", coins)
+	Global_Coin.coin_collected.connect(_on_coin_collected)
+	# coins = 0
 
-func _on_body_entered() -> void:
+
+func _on_coin_collected() -> void:
 	coins = coins + 1
-	connect("body_entered", GlobalScript.coin)
-	_ready()
-#func collecCoin():
-#	coins = coins + 1
-#	GlobalScript.coin
-#	_ready()
-	
-

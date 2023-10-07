@@ -13,3 +13,6 @@ res://scenes/Global_Music.tscn
 res://scripts/soundsAudio.gd
 res://scripts/dev.gd
 res://scripts/player.gd
+res://scripts/CollectedCoins.gd
+res://scripts/GlobalScript.gd
+res://scripts/coin.gd

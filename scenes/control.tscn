@@ -56,6 +56,7 @@ offset_left = 332.0
 offset_top = 347.0
 offset_right = 1223.0
 offset_bottom = 470.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_u02s4")
 theme_override_font_sizes/font_size = 100
 text = "Grand"

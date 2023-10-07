@@ -14,7 +14,8 @@ func _process(delta: float) -> void:
 #	GlobalScript.emit_signal("collectCoin")
 #	queue_free()
 
-
-func _on_body_entered(body: Node3D) -> void:
-	print("collected")
-	GlobalScript.collectCoin
+func _coin_collected(body: Node3D) -> void:
+	prints("collected")
+	Global_Coin.coin_collected.emit()
+	queue_free()
+	

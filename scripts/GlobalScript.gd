@@ -2,7 +2,8 @@ extends Node
 
 #signal _on_body_entered
 var coin
-signal collectCoin
+
+signal coin_collected
 
 
 #var coins : int = 0
