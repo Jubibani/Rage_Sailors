@@ -17,5 +17,6 @@ func _process(delta: float) -> void:
 func _coin_collected(body: Node3D) -> void:
 	prints("collected")
 	Global_Coin.coin_collected.emit()
+	$"../../coinAudio".play()
 	queue_free()
 	

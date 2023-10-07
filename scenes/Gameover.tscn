@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://behgi0ix7dmot"]
+[gd_scene load_steps=10 format=3 uid="uid://behgi0ix7dmot"]
 
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_gn0o7"]
 [ext_resource type="Script" path="res://scripts/Gameover.gd" id="1_ypiao"]
 [ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="2_d5slv"]
 [ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="4_nrwss"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="5_77ney"]
 [ext_resource type="AudioStream" uid="uid://c4rfpqk5jfk60" path="res://sounds/Explosion Sound Effect.mp3" id="5_xqlkn"]
+[ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="6_sddhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56n7"]
 size = Vector2(48, 48)
@@ -36,16 +38,18 @@ offset_left = 378.0
 offset_top = 617.0
 offset_right = 783.0
 offset_bottom = 739.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_gn0o7")
 theme_override_font_sizes/font_size = 90
 text = "bro ded."
 
 [node name="Gameover" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = 269.0
-offset_top = 481.0
-offset_right = 674.0
-offset_bottom = 603.0
+offset_left = 271.0
+offset_top = 483.0
+offset_right = 676.0
+offset_bottom = 605.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_gn0o7")
 theme_override_font_sizes/font_size = 150
 text = "Game Over"
@@ -86,8 +90,37 @@ theme_override_font_sizes/font_size = 90
 text = "Menu
  "
 
+[node name="Highscore" type="Label" parent="ColorRect"]
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 262.0
+offset_right = 798.0
+offset_bottom = 365.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "Highscore: 9999"
+
+[node name="score" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 381.0
+offset_right = 795.0
+offset_bottom = 484.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "score: 9999"
+
 [node name="gameover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xqlkn")
 
+[node name="buttonAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_sddhr")
+autoplay = true
+
+[connection signal="pressed" from="ColorRect/retry" to="." method="_on_retry_pressed"]
 [connection signal="released" from="ColorRect/retry" to="." method="_on_retry_released"]
+[connection signal="pressed" from="ColorRect/menu" to="." method="_on_menu_pressed"]
 [connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]

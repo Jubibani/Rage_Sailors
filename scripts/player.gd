@@ -53,3 +53,9 @@ func _on_left_pressed():
 	#global_position = global_position.clamp(min_position, max_position)
 func _on_rightt_pressed() -> void:
 	print("pressed for right")
+
+
+func _on_jump_pressed() -> void:
+	print("jumped!")
+	$jumpAudio.play()
+	velocity.y = JUMP_VELOCITY

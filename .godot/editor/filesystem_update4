@@ -16,3 +16,16 @@ res://scripts/player.gd
 res://scripts/CollectedCoins.gd
 res://scripts/GlobalScript.gd
 res://scripts/coin.gd
+res://scenes/coin.gd
+res://scripts/Gameover.gd
+res://scripts/maingame.gd
+res://scenes/Scores.tscn
+res://scripts/Scores.gd
+res://scripts/Buttons.gd
+res://scripts/Exit.gd
+res://scripts/Global_Music.gd
+res://scripts/left.gd
+res://scripts/level.gd
+res://scripts/menu.gd
+res://scripts/module.gd
+res://scripts/scores.gd

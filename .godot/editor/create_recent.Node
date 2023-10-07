@@ -1,8 +1,10 @@
-Node
-AudioStreamPlayer
+Timer
+CanvasLayer
 Label
-ColorRect
 TouchScreenButton
+AudioStreamPlayer
+Node
+ColorRect
 Sprite2D
 Sprite3D
 Control
@@ -15,7 +17,6 @@ MeshInstance3D
 StaticBody3D
 CSGMesh3D
 Panel
-CanvasLayer
 CharacterBody3D
 CSGBox3D
 CollisionPolygon3D

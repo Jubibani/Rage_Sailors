@@ -17,3 +17,11 @@ func _on_retry_released() -> void:
 
 func _on_menu_released() -> void:
 	get_tree().change_scene_to_file("res://scenes/control.tscn")
+
+
+func _on_retry_pressed() -> void:
+	$buttonAudio.play()
+
+
+func _on_menu_pressed() -> void:
+	$buttonAudio.play()
