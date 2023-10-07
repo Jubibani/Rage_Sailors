@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="2_d5slv"]
 [ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="4_nrwss"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="5_77ney"]
-[ext_resource type="AudioStream" uid="uid://c4rfpqk5jfk60" path="res://sounds/Explosion Sound Effect.mp3" id="5_xqlkn"]
+[ext_resource type="AudioStream" uid="uid://bneyi6xpq8xr1" path="res://sounds/8bit explosion(2).mp3" id="6_ndbrh"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="6_sddhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56n7"]
@@ -114,11 +114,11 @@ theme_override_font_sizes/font_size = 90
 text = "score: 9999"
 
 [node name="gameover" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_xqlkn")
+stream = ExtResource("6_ndbrh")
+volume_db = 18.023
 
 [node name="buttonAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_sddhr")
-autoplay = true
 
 [connection signal="pressed" from="ColorRect/retry" to="." method="_on_retry_pressed"]
 [connection signal="released" from="ColorRect/retry" to="." method="_on_retry_released"]

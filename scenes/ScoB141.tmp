@@ -44,14 +44,11 @@ text = "Q"
 script = ExtResource("4_1vg7e")
 
 [node name="score" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -93.0
-offset_right = 93.0
-offset_bottom = 63.0
-grow_horizontal = 2
+layout_mode = 0
+offset_left = 328.0
+offset_top = 32.0
+offset_right = 862.0
+offset_bottom = 135.0
 theme_override_fonts/font = ExtResource("3_v4o48")
 theme_override_font_sizes/font_size = 60
 text = "score: 

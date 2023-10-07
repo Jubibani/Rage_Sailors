@@ -25,11 +25,11 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, SPEED)     
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	move_and_slide()
 	var min_position = Vector3(5, 0.2, -1000)
-	var max_position = Vector3(6, 10, 1000)
+	var max_position = Vector3(6, 2.5, 1000)
 	global_position = global_position.clamp(min_position, max_position)
 	# game over	
 	var collision = get_last_slide_collision()
@@ -37,7 +37,7 @@ func _physics_process(delta):
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
 			print("Gameover!")
-			#get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+			get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")

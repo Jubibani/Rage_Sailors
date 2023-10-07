@@ -1,9 +1,9 @@
 extends Node3D
 
 @onready var level = $"../"
-var baseSpeed = 2
+var baseSpeed = 0.025
 var maxSpeed = 10
-var speedIncrement = 0.5
+var speedIncrement = 1.5
 var speed = baseSpeed
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
