@@ -1,5 +1,6 @@
-res://scenes/maingame.tscn
 res://scenes/control.tscn
+res://scripts/control.gd
+res://scenes/maingame.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
 res://Collision models/ship_player.tscn
@@ -9,3 +10,6 @@ res://modules/module2.tscn
 res://modules/module3.tscn
 res://scenes/dev.tscn
 res://scenes/Global_Music.tscn
+res://scripts/soundsAudio.gd
+res://scripts/dev.gd
+res://scripts/player.gd

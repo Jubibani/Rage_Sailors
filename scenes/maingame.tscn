@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=33 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="2_h1rpl"]
@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="21_put8f"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="22_s0lgn"]
 [ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="23_e6jtn"]
-[ext_resource type="PackedScene" uid="uid://ed7ftb6kxg1s" path="res://scenes/Global_Music.tscn" id="25_cxtst"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
@@ -196,10 +195,6 @@ offset_bottom = 127.0
 theme_override_fonts/font = ExtResource("22_s0lgn")
 theme_override_font_sizes/font_size = 60
 text = "Highscore "
-
-[node name="main" parent="." instance=ExtResource("25_cxtst")]
-volume_db = -24.233
-autoplay = false
 
 [connection signal="released" from="shipPlayer/menu" to="." method="_on_menu_released"]
 [connection signal="pressed" from="shipPlayer/leftt" to="shipPlayer" method="_on_left_pressed"]

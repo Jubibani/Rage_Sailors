@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalScript="*res://scripts/GlobalScript.gd"
-GlobalMusic="*res://scenes/Global_Music.tscn"
 
 [display]
 

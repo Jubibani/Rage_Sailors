@@ -36,7 +36,8 @@ func _physics_process(delta):
 	if collision:
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
-			get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+			print("Gameover!")
+			#get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")

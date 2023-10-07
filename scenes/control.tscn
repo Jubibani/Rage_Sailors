@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="2_h2uu2"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="2_u02s4"]
 [ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="3_tb7i6"]
+[ext_resource type="Script" path="res://scripts/soundsAudio.gd" id="6_eraah"]
 [ext_resource type="Texture2D" uid="uid://dd8dg0qo17231" path="res://assets/latest.png" id="6_us5p0"]
-[ext_resource type="AudioStream" uid="uid://hkfbm7c42xbe" path="res://sounds/main menu .mp3" id="7_l8v18"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="8_udyeh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33wgt"]
@@ -42,6 +42,7 @@ offset_left = 193.0
 offset_top = 237.0
 offset_right = 1084.0
 offset_bottom = 546.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_u02s4")
 theme_override_font_sizes/font_size = 100
 text = "The 
@@ -66,12 +67,13 @@ texture_normal = ExtResource("2_h2uu2")
 texture_pressed = ExtResource("3_tb7i6")
 shape = SubResource("RectangleShape2D_33wgt")
 
-[node name="start2" type="Label" parent="ColorRect"]
+[node name="startLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 449.0
 offset_top = 812.0
 offset_right = 591.0
 offset_bottom = 934.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 150
 text = "play"
@@ -83,12 +85,13 @@ texture_normal = ExtResource("2_h2uu2")
 texture_pressed = ExtResource("3_tb7i6")
 shape = SubResource("RectangleShape2D_giegk")
 
-[node name="exit2" type="Label" parent="ColorRect"]
+[node name="exitLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 668.0
 offset_top = 1398.0
 offset_right = 801.0
 offset_bottom = 1520.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 150
 text = "exit"
@@ -107,12 +110,13 @@ texture_normal = ExtResource("2_h2uu2")
 texture_pressed = ExtResource("3_tb7i6")
 shape = SubResource("RectangleShape2D_a63ev")
 
-[node name="skins2" type="Label" parent="ColorRect"]
+[node name="skinsLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 133.0
 offset_top = 836.0
 offset_right = 323.0
 offset_bottom = 958.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 110
 text = "boats"
@@ -124,25 +128,25 @@ texture_normal = ExtResource("2_h2uu2")
 texture_pressed = ExtResource("3_tb7i6")
 shape = SubResource("RectangleShape2D_a63ev")
 
-[node name="maps2" type="Label" parent="ColorRect"]
+[node name="mapsLabel" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 502.0
 offset_top = 968.0
 offset_right = 672.0
 offset_bottom = 1090.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 150
 text = "Maps"
 
-[node name="start3" type="AudioStreamPlayer" parent="ColorRect"]
-
 [node name="stay" type="Label" parent="ColorRect"]
 modulate = Color(0.815686, 0.482353, 0.352941, 1)
 layout_mode = 0
-offset_left = 142.0
-offset_top = 1098.0
-offset_right = 987.0
-offset_bottom = 1294.0
+offset_left = 182.0
+offset_top = 1085.0
+offset_right = 1159.0
+offset_bottom = 1281.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_3abb1")
 theme_override_font_sizes/font_size = 120
 text = "! The Game is
@@ -151,28 +155,36 @@ text = "! The Game is
 [node name="stay2" type="Label" parent="ColorRect"]
 modulate = Color(1, 0.737255, 0.203922, 1)
 layout_mode = 0
-offset_left = 196.0
-offset_top = 1295.0
-offset_right = 1041.0
-offset_bottom = 1461.0
+offset_left = 224.0
+offset_top = 1265.0
+offset_right = 1069.0
+offset_bottom = 1431.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_u02s4")
 theme_override_font_sizes/font_size = 80
 text = "! stay tuned !"
+
+[node name="sounds" type="Node" parent="ColorRect"]
+script = ExtResource("6_eraah")
+
+[node name="buttonAudio" type="AudioStreamPlayer" parent="ColorRect/sounds"]
+stream = ExtResource("8_udyeh")
+autoplay = true
+
+[node name="buttonMenuAudio" type="AudioStreamPlayer" parent="ColorRect/sounds"]
+stream = ExtResource("8_udyeh")
 
 [node name="Latest" type="Sprite2D" parent="."]
 position = Vector2(113, 1470)
 scale = Vector2(0.1105, 0.0847618)
 texture = ExtResource("6_us5p0")
 
-[node name="MainMenuBG" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_l8v18")
-volume_db = -57.379
-
-[node name="buttonAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_udyeh")
-
+[connection signal="pressed" from="ColorRect/start" to="ColorRect/sounds" method="_on_start_pressed"]
 [connection signal="released" from="ColorRect/start" to="." method="_on_start_released"]
 [connection signal="released" from="ColorRect/exit" to="." method="_on_exit_released"]
+[connection signal="pressed" from="ColorRect/options" to="ColorRect/sounds" method="_on_options_pressed"]
 [connection signal="released" from="ColorRect/options" to="." method="_on_options_released"]
+[connection signal="pressed" from="ColorRect/skins" to="ColorRect/sounds" method="_on_skins_pressed"]
 [connection signal="released" from="ColorRect/skins" to="." method="_on_skins_released"]
+[connection signal="pressed" from="ColorRect/maps" to="ColorRect/sounds" method="_on_maps_pressed"]
 [connection signal="released" from="ColorRect/maps" to="." method="_on_maps_released"]
