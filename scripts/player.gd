@@ -4,6 +4,7 @@ const JUMP_VELOCITY = 7
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var collider_disabled = false
+var can_jump = true
 func _physics_process(delta):
 	if collider_disabled:
 		return
@@ -59,3 +60,11 @@ func _on_jump_pressed() -> void:
 	print("jumped!")
 	$jumpAudio.play()
 	velocity.y = JUMP_VELOCITY
+	can_jump = false
+
+
+
+func _on_timer_timeout() -> void:
+	can_jump = true
+	print("Jump cooldown over. You can jump again now.")
+	# Any other instructions you want to execute when the cooldown ends

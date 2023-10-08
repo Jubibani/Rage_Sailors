@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=34 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="2_h1rpl"]
@@ -21,7 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="18_dbp7u"]
 [ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
 [ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="22_1evjj"]
+[ext_resource type="PackedScene" uid="uid://6w2ycyuml6tj" path="res://scenes/pause_unpause.tscn" id="23_c52bb"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sahg"]
+size = Vector2(49, 49)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
 
@@ -65,6 +69,48 @@ script = ExtResource("1_wnv5v")
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("22_1evjj")]
 
+[node name="PauseUnpause" parent="CanvasLayer" instance=ExtResource("23_c52bb")]
+visible = false
+
+[node name="continue" type="TouchScreenButton" parent="CanvasLayer/PauseUnpause"]
+position = Vector2(248, 720)
+scale = Vector2(8.16667, 3.33333)
+texture_normal = ExtResource("17_c41jn")
+texture_pressed = ExtResource("18_dbp7u")
+shape = SubResource("RectangleShape2D_3sahg")
+
+[node name="Continue2" type="Label" parent="CanvasLayer/PauseUnpause"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 752.0
+offset_right = 528.0
+offset_bottom = 928.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "continue"
+
+[node name="menu" type="TouchScreenButton" parent="CanvasLayer/PauseUnpause"]
+position = Vector2(248, 928)
+scale = Vector2(8.16667, 3.33333)
+texture_normal = ExtResource("17_c41jn")
+
+[node name="menu2" type="Label" parent="CanvasLayer/PauseUnpause"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 960.0
+offset_right = 568.0
+offset_bottom = 1136.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "menu"
+
+[node name="menuAudio" type="AudioStreamPlayer" parent="CanvasLayer/PauseUnpause"]
+stream = ExtResource("26_tjj7e")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
 light_energy = 3.0
@@ -95,7 +141,7 @@ shape = SubResource("BoxShape3D_3tsol")
 transform = Transform3D(1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 1.50996e-07, -1.32005e-14, 1, -0.323255, 0.183014, -10.1092)
 shape = SubResource("BoxShape3D_2pnkp")
 
-[node name="menu" type="TouchScreenButton" parent="shipPlayer"]
+[node name="menuPause" type="TouchScreenButton" parent="shipPlayer"]
 modulate = Color(1, 1, 1, 0.372549)
 position = Vector2(16, 32)
 scale = Vector2(3.16667, 1.5)
@@ -104,14 +150,14 @@ texture_pressed = ExtResource("18_dbp7u")
 shape = SubResource("RectangleShape2D_ticod")
 
 [node name="menu2" type="Label" parent="shipPlayer"]
-offset_left = 40.0
-offset_top = 16.0
-offset_right = 216.0
-offset_bottom = 192.0
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 99.0
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("16_adygd")
 theme_override_font_sizes/font_size = 90
-text = "menu"
+text = "||"
 
 [node name="leftt" type="TouchScreenButton" parent="shipPlayer"]
 modulate = Color(1, 1, 1, 0.352941)
@@ -163,8 +209,14 @@ texture_normal = ExtResource("14_dl5ge")
 texture_pressed = ExtResource("17_0eti2")
 shape = SubResource("RectangleShape2D_cfl7j")
 
+[node name="Timer" type="Timer" parent="shipPlayer"]
+
 [connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]
-[connection signal="released" from="shipPlayer/menu" to="." method="_on_menu_released"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="CanvasLayer/PauseUnpause" method="_on_continue_released"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
+[connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
+[connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]
 [connection signal="pressed" from="shipPlayer/leftt" to="shipPlayer" method="_on_left_pressed"]
 [connection signal="pressed" from="shipPlayer/rightt" to="shipPlayer" method="_on_rightt_pressed"]
 [connection signal="pressed" from="shipPlayer/jump" to="shipPlayer" method="_on_jump_pressed"]
+[connection signal="timeout" from="shipPlayer/Timer" to="shipPlayer" method="_on_timer_timeout"]

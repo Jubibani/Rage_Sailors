@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="3_v4o48"]
 [ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="4_1vg7e"]
 
-[node name="Control" type="Control"]
+[node name="HUDScoreCoins" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

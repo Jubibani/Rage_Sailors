@@ -27,3 +27,5 @@ res://scripts/menu.gd
 res://scripts/module.gd
 res://scripts/player.gd
 res://scripts/soundsAudio.gd
+res://scenes/pause_unpause.tscn
+res://scripts/pause_unpause.gd

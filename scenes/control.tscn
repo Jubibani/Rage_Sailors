@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dwqxjclbs43m"]
+[gd_scene load_steps=13 format=3 uid="uid://dwqxjclbs43m"]
 
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_3abb1"]
 [ext_resource type="Script" path="res://scripts/control.gd" id="1_p4ydt"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/soundsAudio.gd" id="6_eraah"]
 [ext_resource type="Texture2D" uid="uid://dd8dg0qo17231" path="res://assets/latest.png" id="6_us5p0"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="8_udyeh"]
+[ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="9_5geoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_33wgt"]
 size = Vector2(49, 49)
@@ -179,6 +180,9 @@ stream = ExtResource("8_udyeh")
 position = Vector2(113, 1470)
 scale = Vector2(0.1105, 0.0847618)
 texture = ExtResource("6_us5p0")
+
+[node name="HUDScoreCoins" parent="." instance=ExtResource("9_5geoo")]
+layout_mode = 1
 
 [connection signal="pressed" from="ColorRect/start" to="ColorRect/sounds" method="_on_start_pressed"]
 [connection signal="released" from="ColorRect/start" to="." method="_on_start_released"]

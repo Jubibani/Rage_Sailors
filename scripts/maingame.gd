@@ -18,9 +18,16 @@ func _process(delta: float) -> void:
 
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play()
-	get_tree().change_scene_to_file("res://scenes/control.tscn")
+	get_tree().paused = true
+	$"CanvasLayer/PauseUnpause".show()
 	
 func _score(points):
 	score += points
 	HUD.score = score
 	print(score)
+#func pause(): 
+#	get_tree().paused = true
+#	$PauseMenu.show()
+#func unpause():
+#	get_tree().paused = false
+#	$PauseMenu.hide()
