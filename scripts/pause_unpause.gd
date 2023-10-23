@@ -11,10 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_continue_released() -> void:
-	get_tree().paused = false
-	$"PauseUnpause".hide()
-
-
 func _on_menu_released() -> void:
 	get_tree().change_scene_to_file("res://scenes/control.tscn")

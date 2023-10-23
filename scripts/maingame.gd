@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 
 
 func _on_menu_released() -> void:
-	$shipPlayer/menuAudio.play()
+	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
 	$"CanvasLayer/PauseUnpause".show()
 	
@@ -31,3 +31,10 @@ func _score(points):
 #func unpause():
 #	get_tree().paused = false
 #	$PauseMenu.hide()
+
+
+
+func _on_continue_released():
+	get_tree().paused = false
+	$"PauseUnpause".hide()
+	print("pressed continue")

@@ -211,8 +211,9 @@ shape = SubResource("RectangleShape2D_cfl7j")
 
 [node name="Timer" type="Timer" parent="shipPlayer"]
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]
-[connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="CanvasLayer/PauseUnpause" method="_on_continue_released"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
 [connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
 [connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]
