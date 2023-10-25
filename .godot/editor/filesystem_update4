@@ -1,4 +1,3 @@
-res://scenes/pause_unpause.tscn
 res://scenes/control.tscn
 res://scenes/maingame.tscn
 res://modules/module4.tscn
@@ -9,3 +8,6 @@ res://modules/module1.tscn
 res://modules/module2.tscn
 res://scenes/dev.tscn
 res://scenes/Scores.tscn
+res://scenes/pause_unpause.tscn
+res://scripts/maingame.gd
+res://scripts/pause_unpause.gd

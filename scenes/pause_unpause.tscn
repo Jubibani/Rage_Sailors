@@ -91,3 +91,4 @@ text = "menu"
 stream = ExtResource("4_wbd64")
 
 [connection signal="released" from="ColorRect/continue" to="." method="_on_continue_released"]
+[connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]

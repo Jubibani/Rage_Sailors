@@ -36,5 +36,5 @@ func _score(points):
 
 func _on_continue_released():
 	get_tree().paused = false
-	$"PauseUnpause".hide()
+	$"CanvasLayer/PauseUnpause".hide()
 	print("pressed continue")
