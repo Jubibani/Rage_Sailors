@@ -255,6 +255,7 @@ texture_pressed = ExtResource("17_0eti2")
 shape = SubResource("RectangleShape2D_cfl7j")
 
 [node name="Timer" type="Timer" parent="shipPlayer"]
+autostart = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]

@@ -33,6 +33,8 @@ func _physics_process(delta):
 	var max_position = Vector3(6, 2.5, 1000)
 	global_position = global_position.clamp(min_position, max_position)
 	# game over	
+	await get_tree().create_timer(3.5).timeout #upstart
+	#to fix early collission on the start of the game
 	var collision = get_last_slide_collision()
 	if collision:
 		if !collider_disabled:
@@ -60,11 +62,10 @@ func _on_jump_pressed() -> void:
 	print("jumped!")
 	$jumpAudio.play()
 	velocity.y = JUMP_VELOCITY
-	can_jump = false
+	await get_tree().create_timer(3.5).timeout
 
 
 
 func _on_timer_timeout() -> void:
-	can_jump = true
-	print("Jump cooldown over. You can jump again now.")
+	print_debug("Jump cooldown over. You can jump again now.")
 	# Any other instructions you want to execute when the cooldown ends

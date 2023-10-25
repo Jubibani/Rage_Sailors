@@ -19,8 +19,7 @@ func _process(delta: float) -> void:
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
-	$"CanvasLayer/PauseUnpause".show() 
-	
+	$"CanvasLayer/PauseUnpause".show()
 func _score(points):
 	score += points
 	HUD.score = score
