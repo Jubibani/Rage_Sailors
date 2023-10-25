@@ -1,5 +1,6 @@
-res://scenes/control.tscn
 res://scenes/maingame.tscn
+res://scripts/pause_unpause.gd
+res://scenes/control.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
 res://Collision models/ship_player.tscn
@@ -10,4 +11,3 @@ res://scenes/dev.tscn
 res://scenes/Scores.tscn
 res://scenes/pause_unpause.tscn
 res://scripts/maingame.gd
-res://scripts/pause_unpause.gd

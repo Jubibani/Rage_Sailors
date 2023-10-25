@@ -1,14 +1,14 @@
+Control
+Timer
 Label
 CanvasLayer
 TouchScreenButton
 ColorRect
 Node3D
-Timer
 AudioStreamPlayer
 Node
 Sprite2D
 Sprite3D
-Control
 CollisionShape3D
 Area3D
 AnimationPlayer

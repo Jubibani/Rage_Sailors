@@ -10,7 +10,7 @@ var score :int=0:
 func _ready() -> void:
 	#$main.play()
 #	HUD.score = 0
-	pass
+	$CanvasLayer/PauseUnpause/PauseTimer.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
-	$"CanvasLayer/PauseUnpause".show()
+	$"CanvasLayer/PauseUnpause".show() 
 	
 func _score(points):
 	score += points
@@ -28,13 +28,30 @@ func _score(points):
 #func pause(): 
 #	get_tree().paused = true
 #	$PauseMenu.show()
-#func unpause():
+#func unpause(): 
 #	get_tree().paused = false
 #	$PauseMenu.hide()
 
-
+func _countdown():
+	show
 
 func _on_continue_released():
-	get_tree().paused = false
-	$"CanvasLayer/PauseUnpause".hide()
 	print("pressed continue")
+	$"CanvasLayer/PauseUnpause".hide() #hide the buttons
+	print("start timer")
+	$"CanvasLayer/Countdown/3".show()
+	#$"CanvasLayer/PauseUnpause/3".show()
+	await get_tree().create_timer(1.5).timeout
+	$"CanvasLayer/Countdown/3".hide()
+	#$"CanvasLayer/PauseUnpause/3".hide()
+	$"CanvasLayer/Countdown/2".show()
+	await get_tree().create_timer(1.5).timeout
+	$"CanvasLayer/Countdown/2".hide()
+	#$"CanvasLayer/PauseUnpause/2".hide()
+	$"CanvasLayer/Countdown/1".show()
+	#$"CanvasLayer/PauseUnpause/1".show()
+	await get_tree().create_timer(1.5).timeout
+	$"CanvasLayer/Countdown/1".hide()
+	#$"CanvasLayer/PauseUnpause/1".hide()
+	print("timer ended")
+	get_tree().paused = false #execute unpause

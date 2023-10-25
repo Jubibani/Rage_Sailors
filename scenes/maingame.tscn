@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=35 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="2_h1rpl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
 [ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="5_koj35"]
 [ext_resource type="PackedScene" uid="uid://bwcd0ddn06jlj" path="res://modules/module6.tscn" id="7_6r4ya"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="8_i8see"]
 [ext_resource type="PackedScene" uid="uid://d2tj7rgnpyjob" path="res://modules/module7.tscn" id="8_jadkv"]
 [ext_resource type="PackedScene" uid="uid://ca4j2j3gk4wlj" path="res://modules/module8.tscn" id="9_q8gjc"]
 [ext_resource type="PackedScene" uid="uid://bn7jf803mnduo" path="res://modules/module9.tscn" id="10_bpcuu"]
@@ -110,6 +111,50 @@ text = "menu"
 
 [node name="menuAudio" type="AudioStreamPlayer" parent="CanvasLayer/PauseUnpause"]
 stream = ExtResource("26_tjj7e")
+
+[node name="PauseTimer" type="Timer" parent="CanvasLayer/PauseUnpause"]
+
+[node name="Countdown" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="3" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "3"
+
+[node name="2" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "2"
+
+[node name="1" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "1"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
@@ -215,6 +260,7 @@ shape = SubResource("RectangleShape2D_cfl7j")
 [connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
+[connection signal="timeout" from="CanvasLayer/PauseUnpause/PauseTimer" to="CanvasLayer/PauseUnpause" method="_on_pause_timer_timeout"]
 [connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
 [connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]
 [connection signal="pressed" from="shipPlayer/leftt" to="shipPlayer" method="_on_left_pressed"]

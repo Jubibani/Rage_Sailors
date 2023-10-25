@@ -6,11 +6,16 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Calle"d every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 
 func _on_menu_released() -> void:
 	get_tree().paused = false
+	# i observed if get_tree().paused = false is not added.
+	# it will go to the other scene but the game will freeze.
 	get_tree().change_scene_to_file("res://scenes/control.tscn")
+
+func _on_pause_timer_timeout():
+	print_debug("timer started")
