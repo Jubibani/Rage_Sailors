@@ -1,5 +1,5 @@
-res://scenes/control.tscn
 res://scenes/maingame.tscn
+res://scenes/control.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
 res://Collision models/ship_player.tscn

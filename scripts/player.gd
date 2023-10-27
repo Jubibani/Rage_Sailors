@@ -4,7 +4,7 @@ const JUMP_VELOCITY = 7
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var collider_disabled = false
-var max_jump = 2
+const max_jump = 2
 var used_jump = 0
 func _physics_process(delta):
 	if collider_disabled:
@@ -58,18 +58,16 @@ func _on_left_pressed():
 func _on_rightt_pressed() -> void:
 	print("pressed for right")
 
-
 func _on_jump_pressed() -> void:
-	print("jumped!")
 	var jumped = 0
-	jumped =  + 1
+	used_jump =  jumped + 1
 	print_debug("added one jump")
-	if jumped > max_jump:
-		print_debug("wait for cooldown")
+	if used_jump > max_jump:
 		await get_tree().create_timer(3.5).timeout
-#	elif jumped < max_jump:
-#		$jumpAudio.play()
-#		velocity.y = JUMP_VELOCITY
+		print_debug("wait for cooldown")
+	elif used_jump < max_jump:
+		$jumpAudio.play()
+		velocity.y = JUMP_VELOCITY
 
 
 
