@@ -14,6 +14,7 @@ config/name="The Grand Line"
 config/description="An endless runner game that you ride your boat or ship inside the grand line where it is the most dangerous path and it is required before you traverse unto the vast body of the ocean. This is where most sailors meet their fate! is this where you will meet yours too?"
 run/main_scene="res://scenes/control.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+run/max_fps=90
 boot_splash/image="res://assets/jubi dev.png"
 config/icon="res://assets/grey mountains with red boat.png"
 

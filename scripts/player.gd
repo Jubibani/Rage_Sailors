@@ -1,10 +1,10 @@
 extends CharacterBody3D
 const SPEED = 3.0
 const JUMP_VELOCITY = 7
+const MAX_JUMP:int=2
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var collider_disabled = false
-var can_jump = true
 func _physics_process(delta):
 	if collider_disabled:
 		return
@@ -16,8 +16,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		$jumpAudio.play()
 		velocity.y = JUMP_VELOCITY
-
-
+	# Jump mechanics0
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("right", "left", "backward", "forward")
@@ -56,16 +55,28 @@ func _on_left_pressed():
 	#global_position = global_position.clamp(min_position, max_position)
 func _on_rightt_pressed() -> void:
 	print("pressed for right")
-
-
-func _on_jump_pressed() -> void:
-	print("jumped!")
+	
+var jump :int=0 	#the the default value
+var jump_value :int=1	#the value to be added
+func _on_less_jump():
+#	if int(jump) < int(MAX_JUMP):
+	print_debug("jumped!")
+	print("used jump: ", jump)
 	$jumpAudio.play()
 	velocity.y = JUMP_VELOCITY
+	await get_tree().create_timer(1.0).timeout
+	jump=0
+func _on_more_jump(): # not implemented
+#	if int(jump) > int(MAX_JUMP):
 	await get_tree().create_timer(3.5).timeout
-
-
-
+	print_debug("max jump exceeded!")
+	print("exceeded jump: ", jump)
+	jump = 0
+func _on_jump_pressed() -> void:	
+	jump = jump + jump_value	#the equation
+	if int(jump) < int(MAX_JUMP):
+		_on_less_jump()
 func _on_timer_timeout() -> void:
-	print_debug("Jump cooldown over. You can jump again now.")
-	# Any other instructions you want to execute when the cooldown ends
+#	print_debug("Jump cooldown over. You can jump again now.")
+#	print_debug("jumps: ", jump)
+	pass
