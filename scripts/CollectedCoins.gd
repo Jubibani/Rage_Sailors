@@ -8,9 +8,10 @@ var coins:int = 0:
 
 
 func _ready() -> void:
-	Global_Coin.coin_collected.connect(_on_coin_collected)
-	coins = coins + 1
-	# coins = 0
+	#global coin == global script
+	#coin_collected is the function of the collission
+	#_on coin_collected?
+	$".".text = str(Global_Coin.coin_collected.connect(_on_coin_collected))
 
 
 func _on_coin_collected() -> void:

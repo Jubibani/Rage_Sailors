@@ -10,29 +10,17 @@ var score :int=0:
 func _ready() -> void:
 	#$main.play()
 	$CanvasLayer/PauseUnpause/PauseTimer.start()
+	GlobalHighScore.score_collected.emit()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
+	
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
 	$"CanvasLayer/PauseUnpause".show()
-func _score(points):
-	score += points
-	HUD.score = score
-	print(score)
-#func pause(): 
-#	get_tree().paused = true
-#	$PauseMenu.show()
-#func unpause(): 
-#	get_tree().paused = false
-#	$PauseMenu.hide()
-
-func _countdown():
-	show
-
+	
+	
 func _on_continue_released():
 	print("pressed continue")
 	$"CanvasLayer/PauseUnpause".hide() #hide the buttons

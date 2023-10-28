@@ -2,16 +2,21 @@ extends CharacterBody3D
 const SPEED = 3.0
 const JUMP_VELOCITY = 7
 const MAX_JUMP:int=2
+const DAMAGE = 1
+var MAX_HEALTH:int=3
+var health
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var collider_disabled = false
+
 func _physics_process(delta):
 	if collider_disabled:
 		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	
+	# Handle score
+
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		$jumpAudio.play()
@@ -38,10 +43,16 @@ func _physics_process(delta):
 	var collision = get_last_slide_collision()
 	if collision:
 		if !collider_disabled:
+			health
 			print("Collided with: ", collision.get_collider())
-			print("Gameover!")
-			# optional: put last end highscore
-			get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+			health = int(MAX_HEALTH)-int(DAMAGE)
+			print_debug("remaining_health: ", health)
+			if int(health) <= 0:
+				print("Gameover!")
+				# optional: put last end highscore
+				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+				print("Collided with: ", collision.get_collider())
+
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
@@ -81,4 +92,10 @@ func _on_jump_pressed() -> void:
 func _on_timer_timeout() -> void:
 #	print_debug("Jump cooldown over. You can jump again now.")
 #	print_debug("jumps: ", jump)
+	pass
+
+
+func _on_ready():
+	str(GlobalPlayer.PlayerStatus.connect(health))
+	print_debug("probably died")
 	pass

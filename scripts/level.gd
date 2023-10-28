@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var modules: Array[PackedScene] = []
-var amnt = 200
+var amnt :int= 200
 var rng = RandomNumberGenerator.new()
 var offset = 6
 
@@ -9,6 +9,7 @@ var offset = 6
 func _ready():
 	for n in amnt:
 		spawnModule(n*offset)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

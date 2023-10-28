@@ -49,12 +49,31 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -93.0
-offset_right = 93.0
-offset_bottom = 63.0
+offset_left = 134.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 79.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_v4o48")
 theme_override_font_sizes/font_size = 60
-text = "score: 
-"
+text = "x"
 script = ExtResource("6_1s76y")
+
+[node name="Highscore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 16.0
+offset_right = 101.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v4o48")
+theme_override_font_sizes/font_size = 60
+text = "Score: "
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="score" method="_on_timer_timeout"]

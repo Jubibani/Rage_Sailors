@@ -1,0 +1,262 @@
+[gd_scene load_steps=26 format=3 uid="uid://bxby1dcpjypq1"]
+
+[ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
+[ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="4_jqq52"]
+[ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="8_i8see"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
+[ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="14_dl5ge"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="16_adygd"]
+[ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="17_0eti2"]
+[ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="17_c41jn"]
+[ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="18_dbp7u"]
+[ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
+[ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="22_1evjj"]
+[ext_resource type="PackedScene" uid="uid://6w2ycyuml6tj" path="res://scenes/pause_unpause.tscn" id="23_c52bb"]
+[ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sahg"]
+size = Vector2(49, 49)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rn0po"]
+
+[sub_resource type="Sky" id="Sky_vftai"]
+sky_material = SubResource("ProceduralSkyMaterial_rn0po")
+
+[sub_resource type="Environment" id="Environment_0n70x"]
+background_mode = 2
+sky = SubResource("Sky_vftai")
+ambient_light_source = 3
+fog_enabled = true
+fog_light_color = Color(0.54902, 0.792157, 1, 1)
+fog_light_energy = 0.82
+fog_density = 0.1076
+fog_aerial_perspective = 0.7
+fog_sky_affect = 0.759
+volumetric_fog_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tsol"]
+size = Vector3(0.620956, 0.249291, 0.585958)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pnkp"]
+size = Vector3(0.279869, 0.323652, 0.802732)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ticod"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eelpb"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uivif"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfl7j"]
+size = Vector2(50, 50)
+
+[node name="MainGame" type="Node3D"]
+script = ExtResource("1_wnv5v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("22_1evjj")]
+
+[node name="PauseUnpause" parent="CanvasLayer" instance=ExtResource("23_c52bb")]
+visible = false
+
+[node name="continue" type="TouchScreenButton" parent="CanvasLayer/PauseUnpause"]
+position = Vector2(248, 720)
+scale = Vector2(8.16667, 3.33333)
+texture_normal = ExtResource("17_c41jn")
+texture_pressed = ExtResource("18_dbp7u")
+shape = SubResource("RectangleShape2D_3sahg")
+
+[node name="Continue2" type="Label" parent="CanvasLayer/PauseUnpause"]
+layout_mode = 0
+offset_left = 352.0
+offset_top = 752.0
+offset_right = 528.0
+offset_bottom = 928.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "continue"
+
+[node name="menu" type="TouchScreenButton" parent="CanvasLayer/PauseUnpause"]
+position = Vector2(248, 928)
+scale = Vector2(8.16667, 3.33333)
+texture_normal = ExtResource("17_c41jn")
+
+[node name="menu2" type="Label" parent="CanvasLayer/PauseUnpause"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 960.0
+offset_right = 568.0
+offset_bottom = 1136.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "menu"
+
+[node name="menuAudio" type="AudioStreamPlayer" parent="CanvasLayer/PauseUnpause"]
+stream = ExtResource("26_tjj7e")
+
+[node name="PauseTimer" type="Timer" parent="CanvasLayer/PauseUnpause"]
+
+[node name="Countdown" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="3" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "3"
+
+[node name="2" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "2"
+
+[node name="1" type="Label" parent="CanvasLayer/Countdown"]
+visible = false
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 492.0
+offset_bottom = 609.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 190
+text = "1"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.706142, -0.681129, 0.193461, -0.0349229, 0.239388, 0.970296, -0.707209, -0.691922, 0.145255, 0, 18.3897, 0)
+light_energy = 3.0
+shadow_enabled = true
+shadow_blur = 1.617
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0n70x")
+
+[node name="level" type="Node3D" parent="."]
+script = ExtResource("11_m4f8i")
+modules = Array[PackedScene]([ExtResource("4_gsb83")])
+
+[node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
+transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 0, -0.9, -1.50996e-07, -7.54979e-08, -14.1373, 0.191373, 0.000805855)
+script = ExtResource("4_jqq52")
+
+[node name="Camera3D" type="Camera3D" parent="shipPlayer"]
+transform = Transform3D(-0.999707, 0.011213, 0.0214475, 0.0213071, 0.828051, 0.560248, 0.0114775, -0.560541, 0.828047, 0.21274, 4.63173, -7.7931)
+current = true
+fov = 90.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(-1, 0, 0, 0, -1, -1.01644e-20, 0, -1.01644e-20, -1, -0.328882, 0.174895, -9.60655)
+shape = SubResource("BoxShape3D_3tsol")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="shipPlayer"]
+transform = Transform3D(1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, 1.50996e-07, -1.32005e-14, 1, -0.323255, 0.183014, -10.1092)
+shape = SubResource("BoxShape3D_2pnkp")
+
+[node name="menuPause" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.372549)
+position = Vector2(16, 32)
+scale = Vector2(3.16667, 1.5)
+texture_normal = ExtResource("17_c41jn")
+texture_pressed = ExtResource("18_dbp7u")
+shape = SubResource("RectangleShape2D_ticod")
+
+[node name="menu2" type="Label" parent="shipPlayer"]
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 99.0
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 90
+text = "||"
+
+[node name="leftt" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(8, 808)
+scale = Vector2(4.79167, 2.9375)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("17_0eti2")
+shape = SubResource("RectangleShape2D_eelpb")
+action = "left"
+
+[node name="<-" type="Label" parent="shipPlayer"]
+offset_left = 80.0
+offset_top = 832.0
+offset_right = 156.0
+offset_bottom = 915.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 100
+text = "<-"
+
+[node name="rightt" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.352941)
+position = Vector2(656, 808)
+scale = Vector2(4.85417, 2.97917)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("17_0eti2")
+shape = SubResource("RectangleShape2D_uivif")
+action = "right"
+
+[node name="->" type="Label" parent="shipPlayer"]
+offset_left = 744.0
+offset_top = 832.0
+offset_right = 820.0
+offset_bottom = 915.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 100
+text = "->"
+
+[node name="jumpAudio" type="AudioStreamPlayer" parent="shipPlayer"]
+stream = ExtResource("20_w02wt")
+
+[node name="menuAudio" type="AudioStreamPlayer" parent="shipPlayer"]
+stream = ExtResource("26_tjj7e")
+
+[node name="jump" type="TouchScreenButton" parent="shipPlayer"]
+modulate = Color(1, 1, 1, 0.529412)
+position = Vector2(256, 1360)
+scale = Vector2(7.81324, 2.29177)
+texture_normal = ExtResource("14_dl5ge")
+texture_pressed = ExtResource("17_0eti2")
+shape = SubResource("RectangleShape2D_cfl7j")
+
+[node name="Timer" type="Timer" parent="shipPlayer"]
+wait_time = 1.5
+autostart = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
+[connection signal="timeout" from="CanvasLayer/PauseUnpause/PauseTimer" to="CanvasLayer/PauseUnpause" method="_on_pause_timer_timeout"]
+[connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
+[connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]
+[connection signal="pressed" from="shipPlayer/leftt" to="shipPlayer" method="_on_left_pressed"]
+[connection signal="pressed" from="shipPlayer/rightt" to="shipPlayer" method="_on_rightt_pressed"]
+[connection signal="pressed" from="shipPlayer/jump" to="shipPlayer" method="_on_jump_pressed"]
+[connection signal="timeout" from="shipPlayer/Timer" to="shipPlayer" method="_on_timer_timeout"]

@@ -1,16 +1,25 @@
-[gd_scene load_steps=26 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=35 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="4_jqq52"]
 [ext_resource type="PackedScene" uid="uid://qcmysdc04y1g" path="res://Collision models/ship_player.tscn" id="4_uw0nc"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="8_i8see"]
+[ext_resource type="PackedScene" uid="uid://p71xwawyruxj" path="res://modules/module1.tscn" id="10_lvdis"]
+[ext_resource type="PackedScene" uid="uid://3sve2nrss2io" path="res://modules/module2.tscn" id="11_5k1nh"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
+[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="13_oxc55"]
 [ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="14_dl5ge"]
+[ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="14_frpyu"]
+[ext_resource type="PackedScene" uid="uid://bwcd0ddn06jlj" path="res://modules/module6.tscn" id="15_570dw"]
+[ext_resource type="PackedScene" uid="uid://d2tj7rgnpyjob" path="res://modules/module7.tscn" id="16_1xdyq"]
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="16_adygd"]
 [ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="17_0eti2"]
 [ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="17_c41jn"]
+[ext_resource type="PackedScene" uid="uid://ca4j2j3gk4wlj" path="res://modules/module8.tscn" id="17_ufinj"]
 [ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="18_dbp7u"]
+[ext_resource type="PackedScene" uid="uid://bn7jf803mnduo" path="res://modules/module9.tscn" id="18_vqm4g"]
+[ext_resource type="PackedScene" uid="uid://bj3djjm7st51" path="res://modules/module10.tscn" id="19_as1pv"]
 [ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
 [ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="22_1evjj"]
 [ext_resource type="PackedScene" uid="uid://6w2ycyuml6tj" path="res://scenes/pause_unpause.tscn" id="23_c52bb"]
@@ -158,7 +167,7 @@ environment = SubResource("Environment_0n70x")
 
 [node name="level" type="Node3D" parent="."]
 script = ExtResource("11_m4f8i")
-modules = Array[PackedScene]([ExtResource("4_gsb83")])
+modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), ExtResource("4_gsb83"), ExtResource("13_oxc55"), ExtResource("14_frpyu"), ExtResource("15_570dw"), ExtResource("16_1xdyq"), ExtResource("17_ufinj"), ExtResource("18_vqm4g"), ExtResource("19_as1pv")])
 
 [node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
 transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 0, -0.9, -1.50996e-07, -7.54979e-08, -14.1373, 0.191373, 0.000805855)
