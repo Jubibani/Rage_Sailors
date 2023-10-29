@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c51ieggojeddq"]
+[gd_scene load_steps=7 format=3 uid="uid://c51ieggojeddq"]
 
 [ext_resource type="Script" path="res://scripts/Scores.gd" id="1_7kusq"]
 [ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="1_s4knp"]
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="2_y2sj2"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="3_v4o48"]
 [ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="4_1vg7e"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="6_1s76y"]
 
 [node name="HUDScoreCoins" type="Control"]
 layout_mode = 3
@@ -56,3 +57,4 @@ theme_override_fonts/font = ExtResource("3_v4o48")
 theme_override_font_sizes/font_size = 60
 text = "score: 
 "
+script = ExtResource("6_1s76y")

@@ -9,6 +9,7 @@ var coins:int = 0:
 
 func _ready() -> void:
 	Global_Coin.coin_collected.connect(_on_coin_collected)
+	coins = coins + 1
 	# coins = 0
 
 

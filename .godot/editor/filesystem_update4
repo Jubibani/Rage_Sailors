@@ -10,3 +10,8 @@ res://scenes/dev.tscn
 res://scenes/Scores.tscn
 res://scenes/pause_unpause.tscn
 res://scripts/player.gd
+res://scripts/maingame.gd
+res://scripts/GlobalScript.gd
+res://scripts/score.gd
+res://scripts/GlobalHighScore.gd
+res://scripts/CollectedCoins.gd

@@ -33,12 +33,14 @@ func _physics_process(delta):
 	global_position = global_position.clamp(min_position, max_position)
 	# game over	
 	await get_tree().create_timer(3.5).timeout #upstart
+	#optional! can put flashy lights effects
 	#to fix early collission on the start of the game
 	var collision = get_last_slide_collision()
 	if collision:
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
 			print("Gameover!")
+			# optional: put last end highscore
 			get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 # some buttons
 func _on_menu_pressed():

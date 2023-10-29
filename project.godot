@@ -22,6 +22,7 @@ config/icon="res://assets/grey mountains with red boat.png"
 
 Global_Coin="*res://scripts/GlobalScript.gd"
 CollectedCoins="*res://scripts/CollectedCoins.gd"
+GlobalHighScore="*res://scripts/GlobalHighScore.gd"
 
 [display]
 

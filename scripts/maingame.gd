@@ -9,7 +9,6 @@ var score :int=0:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$main.play()
-#	HUD.score = 0
 	$CanvasLayer/PauseUnpause/PauseTimer.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -54,3 +53,7 @@ func _on_continue_released():
 	#$"CanvasLayer/PauseUnpause/1".hide()
 	print("timer ended")
 	get_tree().paused = false #execute unpause
+	
+func _score_collected(body: Node3D) -> void:
+	GlobalHighScore.score_collected.emit()
+	print_debug("score_gained!")
