@@ -1,5 +1,5 @@
 extends Node
 
-var score
+var score:int=0
 
 signal score_collected

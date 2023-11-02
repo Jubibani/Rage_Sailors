@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var  HUD = $CanvasLayer/HUD
+@onready var  HUD = $HUD
 
 var score :int=0:
 	set(value):
@@ -11,6 +11,7 @@ func _ready() -> void:
 	#$main.play()
 	$CanvasLayer/PauseUnpause/PauseTimer.start()
 	GlobalHighScore.score_collected.emit()
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -26,19 +27,14 @@ func _on_continue_released():
 	$"CanvasLayer/PauseUnpause".hide() #hide the buttons
 	print("start timer")
 	$"CanvasLayer/Countdown/3".show()
-	#$"CanvasLayer/PauseUnpause/3".show()
 	await get_tree().create_timer(1.5).timeout
 	$"CanvasLayer/Countdown/3".hide()
-	#$"CanvasLayer/PauseUnpause/3".hide()
 	$"CanvasLayer/Countdown/2".show()
 	await get_tree().create_timer(1.5).timeout
 	$"CanvasLayer/Countdown/2".hide()
-	#$"CanvasLayer/PauseUnpause/2".hide()
 	$"CanvasLayer/Countdown/1".show()
-	#$"CanvasLayer/PauseUnpause/1".show()
 	await get_tree().create_timer(1.5).timeout
 	$"CanvasLayer/Countdown/1".hide()
-	#$"CanvasLayer/PauseUnpause/1".hide()
 	print("timer ended")
 	get_tree().paused = false #execute unpause
 	

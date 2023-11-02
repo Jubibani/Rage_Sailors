@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=37 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -21,8 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://bn7jf803mnduo" path="res://modules/module9.tscn" id="18_vqm4g"]
 [ext_resource type="PackedScene" uid="uid://bj3djjm7st51" path="res://modules/module10.tscn" id="19_as1pv"]
 [ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
-[ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="22_1evjj"]
 [ext_resource type="PackedScene" uid="uid://6w2ycyuml6tj" path="res://scenes/pause_unpause.tscn" id="23_c52bb"]
+[ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="24_8hx65"]
+[ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="25_o24yq"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="26_2lu3s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sahg"]
@@ -67,8 +69,6 @@ size = Vector2(50, 50)
 script = ExtResource("1_wnv5v")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HUD" parent="CanvasLayer" instance=ExtResource("22_1evjj")]
 
 [node name="PauseUnpause" parent="CanvasLayer" instance=ExtResource("23_c52bb")]
 visible = false
@@ -258,10 +258,67 @@ shape = SubResource("RectangleShape2D_cfl7j")
 wait_time = 1.5
 autostart = true
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(848, 128)
+scale = Vector2(0.104, 0.112)
+texture = ExtResource("24_8hx65")
+
+[node name="x" type="Label" parent="."]
+modulate = Color(1, 0.819608, 0.392157, 1)
+offset_left = 800.0
+offset_top = 104.0
+offset_right = 832.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("16_adygd")
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[node name="CollectedCoins" type="Label" parent="."]
+modulate = Color(1, 0.819608, 0.392157, 1)
+offset_left = 680.0
+offset_top = 96.0
+offset_right = 720.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 50
+text = "Q"
+script = ExtResource("25_o24yq")
+
+[node name="score" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 134.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 60
+text = "x"
+script = ExtResource("26_2lu3s")
+
+[node name="Highscore" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 16.0
+offset_right = 101.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_i8see")
+theme_override_font_sizes/font_size = 60
+text = "Score: "
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 1
+autostart = true
+
 [connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="ready" from="CanvasLayer/HUD" to="CanvasLayer/HUD" method="_on_ready"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
+[connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="score" method="_on_menu_released"]
 [connection signal="timeout" from="CanvasLayer/PauseUnpause/PauseTimer" to="CanvasLayer/PauseUnpause" method="_on_pause_timer_timeout"]
 [connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
 [connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]

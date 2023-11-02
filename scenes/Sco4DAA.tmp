@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://c51ieggojeddq"]
+
+[ext_resource type="Script" path="res://scripts/Scores.gd" id="1_7kusq"]
+[ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="1_s4knp"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="2_y2sj2"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="3_v4o48"]
+[ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="4_1vg7e"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="6_1s76y"]
+
+[node name="HUDScoreCoins" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7kusq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(848, 128)
+scale = Vector2(0.104, 0.112)
+texture = ExtResource("1_s4knp")
+
+[node name="x" type="Label" parent="."]
+modulate = Color(1, 0.819608, 0.392157, 1)
+layout_mode = 0
+offset_left = 800.0
+offset_top = 104.0
+offset_right = 832.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("2_y2sj2")
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[node name="CollectedCoins" type="Label" parent="."]
+modulate = Color(1, 0.819608, 0.392157, 1)
+layout_mode = 0
+offset_left = 680.0
+offset_top = 96.0
+offset_right = 720.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("3_v4o48")
+theme_override_font_sizes/font_size = 50
+text = "Q"
+script = ExtResource("4_1vg7e")
+
+[node name="score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 134.0
+offset_top = 16.0
+offset_right = 333.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v4o48")
+theme_override_font_sizes/font_size = 60
+text = "x"
+script = ExtResource("6_1s76y")
+
+[node name="Highscore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.0
+offset_top = 16.0
+offset_right = 101.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_v4o48")
+theme_override_font_sizes/font_size = 60
+text = "Score: "
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="score" method="_on_timer_timeout"]
