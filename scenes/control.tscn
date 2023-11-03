@@ -37,30 +37,28 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0705882, 0.541176, 0.956863, 0.34902)
 
-[node name="grand line" type="Label" parent="ColorRect"]
+[node name="Rage Sailors" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = 193.0
-offset_top = 237.0
-offset_right = 1084.0
-offset_bottom = 546.0
+offset_left = 122.0
+offset_top = 206.0
+offset_right = 1013.0
+offset_bottom = 515.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_u02s4")
 theme_override_font_sizes/font_size = 100
-text = "The 
---- Grand --- 
-		Line"
+text = "Rage Sailors"
 
-[node name="Grand" type="Label" parent="ColorRect"]
+[node name="Rage" type="Label" parent="ColorRect"]
 modulate = Color(0.74902, 0.0941176, 0.0862745, 1)
 layout_mode = 0
-offset_left = 332.0
-offset_top = 347.0
-offset_right = 1223.0
-offset_bottom = 470.0
+offset_left = 115.0
+offset_top = 210.0
+offset_right = 1006.0
+offset_bottom = 333.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_u02s4")
 theme_override_font_sizes/font_size = 100
-text = "Grand"
+text = "Rage"
 
 [node name="start" type="TouchScreenButton" parent="ColorRect"]
 position = Vector2(311, 812)
