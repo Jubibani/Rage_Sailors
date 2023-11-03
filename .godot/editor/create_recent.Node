@@ -1,3 +1,6 @@
+AudioStreamPlayer
+Area3D
+CollisionShape3D
 Timer
 Label
 Control
@@ -5,12 +8,9 @@ CanvasLayer
 TouchScreenButton
 ColorRect
 Node3D
-AudioStreamPlayer
 Node
 Sprite2D
 Sprite3D
-CollisionShape3D
-Area3D
 AnimationPlayer
 AnimationTree
 MeshInstance3D

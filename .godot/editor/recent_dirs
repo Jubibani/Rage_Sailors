@@ -1,7 +1,8 @@
+res://scenes
+res://
 res://scripts
 res://assets
 res://assets/kenney_pixel-ui-pack/9-Slice
-res://scenes
 res://assets/kenney_pixel-ui-pack/9-Slice/Ancient
 res://sounds
 C:/Game(s)/simple_game-20230915T104554Z-001/simple_game
@@ -10,7 +11,6 @@ res://assets/kenney_pirate-kit/Models/OBJ format
 res://assets/kenney_nature-kit/Models/OBJ format
 res://assets/kenney_pixel-ui-pack/9-Slice/Colored
 res://Collision models
-res://
 C:/Program Files/Blender Foundation/Blender 3.6
 res://fonts
 res://assets/kenney_pixel-ui-pack/9-Slice/Outline

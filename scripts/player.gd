@@ -3,8 +3,6 @@ const SPEED = 3.0
 const JUMP_VELOCITY = 7
 const MAX_JUMP:int=2
 var DAMAGE:int = 1
-var two_health:int=0
-var one_health
 var no_health
 @onready var player_health = GlobalPlayer.Player_Status
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -14,23 +12,19 @@ var collider_disabled = false
 
 func _on_ready():
 	pass
-func _on_received_damage(damage):
-	DAMAGE = damage
+func life_status():
+	no_health
 func _physics_process(delta):
 	if collider_disabled:
 		return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
-	# Handle score
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept"):
 		$jumpAudio.play()
 		velocity.y = JUMP_VELOCITY
-	# Jump mechanics0
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Jump mechanics
 	var input_dir = Input.get_vector("right", "left", "backward", "forward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -51,11 +45,9 @@ func _physics_process(delta):
 	if collision:
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
-#			while no_health < player_health:
-			two_health = player_health-DAMAGE
-			one_health = two_health-DAMAGE
-			no_health = one_health-DAMAGE
-			#above set lines of codes is bad. i should improve it
+			$damageAudio.play()
+			player_health -= 1
+			no_health = player_health
 			print_debug("remaining_health: ", no_health)
 			if no_health == 0:
 				print("Gameover!")

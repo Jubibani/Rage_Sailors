@@ -1,5 +1,4 @@
 res://scenes/maingame.tscn
-res://scripts/player.gd
 res://scenes/control.tscn
 res://scenes/Gameover.tscn
 res://modules/module4.tscn
@@ -10,10 +9,9 @@ res://modules/module2.tscn
 res://scenes/dev.tscn
 res://scenes/Scores.tscn
 res://scenes/pause_unpause.tscn
+res://scripts/player.gd
+res://hitbox.tscn
+res://scripts/hitbox.gd
+res://scenes/hurtbox.tscn
 res://scripts/score.gd
-res://scripts/GlobalHighScore.gd
-res://scripts/CollectedCoins.gd
-res://scripts/maingame.gd
-res://scripts/Global_Pause.gd
-res://scripts/Scores.gd
 res://scripts/Global_Player.gd

@@ -5,25 +5,27 @@ var score:int = 0:
 	set (mod_value):
 		score = mod_value
 		text = str(score)
-var goal:int = 100000000
 
 func _ready() -> void:
 	$".".text = str(GlobalHighScore.score_collected.connect(_on_score_collected))
-	process_mode = Node.PROCESS_MODE_PAUSABLE
 	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	
 func _on_score_collected() -> void:
-	while GlobalHighScore.score < goal: #a temporary fix
+	while GlobalHighScore.score < 100000000: #a temporary fix
 		await get_tree().create_timer(1.3).timeout
 		score = score + 1
 		print_debug("score: ", score)
-		if GlobalHighScore.score <=  goal :
+		if GlobalHighScore.score >  100000000 :
 			print_debug("you're the king of the pirates!")
+		if GlobalPlayer.Player_Status == 0:
+			print_debug("score: ", score)
+			get_line_count()
 		
 
 func _on_timer_timeout():
 	pass
+
+

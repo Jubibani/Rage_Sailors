@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=38 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://6twnurdx5a2u" path="res://sounds/flap.mp3" id="20_w02wt"]
 [ext_resource type="PackedScene" uid="uid://6w2ycyuml6tj" path="res://scenes/pause_unpause.tscn" id="23_c52bb"]
 [ext_resource type="Texture2D" uid="uid://gno3ogeel56t" path="res://assets/hud_coin.png" id="24_8hx65"]
+[ext_resource type="AudioStream" uid="uid://ceh35h1cwriwb" path="res://sounds/damaged sound.mp3" id="24_yu2sg"]
 [ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="25_o24yq"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="26_2lu3s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
@@ -257,6 +258,9 @@ shape = SubResource("RectangleShape2D_cfl7j")
 [node name="Timer" type="Timer" parent="shipPlayer"]
 wait_time = 1.5
 autostart = true
+
+[node name="damageAudio" type="AudioStreamPlayer" parent="shipPlayer"]
+stream = ExtResource("24_yu2sg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(848, 128)
