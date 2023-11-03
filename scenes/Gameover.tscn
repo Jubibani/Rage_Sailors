@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://behgi0ix7dmot"]
+[gd_scene load_steps=12 format=3 uid="uid://behgi0ix7dmot"]
 
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_gn0o7"]
 [ext_resource type="Script" path="res://scripts/Gameover.gd" id="1_ypiao"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bneyi6xpq8xr1" path="res://sounds/8bit explosion(2).mp3" id="6_ndbrh"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="6_sddhr"]
 [ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="8_gtnx0"]
+[ext_resource type="AudioStream" uid="uid://duiyiayrfvvjr" path="res://sounds/you suck + oh slap .mp3" id="9_j7ysl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56n7"]
 size = Vector2(48, 48)
@@ -117,6 +118,7 @@ text = "score: 9999"
 [node name="gameover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ndbrh")
 volume_db = 18.023
+pitch_scale = 1.1
 
 [node name="buttonAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_sddhr")
@@ -124,7 +126,13 @@ stream = ExtResource("6_sddhr")
 [node name="HUDScoreCoins" parent="." instance=ExtResource("8_gtnx0")]
 layout_mode = 1
 
+[node name="yousuckAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_j7ysl")
+
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="ColorRect/retry" to="." method="_on_retry_pressed"]
 [connection signal="released" from="ColorRect/retry" to="." method="_on_retry_released"]
 [connection signal="pressed" from="ColorRect/menu" to="." method="_on_menu_pressed"]
 [connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

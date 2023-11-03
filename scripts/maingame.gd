@@ -20,6 +20,7 @@ func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
 	$"CanvasLayer/PauseUnpause".show()
+	$huhAudio.play()
 	
 	
 func _on_continue_released():

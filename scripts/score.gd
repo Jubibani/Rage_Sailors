@@ -15,7 +15,8 @@ func _process(delta: float) -> void:
 	
 func _on_score_collected() -> void:
 	while GlobalHighScore.score < 100000000: #a temporary fix
-		await get_tree().create_timer(1.3).timeout
+		await get_tree().create_timer(1.3, false).timeout
+		# 'false' what is a couroutine?
 		score = score + 1
 		print_debug("score: ", score)
 		if GlobalHighScore.score >  100000000 :
@@ -27,5 +28,4 @@ func _on_score_collected() -> void:
 
 func _on_timer_timeout():
 	pass
-
 

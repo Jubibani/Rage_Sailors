@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=39 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://scripts/CollectedCoins.gd" id="25_o24yq"]
 [ext_resource type="Script" path="res://scripts/score.gd" id="26_2lu3s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
+[ext_resource type="AudioStream" uid="uid://cg7vx7duj02se" path="res://sounds/huh sound.mp3" id="28_hux4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sahg"]
 size = Vector2(49, 49)
@@ -319,10 +320,12 @@ text = "Score: "
 process_mode = 1
 autostart = true
 
+[node name="huhAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_hux4u")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
-[connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="score" method="_on_menu_released"]
 [connection signal="timeout" from="CanvasLayer/PauseUnpause/PauseTimer" to="CanvasLayer/PauseUnpause" method="_on_pause_timer_timeout"]
 [connection signal="ready" from="shipPlayer" to="shipPlayer" method="_on_ready"]
 [connection signal="released" from="shipPlayer/menuPause" to="." method="_on_menu_released"]
