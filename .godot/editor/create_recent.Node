@@ -1,13 +1,13 @@
+ColorRect
+Control
 TextureRect
 AudioStreamPlayer
 Timer
 Area3D
 CollisionShape3D
 Label
-Control
 CanvasLayer
 TouchScreenButton
-ColorRect
 Node3D
 Node
 Sprite2D

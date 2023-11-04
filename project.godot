@@ -24,6 +24,7 @@ Global_Coin="*res://scripts/GlobalScript.gd"
 CollectedCoins="*res://scripts/CollectedCoins.gd"
 GlobalHighScore="*res://scripts/GlobalHighScore.gd"
 GlobalPlayer="*res://scripts/Global_Player.gd"
+GetLastScore="*res://scripts/get_last_score.gd"
 
 [display]
 

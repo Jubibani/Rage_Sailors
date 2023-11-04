@@ -45,7 +45,11 @@ func _physics_process(delta):
 	if collision:
 		if !collider_disabled:
 			print("Collided with: ", collision.get_collider())
+			#optional: this can be improved with animation or shake
 			$damageAudio.play()
+			$hurt_hud.show()
+			await get_tree().create_timer(0.3).timeout
+			$hurt_hud.hide()
 			player_health -= 1
 			no_health = player_health
 			print_debug("remaining_health: ", no_health)
@@ -54,7 +58,7 @@ func _physics_process(delta):
 				# optional: put last end highscore
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 				print("Collided with: ", collision.get_collider())
-				print_debug("your last score: ", GlobalHighScore.score)
+				print_debug("your last score from ship.script: ", GlobalHighScore.score)
 
 # some buttons
 func _on_menu_pressed():

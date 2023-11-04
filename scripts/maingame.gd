@@ -7,7 +7,7 @@ var done_time:int=0
 var score :int=0:
 	set(value):
 		score = value
-		HUD.score = score
+		HUD.score = GlobalHighScore.score
 # Called when the node enters the scene tree for the first time.
 func _upstart() -> void:
 	$splashSound.play()
@@ -33,6 +33,14 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_upstart()
 	#$shipPlayer.hide()
+	
+	#save config file for the score
+	var last_score_config = ConfigFile.new()
+	#storing for the value
+	#last_score_config.set_value("your last score: ", score)
+	
+	# saving the file
+	last_score_config.save("user://scores.cfg")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

@@ -76,7 +76,7 @@ text = "Again
 "
 
 [node name="menu" type="TouchScreenButton" parent="ColorRect"]
-position = Vector2(353, 929)
+position = Vector2(353, 1001)
 scale = Vector2(4.77083, 2.35417)
 texture_normal = ExtResource("2_d5slv")
 texture_pressed = ExtResource("4_nrwss")
@@ -85,9 +85,9 @@ shape = SubResource("RectangleShape2D_pbbho")
 [node name="menu2" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 418.0
-offset_top = 937.0
+offset_top = 1009.0
 offset_right = 532.0
-offset_bottom = 1087.0
+offset_bottom = 1159.0
 theme_override_fonts/font = ExtResource("1_gn0o7")
 theme_override_font_sizes/font_size = 90
 text = "Menu
@@ -119,10 +119,22 @@ text = "Highscore:"
 [node name="score" type="Label" parent="ColorRect"]
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
-offset_left = 576.0
-offset_top = 256.0
-offset_right = 1334.0
-offset_bottom = 359.0
+offset_left = 571.0
+offset_top = 261.0
+offset_right = 1329.0
+offset_bottom = 364.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "x"
+script = ExtResource("6_v1tyu")
+
+[node name="score2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 380.0
+offset_right = 1135.0
+offset_bottom = 483.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
@@ -139,7 +151,7 @@ offset_bottom = 484.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
-text = "score: 9999"
+text = "score:"
 
 [node name="labelScore2" type="Label" parent="ColorRect"]
 layout_mode = 0
@@ -150,7 +162,7 @@ offset_bottom = 484.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
-text = "score: 9999"
+text = "score:"
 
 [node name="gameover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ndbrh")

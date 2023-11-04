@@ -177,6 +177,12 @@ modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), 
 transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 0, -0.9, -1.50996e-07, -7.54979e-08, -14.1373, 0.191373, 0.000805855)
 script = ExtResource("4_jqq52")
 
+[node name="hurt_hud" type="ColorRect" parent="shipPlayer"]
+visible = false
+modulate = Color(0.713726, 0.129412, 0, 0.635294)
+offset_right = 904.0
+offset_bottom = 1600.0
+
 [node name="Camera3D" type="Camera3D" parent="shipPlayer"]
 transform = Transform3D(-0.999707, 0.011213, 0.0214475, 0.0213071, 0.828051, 0.560248, 0.0114775, -0.560541, 0.828047, 0.21274, 4.63173, -7.7931)
 current = true
@@ -305,7 +311,7 @@ theme_override_font_sizes/font_size = 60
 text = "x"
 script = ExtResource("26_2lu3s")
 
-[node name="Highscore" type="Label" parent="."]
+[node name="Highscore" type="Label" parent="." groups=["Persist"]]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

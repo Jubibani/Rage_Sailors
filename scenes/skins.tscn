@@ -48,6 +48,7 @@ theme_override_font_sizes/font_size = 90
 text = "menu"
 
 [node name="dev" type="Label" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 232.0
 offset_right = 889.0
@@ -58,6 +59,7 @@ theme_override_font_sizes/font_size = 120
 text = "Dev is trying his best :>"
 
 [node name="coins" type="Label" parent="."]
+layout_mode = 0
 offset_left = 80.0
 offset_top = 736.0
 offset_right = 1050.0
@@ -72,6 +74,7 @@ upcoming update patches"
 
 [node name="golden coin" type="Label" parent="."]
 modulate = Color(1, 0.976471, 0, 1)
+layout_mode = 0
 offset_left = 405.0
 offset_top = 736.0
 offset_right = 645.0
@@ -82,6 +85,7 @@ theme_override_font_sizes/font_size = 120
 text = "coins"
 
 [node name="dev2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 248.0
 offset_top = 320.0
 offset_right = 1081.0
@@ -93,6 +97,7 @@ text = "coming soon !"
 
 [node name="dev3" type="Label" parent="."]
 modulate = Color(0.898039, 0.113725, 0, 1)
+layout_mode = 0
 offset_left = 240.0
 offset_top = 320.0
 offset_right = 1073.0
@@ -104,6 +109,7 @@ text = "coming soon !"
 
 [node name="colored skins" type="Label" parent="."]
 modulate = Color(0.443137, 0.27451, 0.0392157, 1)
+layout_mode = 0
 offset_left = 354.0
 offset_top = 836.0
 offset_right = 506.0
@@ -115,6 +121,7 @@ text = "skins"
 
 [node name="colored maps" type="Label" parent="."]
 modulate = Color(0.0784314, 0.356863, 0.403922, 1)
+layout_mode = 0
 offset_left = 559.0
 offset_top = 835.0
 offset_right = 711.0
@@ -126,6 +133,7 @@ text = "maps"
 
 [node name="colored char" type="Label" parent="."]
 modulate = Color(1, 0, 0.32549, 1)
+layout_mode = 0
 offset_left = 80.0
 offset_top = 936.0
 offset_right = 380.0
@@ -137,6 +145,7 @@ text = "characters"
 
 [node name="colored items" type="Label" parent="."]
 modulate = Color(1, 0.498039, 0.168627, 1)
+layout_mode = 0
 offset_left = 440.0
 offset_top = 936.0
 offset_right = 740.0
