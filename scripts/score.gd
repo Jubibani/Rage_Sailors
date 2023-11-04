@@ -5,7 +5,7 @@ var score:int = 0:
 	set (mod_value):
 		score = mod_value
 		text = str(score)
-
+var last_score:int=0
 func _ready() -> void:
 	$".".text = str(GlobalHighScore.score_collected.connect(_on_score_collected))
 	
@@ -24,7 +24,7 @@ func _on_score_collected() -> void:
 		if GlobalPlayer.Player_Status == 0:
 			print_debug("score: ", score)
 			get_line_count()
-		
+	
 
 func _on_timer_timeout():
 	pass

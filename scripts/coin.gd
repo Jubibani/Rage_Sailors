@@ -7,6 +7,6 @@ func _coin_collected(body: Node3D) -> void:
 	# refer to score text
 	prints("collected")
 	Global_Coin.coin_collected.emit()
-	$"../../coinAudio".play()
+	$"../coinAudio".play()
 	queue_free()
 	

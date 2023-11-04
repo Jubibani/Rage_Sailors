@@ -11,7 +11,7 @@ var collider_disabled = false
 
 
 func _on_ready():
-	pass
+	GlobalHighScore.score
 func life_status():
 	no_health
 func _physics_process(delta):
@@ -54,6 +54,7 @@ func _physics_process(delta):
 				# optional: put last end highscore
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 				print("Collided with: ", collision.get_collider())
+				print_debug("your last score: ", GlobalHighScore.score)
 
 # some buttons
 func _on_menu_pressed():
@@ -94,4 +95,5 @@ func _on_jump_pressed() -> void:
 func _on_timer_timeout() -> void:
 #	print_debug("Jump cooldown over. You can jump again now.")
 #	print_debug("jumps: ", jump)
+	print_debug("invisibility is off!")
 	pass

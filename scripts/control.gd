@@ -27,8 +27,8 @@ func _on_options_released() -> void:
 
 
 func _on_skins_released() -> void:
-	get_tree().change_scene_to_file("res://scenes/dev.tscn")
+	get_tree().change_scene_to_file("res://scenes/skins.tscn")
 	
-# from overvation: The node ButtonAudio properties is set to "autoplay" That is why there
+# from overvation: The node ButtonAudkinio properties is set to "autoplay" That is why there
 # is a sound after button click not because of the func you set but because of auto play.
 # so therefore, your code needs mmore polishing and checking.

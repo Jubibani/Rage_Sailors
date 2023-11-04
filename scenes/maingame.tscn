@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=41 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -28,6 +28,8 @@
 [ext_resource type="Script" path="res://scripts/score.gd" id="26_2lu3s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="26_tjj7e"]
 [ext_resource type="AudioStream" uid="uid://cg7vx7duj02se" path="res://sounds/huh sound.mp3" id="28_hux4u"]
+[ext_resource type="AudioStream" uid="uid://jkjysf1fmpii" path="res://sounds/river sound.mp3" id="29_ioy0k"]
+[ext_resource type="AudioStream" uid="uid://83qkndexs5ys" path="res://sounds/sound splash soumd.mp3" id="30_ytmqr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sahg"]
 size = Vector2(49, 49)
@@ -323,6 +325,12 @@ autostart = true
 [node name="huhAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_hux4u")
 
+[node name="mainBackgroundSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_ioy0k")
+
+[node name="splashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_ytmqr")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/continue" to="." method="_on_continue_released"]
 [connection signal="released" from="CanvasLayer/PauseUnpause/menu" to="CanvasLayer/PauseUnpause" method="_on_menu_released"]
@@ -333,3 +341,4 @@ stream = ExtResource("28_hux4u")
 [connection signal="pressed" from="shipPlayer/rightt" to="shipPlayer" method="_on_rightt_pressed"]
 [connection signal="pressed" from="shipPlayer/jump" to="shipPlayer" method="_on_jump_pressed"]
 [connection signal="timeout" from="shipPlayer/Timer" to="shipPlayer" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

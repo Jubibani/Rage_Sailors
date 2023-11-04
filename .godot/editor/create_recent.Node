@@ -1,5 +1,6 @@
-Timer
+TextureRect
 AudioStreamPlayer
+Timer
 Area3D
 CollisionShape3D
 Label

@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8auqcn5w1ju4"]
+
+[ext_resource type="Script" path="res://scripts/dev.gd" id="1_qrd1i"]
+[ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="1_to0sp"]
+[ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="2_u7vyq"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="3_yxbka"]
+[ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="4_io2y2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fevya"]
+size = Vector2(49, 49)
+
+[node name="skins" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qrd1i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.403922, 1, 0.607843, 1)
+
+[node name="menu" type="TouchScreenButton" parent="ColorRect"]
+modulate = Color(1, 1, 1, 0.372549)
+position = Vector2(56, 64)
+scale = Vector2(4.5, 2.16667)
+texture_normal = ExtResource("1_to0sp")
+texture_pressed = ExtResource("2_u7vyq")
+shape = SubResource("RectangleShape2D_fevya")
+
+[node name="menu2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 64.0
+offset_right = 225.0
+offset_bottom = 147.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 90
+text = "menu"
+
+[node name="dev" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 232.0
+offset_right = 889.0
+offset_bottom = 354.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "Dev is trying his best :>"
+
+[node name="coins" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 736.0
+offset_right = 1050.0
+offset_bottom = 1128.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "Keep your coins to buy 
+upcoming skins, maps and 
+characters, items from the 
+upcoming update patches"
+
+[node name="golden coin" type="Label" parent="."]
+modulate = Color(1, 0.976471, 0, 1)
+offset_left = 405.0
+offset_top = 736.0
+offset_right = 645.0
+offset_bottom = 858.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "coins"
+
+[node name="dev2" type="Label" parent="."]
+offset_left = 248.0
+offset_top = 320.0
+offset_right = 1081.0
+offset_bottom = 442.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "coming soon !"
+
+[node name="dev3" type="Label" parent="."]
+modulate = Color(0.898039, 0.113725, 0, 1)
+offset_left = 240.0
+offset_top = 320.0
+offset_right = 1073.0
+offset_bottom = 442.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "coming soon !"
+
+[node name="colored skins" type="Label" parent="."]
+modulate = Color(0.443137, 0.27451, 0.0392157, 1)
+offset_left = 354.0
+offset_top = 836.0
+offset_right = 506.0
+offset_bottom = 940.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "skins"
+
+[node name="colored maps" type="Label" parent="."]
+modulate = Color(0.0784314, 0.356863, 0.403922, 1)
+offset_left = 559.0
+offset_top = 835.0
+offset_right = 711.0
+offset_bottom = 939.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "maps"
+
+[node name="colored char" type="Label" parent="."]
+modulate = Color(1, 0, 0.32549, 1)
+offset_left = 80.0
+offset_top = 936.0
+offset_right = 380.0
+offset_bottom = 1040.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "characters"
+
+[node name="colored items" type="Label" parent="."]
+modulate = Color(1, 0.498039, 0.168627, 1)
+offset_left = 440.0
+offset_top = 936.0
+offset_right = 740.0
+offset_bottom = 1040.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "items"
+
+[node name="button Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_io2y2")
+autoplay = true
+
+[connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]

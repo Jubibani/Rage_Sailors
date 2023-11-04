@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://behgi0ix7dmot"]
+[gd_scene load_steps=13 format=3 uid="uid://behgi0ix7dmot"]
 
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_gn0o7"]
 [ext_resource type="Script" path="res://scripts/Gameover.gd" id="1_ypiao"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="5_77ney"]
 [ext_resource type="AudioStream" uid="uid://bneyi6xpq8xr1" path="res://sounds/8bit explosion(2).mp3" id="6_ndbrh"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="6_sddhr"]
+[ext_resource type="Script" path="res://scripts/last_score.gd" id="6_v1tyu"]
 [ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="8_gtnx0"]
 [ext_resource type="AudioStream" uid="uid://duiyiayrfvvjr" path="res://sounds/you suck + oh slap .mp3" id="9_j7ysl"]
 
@@ -92,8 +93,7 @@ theme_override_font_sizes/font_size = 90
 text = "Menu
  "
 
-[node name="Highscore" type="Label" parent="ColorRect"]
-modulate = Color(0.882353, 0.894118, 0.329412, 1)
+[node name="labelHighScore" type="Label" parent="ColorRect"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 262.0
@@ -102,13 +102,50 @@ offset_bottom = 365.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
-text = "Highscore: 9999"
+text = "Highscore:"
+
+[node name="labelHighScore2" type="Label" parent="ColorRect"]
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 48.0
+offset_top = 262.0
+offset_right = 806.0
+offset_bottom = 365.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "Highscore:"
 
 [node name="score" type="Label" parent="ColorRect"]
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 576.0
+offset_top = 256.0
+offset_right = 1334.0
+offset_bottom = 359.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "x"
+script = ExtResource("6_v1tyu")
+
+[node name="labelScore" type="Label" parent="ColorRect"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 37.0
 offset_top = 381.0
 offset_right = 795.0
+offset_bottom = 484.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_77ney")
+theme_override_font_sizes/font_size = 90
+text = "score: 9999"
+
+[node name="labelScore2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 381.0
+offset_right = 800.0
 offset_bottom = 484.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_77ney")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://83qkndexs5ys"
+path="res://.godot/imported/sound splash soumd.mp3-20fc15e72e2693775006b104b7b6b76e.mp3str"
+
+[deps]
+
+source_file="res://sounds/sound splash soumd.mp3"
+dest_files=["res://.godot/imported/sound splash soumd.mp3-20fc15e72e2693775006b104b7b6b76e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

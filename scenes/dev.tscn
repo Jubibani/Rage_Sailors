@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://3xq5semxvhdj"]
+[gd_scene load_steps=8 format=3 uid="uid://3xq5semxvhdj"]
 
 [ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="1_0mgyy"]
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_mff3o"]
 [ext_resource type="Script" path="res://scripts/dev.gd" id="1_rqivt"]
 [ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="2_xjd5s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="5_c51ai"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="6_8mkq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvfoo"]
 size = Vector2(49, 49)
@@ -69,8 +70,41 @@ theme_override_fonts/font = ExtResource("1_mff3o")
 theme_override_font_sizes/font_size = 120
 text = "coming soon !"
 
+[node name="dev3" type="Label" parent="."]
+modulate = Color(0.898039, 0.113725, 0, 1)
+offset_left = 256.0
+offset_top = 800.0
+offset_right = 1089.0
+offset_bottom = 922.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mff3o")
+theme_override_font_sizes/font_size = 120
+text = "coming soon !"
+
 [node name="button Audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_c51ai")
 autoplay = true
+
+[node name="stay" type="Label" parent="."]
+modulate = Color(0.815686, 0.482353, 0.352941, 1)
+offset_left = 8.0
+offset_top = 944.0
+offset_right = 1108.0
+offset_bottom = 1140.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mff3o")
+theme_override_font_sizes/font_size = 95
+text = "! The Game is still in development !"
+
+[node name="stay2" type="Label" parent="."]
+modulate = Color(1, 0.737255, 0.203922, 1)
+offset_left = 200.0
+offset_top = 1056.0
+offset_right = 1045.0
+offset_bottom = 1222.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_8mkq1")
+theme_override_font_sizes/font_size = 80
+text = "! stay tuned !"
 
 [connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]
