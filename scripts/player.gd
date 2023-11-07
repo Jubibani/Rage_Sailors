@@ -4,6 +4,7 @@ const JUMP_VELOCITY = 7
 const MAX_JUMP:int=2
 var DAMAGE:int = 1
 var no_health
+@onready var HighRecord = HighestRecord.record
 @onready var player_health = GlobalPlayer.Player_Status
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -55,6 +56,8 @@ func _physics_process(delta):
 			print_debug("remaining_health: ", no_health)
 			if no_health == 0:
 				print("Gameover!")
+				_on_save_score()
+				print_debug("record: ", HighRecord)
 				# optional: put last end highscore
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 				print("Collided with: ", collision.get_collider())
@@ -63,7 +66,14 @@ func _physics_process(delta):
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
-
+	
+func _on_save_score():
+	if GlobalHighScore.score > SaveLoad.highest_record :
+		SaveLoad.highest_record = GlobalHighScore.score
+		$score.text = str(GlobalHighScore.score)
+		print_debug("saved score")
+	SaveLoad.save_score()
+	
 func _on_left_pressed():
 	var left_direction = -transform.basis.x
 	left_direction = left_direction.normalized()

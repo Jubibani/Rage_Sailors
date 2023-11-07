@@ -1,14 +1,13 @@
 extends Node3D
 
-@onready var  HUD = $HUD
-
-var upstart_time:int= 3.5
+#@onready var HUD = $HUD
+var upstart_time:float= 3.5
 var done_time:int=0
 var score :int=0:
 	set(value):
 		score = value
-		HUD.score = GlobalHighScore.score
-# Called when the node enters the scene tree for the first time.
+		score = GlobalHighScore.score
+		
 func _upstart() -> void:
 	$splashSound.play()
 	$mainBackgroundSound.play()
@@ -25,32 +24,28 @@ func _upstart() -> void:
 		if done_time == 3:
 			print_debug("done_time: ", upstart_time)
 			$"shipPlayer".show()	
-		
+			
 func _ready() -> void:
-	#$main.play()
-	$CanvasLayer/PauseUnpause/PauseTimer.start()
+	$CanvasLayer/PauseUnpause/PauseTimer.start() #upstart
 	GlobalHighScore.score_collected.emit()
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_upstart()
-	#$shipPlayer.hide()
 	
-	#save config file for the score
-	var last_score_config = ConfigFile.new()
-	#storing for the value
-	#last_score_config.set_value("your last score: ", score)
-	
-	# saving the file
-	last_score_config.save("user://scores.cfg")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+#func _on_save_score():
+#	if GlobalHighScore.score > SaveLoad.highest_record :
+#		SaveLoad.highest_record = GlobalHighScore.score
+#		$score.text = str(GlobalHighScore.score)
+#		print_debug("saved score")
+#	SaveLoad.save_score()
 	
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
 	$"CanvasLayer/PauseUnpause".show()
 	$huhAudio.play()
-	
 	
 func _on_continue_released():
 	print("pressed continue")
@@ -72,6 +67,6 @@ func _score_collected(body: Node3D) -> void:
 	GlobalHighScore.score_collected.emit()
 	print_debug("score_gained!")
 
-
 func _on_timer_timeout() -> void:
 	$shipPlayer.show()
+	print_debug("player_start")

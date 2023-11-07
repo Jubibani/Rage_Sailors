@@ -1,5 +1,6 @@
 extends Label
 
+@onready var HighRecord = HighestRecord.record
 
 var score:int = 0:
 	set (mod_value):
@@ -23,10 +24,10 @@ func _on_score_collected() -> void:
 #	# saving the file
 #	last_score_config.save("user://scores.cfg")
 	var last_score:int=0
+	HighRecord = last_score
 	while GlobalHighScore.score < 100000000: #a temporary fix
 		last_score = GlobalHighScore.score
 		await get_tree().create_timer(1.3, false).timeout
-		save()
 		print_debug("last_score_saved")
 		# 'false' what is a couroutine?
 		score = score + 1
@@ -40,15 +41,3 @@ func _on_score_collected() -> void:
 	#getting last score value
 #	print_debug("last_score_printed: ", last_score)
 		
-func save():
-	var save_dict = {
-		"filename" : get_scene_file_path(),
-		"last_score" : GlobalHighScore.score
-	}
-	return save_dict
-func load():
-	pass
-	
-func _on_timer_timeout():
-	pass
-

@@ -1,8 +1,6 @@
-res://scenes/maingame.tscn
-res://scripts/score.gd
-res://scenes/Gameover.tscn
-res://scripts/last_score.gd
 res://scenes/control.tscn
+res://scenes/maingame.tscn
+res://scenes/Gameover.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
 res://Collision models/ship_player.tscn
@@ -14,6 +12,8 @@ res://scenes/pause_unpause.tscn
 res://hitbox.tscn
 res://scenes/hurtbox.tscn
 res://scenes/skins.tscn
+res://scripts/maingame.gd
 res://scripts/player.gd
 res://scripts/Gameover.gd
-res://scripts/maingame.gd
+res://scripts/Highest_Record.gd
+res://scripts/score.gd

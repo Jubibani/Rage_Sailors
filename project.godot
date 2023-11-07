@@ -25,6 +25,8 @@ CollectedCoins="*res://scripts/CollectedCoins.gd"
 GlobalHighScore="*res://scripts/GlobalHighScore.gd"
 GlobalPlayer="*res://scripts/Global_Player.gd"
 GetLastScore="*res://scripts/get_last_score.gd"
+SaveLoad="*res://scripts/save_load.gd"
+HighestRecord="*res://scripts/Highest_Record.gd"
 
 [display]
 
