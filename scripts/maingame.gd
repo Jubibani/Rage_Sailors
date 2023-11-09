@@ -28,6 +28,8 @@ func _upstart() -> void:
 func _ready() -> void:
 	$CanvasLayer/PauseUnpause/PauseTimer.start() #upstart
 	GlobalHighScore.score_collected.emit()
+	print_debug("Global_score", GlobalHighScore.score)
+	print_debug("Global_Last_score", GlobalHighScore.last_score)
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_upstart()
 	

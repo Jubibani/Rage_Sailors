@@ -13,6 +13,7 @@ var collider_disabled = false
 
 func _on_ready():
 	GlobalHighScore.score
+	#$"../Lobby_sound".play()
 func life_status():
 	no_health
 func _physics_process(delta):
@@ -57,7 +58,7 @@ func _physics_process(delta):
 			if no_health == 0:
 				print("Gameover!")
 				_on_save_score()
-				print_debug("record: ", HighRecord)
+				print_debug("Highrecord: ", HighRecord)
 				# optional: put last end highscore
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 				print("Collided with: ", collision.get_collider())
@@ -67,7 +68,7 @@ func _physics_process(delta):
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
 	
-func _on_save_score():
+func _on_save_score(): #first solution
 	if GlobalHighScore.score > SaveLoad.highest_record :
 		SaveLoad.highest_record = GlobalHighScore.score
 		$score.text = str(GlobalHighScore.score)
@@ -107,7 +108,8 @@ func _on_jump_pressed() -> void:
 	if int(jump) < int(MAX_JUMP):
 		_on_less_jump()
 func _on_timer_timeout() -> void:
-#	print_debug("Jump cooldown over. You can jump again now.")
-#	print_debug("jumps: ", jump)
 	print_debug("invisibility is off!")
+
+#Passing some variables(score)
+func transfer_data_between_scenes(Character_scene, GameOver_scene):
 	pass

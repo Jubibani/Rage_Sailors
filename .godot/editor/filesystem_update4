@@ -12,8 +12,13 @@ res://scenes/pause_unpause.tscn
 res://hitbox.tscn
 res://scenes/hurtbox.tscn
 res://scenes/skins.tscn
-res://scripts/maingame.gd
-res://scripts/player.gd
-res://scripts/Gameover.gd
-res://scripts/Highest_Record.gd
+res://scenes/Global_Music.tscn
+res://scenes/Global_lobby_audio.tscn
 res://scripts/score.gd
+res://scripts/Gameover.gd
+res://scripts/player.gd
+res://scripts/level.gd
+res://scripts/coin.gd
+res://scripts/GlobalHighScore.gd
+res://scripts/last_score.gd
+res://scripts/maingame.gd

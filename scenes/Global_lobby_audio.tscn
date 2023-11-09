@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cahau5fedi5ti"]
+
+[ext_resource type="AudioStream" uid="uid://dl20i40fpokts" path="res://sounds/game_lobby_music.mp3" id="1_kv6ly"]
+
+[node name="Lobby_Audio" type="AudioStreamPlayer"]
+stream = ExtResource("1_kv6ly")
+autoplay = true

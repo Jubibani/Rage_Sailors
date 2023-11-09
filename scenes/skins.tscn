@@ -49,14 +49,26 @@ text = "menu"
 
 [node name="dev" type="Label" parent="."]
 layout_mode = 0
-offset_left = 56.0
+offset_left = 64.0
 offset_top = 232.0
-offset_right = 889.0
+offset_right = 897.0
 offset_bottom = 354.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
 text = "Dev is trying his best :>"
+
+[node name="mechanics" type="Label" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 1168.0
+offset_right = 967.0
+offset_bottom = 1364.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "- More Gaming Mechanics
+ and Features To come! "
 
 [node name="coins" type="Label" parent="."]
 layout_mode = 0
