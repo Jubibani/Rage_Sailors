@@ -28,8 +28,6 @@ func _upstart() -> void:
 func _ready() -> void:
 	$CanvasLayer/PauseUnpause/PauseTimer.start() #upstart
 	GlobalHighScore.score_collected.emit()
-	print_debug("Global_score", GlobalHighScore.score)
-	print_debug("Global_Last_score", GlobalHighScore.last_score)
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_upstart()
 	
@@ -64,6 +62,7 @@ func _on_continue_released():
 	$"CanvasLayer/Countdown/1".hide()
 	print("timer ended")
 	get_tree().paused = false #execute unpause
+
 	
 func _score_collected(body: Node3D) -> void:
 	GlobalHighScore.score_collected.emit()
@@ -71,4 +70,3 @@ func _score_collected(body: Node3D) -> void:
 
 func _on_timer_timeout() -> void:
 	$shipPlayer.show()
-	print_debug("player_start")

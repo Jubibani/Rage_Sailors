@@ -1,7 +1,7 @@
 bdbec74c6e5bd72edee867077d70896c
-::res://::1699507473
+::res://::1699596557
 export_presets.cfg::TextFile::-1::1699426222::0::1::::<><>::
-hitbox.tscn::PackedScene::7697680432385656050::1699425952::0::1::::<><>::res://scripts/hitbox.gd
+hitbox.tscn::PackedScene::7697680432385656050::1699513753::0::1::::<><>::res://scripts/hitbox.gd
 icon.svg::CompressedTexture2D::8504181332622596320::1694417996::1694418004::1::::<><>::
 README.md::TextFile::-1::1696665526::0::1::::<><>::
 ::res://addons/::1695298488
@@ -3116,14 +3116,14 @@ yellow_pressed.png::CompressedTexture2D::1574973575114402049::1427452856::169483
 spritesheetInfo.txt::TextFile::-1::1427451326::0::1::::<><>::
 UIpackSheet_magenta.png::CompressedTexture2D::6053778903480158403::1427453628::1694830388::1::::<><>::
 UIpackSheet_transparent.png::CompressedTexture2D::2727739433241525576::1427453624::1694830388::1::::<><>::
-::res://Collision models/::1699425951
+::res://Collision models/::1699513752
 boat_small.tscn::PackedScene::3029658150077806924::1695276774::0::1::::<><>::uid://3yyx5oap6ul5
 formation_large_stone.tscn::PackedScene::2998059970680677385::1695368183::0::1::::<><>::uid://6h51wm4t0hdy
 formation_stone.tscn::PackedScene::4054066297495462645::1695276774::0::1::::<><>::uid://ce2j3mrhexddn
 gameOver.tscn::PackedScene::8890027537740705905::1695278473::0::1::::<><>::
 Long.tscn::PackedScene::2861238810785235204::1695202314::0::1::::<><>::
 ship_dark.tscn::PackedScene::1221259681653121923::1695188528::0::1::::<><>::uid://csio340lvq6nr
-ship_player.tscn::PackedScene::1127922666863716306::1699425951::0::1::::<><>::uid://3yyx5oap6ul5::::res://assets/kenney_pirate-kit/Models/glTF format/boat_small.gltf
+ship_player.tscn::PackedScene::1127922666863716306::1699513752::0::1::::<><>::uid://3yyx5oap6ul5::::res://assets/kenney_pirate-kit/Models/glTF format/boat_small.gltf
 ship_wreck.tscn::PackedScene::5451125984251715687::1695188528::0::1::::<><>::uid://bimpbrbuhbp6c
 ::res://example/::1695297590
 ::res://example/boujie_water_shader/::1696403774
@@ -3176,56 +3176,56 @@ Volt5x5.ttf::FontFile::4957223677862400118::1694745636::1694745642::1::::<><>::
 ::res://fonts/pixelfy/::1695297127
 Pixelfy.ttf::FontFile::8441145622259997376::1604541530::1695297127::1::::<><>::
 README!.txt::TextFile::-1::1600167238::0::1::::<><>::
-::res://modules/::1699425952
-module1.tscn::PackedScene::1120513614318185903::1699425951::0::1::::<><>::res://scripts/module.gd<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://dl1byj5susni2::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallB.obj
-module2.tscn::PackedScene::2003730060471804570::1699425952::0::1::::<><>::res://scripts/module.gd<>uid://85ogsnqoawfb::::res://assets/kenney_pirate-kit/Models/OBJ format/formationLarge_stone.obj<>uid://n53gs2p5m0j2::::res://assets/kenney_pirate-kit/Models/OBJ format/tower.obj<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://cvpuywbkitqs3::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallA.obj
+::res://modules/::1699513753
+module1.tscn::PackedScene::1120513614318185903::1699513752::0::1::::<><>::res://scripts/module.gd<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://dl1byj5susni2::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallB.obj
+module2.tscn::PackedScene::2003730060471804570::1699513753::0::1::::<><>::res://scripts/module.gd<>uid://85ogsnqoawfb::::res://assets/kenney_pirate-kit/Models/OBJ format/formationLarge_stone.obj<>uid://n53gs2p5m0j2::::res://assets/kenney_pirate-kit/Models/OBJ format/tower.obj<>uid://b1c2kbfdxugax::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_wreck.obj<>uid://cvpuywbkitqs3::::res://assets/kenney_nature-kit/Models/OBJ format/stone_tallA.obj
 module3.tscn::PackedScene::9089438733422649777::1696724718::0::1::::<><>::res://scripts/module.gd<>uid://b1c2kbfdxugax
-module4.tscn::PackedScene::7087052206557763817::1699425951::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_dark.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://rb2avqbm8mk1::::res://scenes/coin.tscn<>res://scripts/coin.gd<>uid://bdbs6vti44eic::::res://sounds/game coin sound.mp3
+module4.tscn::PackedScene::7087052206557763817::1699513752::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly::::res://assets/kenney_pirate-kit/Models/OBJ format/ship_dark.obj<>uid://52cjws3lrhm7::::res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj<>uid://rb2avqbm8mk1::::res://scenes/coin.tscn<>res://scripts/coin.gd<>uid://bdbs6vti44eic::::res://sounds/game coin sound.mp3
 module5.tscn::PackedScene::6579346624067554645::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module6.tscn::PackedScene::3934930957893616651::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://dcvw03ri3orqp
 module7.tscn::PackedScene::9094188507750606801::1695368182::0::1::::<><>::res://scripts/module.gd<>uid://bu0xv1orn03ly
 module8.tscn::PackedScene::4833303507876082463::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module9.tscn::PackedScene::3365492894201265706::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://biyjuy2pp5hg8
 module10.tscn::PackedScene::90474163805855410::1695368183::0::1::::<><>::res://scripts/module.gd<>uid://dl1byj5susni2
-::res://scenes/::1699425952
+::res://scenes/::1699516202
 coin.gd::GDScript::-1::1696716513::0::1::::<>RefCounted<>::
-coin.tscn::PackedScene::1196915206175311238::1699425951::0::1::::<><>::
-control.tscn::PackedScene::256995862949116344::1699425951::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/control.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>res://scripts/soundsAudio.gd<>uid://dd8dg0qo17231::::res://assets/latest.png<>uid://ctjtu8urxq2i1::::res://assets/boat_shore.png<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://c51ieggojeddq::::res://scenes/Scores.tscn
-dev.tscn::PackedScene::2013794308086006563::1699425952::0::1::::<><>::uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/dev.gd<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf
-Gameover.tscn::PackedScene::2682006617361585687::1699425951::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/Gameover.gd<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://bneyi6xpq8xr1::::res://sounds/8bit explosion(2).mp3<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>res://scripts/last_score.gd<>uid://c51ieggojeddq::::res://scenes/Scores.tscn<>uid://duiyiayrfvvjr::::res://sounds/you suck + oh slap .mp3
-Global_lobby_audio.tscn::PackedScene::4787329311153345334::1699425952::0::1::::<><>::uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
-Global_Music.tscn::PackedScene::288901381463590678::1699425952::0::1::::<><>::uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
-hurtbox.tscn::PackedScene::4957403218568584031::1699425952::0::1::::<><>::
-maingame.tscn::PackedScene::4004332264944006950::1699425951::0::1::::<><>::res://scripts/maingame.gd<>uid://d2q8y0rtu2njt::::res://modules/module3.tscn<>res://scripts/player.gd<>uid://qcmysdc04y1g::::res://Collision models/ship_player.tscn<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://p71xwawyruxj::::res://modules/module1.tscn<>uid://3sve2nrss2io::::res://modules/module2.tscn<>res://scripts/level.gd<>uid://c78ayj4g08730::::res://modules/module4.tscn<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c00c43s6bd7vd::::res://modules/module5.tscn<>uid://bwcd0ddn06jlj::::res://modules/module6.tscn<>uid://d2tj7rgnpyjob::::res://modules/module7.tscn<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://ca4j2j3gk4wlj::::res://modules/module8.tscn<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://bn7jf803mnduo::::res://modules/module9.tscn<>uid://bj3djjm7st51::::res://modules/module10.tscn<>uid://6twnurdx5a2u::::res://sounds/flap.mp3<>uid://6w2ycyuml6tj::::res://scenes/pause_unpause.tscn<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://ceh35h1cwriwb::::res://sounds/damaged sound.mp3<>res://scripts/CollectedCoins.gd<>res://scripts/score.gd<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://cg7vx7duj02se::::res://sounds/huh sound.mp3<>uid://jkjysf1fmpii::::res://sounds/river sound.mp3<>uid://83qkndexs5ys::::res://sounds/sound splash soumd.mp3<>uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
-pause_unpause.tscn::PackedScene::2222952824273950627::1699425952::0::1::::<><>::uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>res://scripts/pause_unpause.gd<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
-Scores.tscn::PackedScene::6932673702307690226::1699425952::0::1::::<><>::res://scripts/Scores.gd<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>res://scripts/CollectedCoins.gd<>res://scripts/score.gd
+coin.tscn::PackedScene::1196915206175311238::1699513752::0::1::::<><>::
+control.tscn::PackedScene::256995862949116344::1699513752::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/control.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>res://scripts/soundsAudio.gd<>uid://dd8dg0qo17231::::res://assets/latest.png<>uid://ctjtu8urxq2i1::::res://assets/boat_shore.png<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://c51ieggojeddq::::res://scenes/Scores.tscn
+dev.tscn::PackedScene::2013794308086006563::1699513753::0::1::::<><>::uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/dev.gd<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf
+Gameover.tscn::PackedScene::2682006617361585687::1699513752::0::1::::<><>::uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>res://scripts/Gameover.gd<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://bneyi6xpq8xr1::::res://sounds/8bit explosion(2).mp3<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>res://scripts/last_score.gd<>uid://c51ieggojeddq::::res://scenes/Scores.tscn<>uid://duiyiayrfvvjr::::res://sounds/you suck + oh slap .mp3
+Global_lobby_audio.tscn::PackedScene::4787329311153345334::1699513753::0::1::::<><>::uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
+Global_Music.tscn::PackedScene::288901381463590678::1699513753::0::1::::<><>::uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
+hurtbox.tscn::PackedScene::4957403218568584031::1699513753::0::1::::<><>::
+maingame.tscn::PackedScene::4004332264944006950::1699516202::0::1::::<><>::res://scripts/maingame.gd<>uid://d2q8y0rtu2njt::::res://modules/module3.tscn<>res://scripts/player.gd<>uid://qcmysdc04y1g::::res://Collision models/ship_player.tscn<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://p71xwawyruxj::::res://modules/module1.tscn<>uid://3sve2nrss2io::::res://modules/module2.tscn<>res://scripts/level.gd<>uid://c78ayj4g08730::::res://modules/module4.tscn<>uid://cp2rb13t1lvpo::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png<>uid://c00c43s6bd7vd::::res://modules/module5.tscn<>uid://bwcd0ddn06jlj::::res://modules/module6.tscn<>uid://d2tj7rgnpyjob::::res://modules/module7.tscn<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://c4bpfh6vdxc2j::::res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://ca4j2j3gk4wlj::::res://modules/module8.tscn<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://bn7jf803mnduo::::res://modules/module9.tscn<>uid://bj3djjm7st51::::res://modules/module10.tscn<>uid://6twnurdx5a2u::::res://sounds/flap.mp3<>uid://6w2ycyuml6tj::::res://scenes/pause_unpause.tscn<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://ceh35h1cwriwb::::res://sounds/damaged sound.mp3<>res://scripts/CollectedCoins.gd<>res://scripts/score.gd<>uid://denfwm7kr0aos::::res://sounds/button press.mp3<>uid://cg7vx7duj02se::::res://sounds/huh sound.mp3<>uid://jkjysf1fmpii::::res://sounds/river sound.mp3<>uid://83qkndexs5ys::::res://sounds/sound splash soumd.mp3<>uid://dl20i40fpokts::::res://sounds/game_lobby_music.mp3
+pause_unpause.tscn::PackedScene::2222952824273950627::1699513753::0::1::::<><>::uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>res://scripts/pause_unpause.gd<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
+Scores.tscn::PackedScene::6932673702307690226::1699513753::0::1::::<><>::res://scripts/Scores.gd<>uid://gno3ogeel56t::::res://assets/hud_coin.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://dsi7o2aoknly3::::res://fonts/pixelfy/Pixelfy.ttf<>res://scripts/CollectedCoins.gd<>res://scripts/score.gd
 ship.tscn::PackedScene::7586593883003766093::1695117235::0::1::::<><>::uid://bfqutw2m1mlpx
-skins.tscn::PackedScene::7090316246521731225::1699425952::0::1::::<><>::res://scripts/dev.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
-::res://scripts/::1699423832
+skins.tscn::PackedScene::7090316246521731225::1699513753::0::1::::<><>::res://scripts/dev.gd<>uid://bdw4kqayn1xa6::::res://assets/kenney_pixel-ui-pack/9-Slice/space.png<>uid://cdnd5nd6wgibp::::res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png<>uid://ccvk0qw2cv67s::::res://fonts/Volt5x5.ttf<>uid://denfwm7kr0aos::::res://sounds/button press.mp3
+::res://scripts/::1699513750
 Buttons.gd::GDScript::-1::1696716513::0::1::::<>Node<>::
-coin.gd::GDScript::-1::1699068237::0::1::::<>Area3D<>::
+coin.gd::GDScript::-1::1699512122::0::1::::<>Area3D<>::
 CollectedCoins.gd::GDScript::-1::1698901211::0::1::::<>Label<>::
 control.gd::GDScript::-1::1699420651::0::1::::<>Control<>::
 dev.gd::GDScript::-1::1699067994::0::1::::<>Control<>::
 Exit.gd::GDScript::-1::1696716513::0::1::::<>Button<>::
-Gameover.gd::GDScript::-1::1699422677::0::1::::<>Control<>::
+Gameover.gd::GDScript::-1::1699513628::0::1::::<>Control<>::
 get_last_score.gd::GDScript::-1::1699237255::0::1::::<>Node<>::
-GlobalHighScore.gd::GDScript::-1::1699422951::0::1::::<>Node<>::
+GlobalHighScore.gd::GDScript::-1::1699513253::0::1::::<>Node<>::
 GlobalScript.gd::GDScript::-1::1698518984::0::1::::<>Node<>::
 Global_Pause.gd::GDScript::-1::1698906370::0::1::::<>Node<>::
 Global_Player.gd::GDScript::-1::1698997090::0::1::::<>Node<>::
 Highest_Record.gd::GDScript::-1::1699341413::0::1::::<>Node<>::
 hitbox.gd::GDScript::-1::1698994178::0::1::::<>Area3D<>::
-last_score.gd::GDScript::-1::1699237255::0::1::::<>Label<>::
+last_score.gd::GDScript::-1::1699513415::0::1::::<>Label<>::
 left.gd::GDScript::-1::1696716513::0::1::::<>Button<>::
-level.gd::GDScript::-1::1698690259::0::1::::<>Node3D<>::
-maingame.gd::GDScript::-1::1699421023::0::1::::<>Node3D<>::
+level.gd::GDScript::-1::1699511370::0::1::::<>Node3D<>::
+maingame.gd::GDScript::-1::1699513750::0::1::::<>Node3D<>::
 menu.gd::GDScript::-1::1696716514::0::1::::<>Button<>::
 module.gd::GDScript::-1::1696722517::0::1::::<>Node3D<>::
 pause_unpause.gd::GDScript::-1::1699337738::0::1::::<>Control<>::
-player.gd::GDScript::-1::1699423832::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1699513750::0::1::::<>CharacterBody3D<>::
 save_load.gd::GDScript::-1::1699312105::0::1::::<>Node<>::
-score.gd::GDScript::-1::1699423238::0::1::::<>Label<>::
+score.gd::GDScript::-1::1699512529::0::1::::<>Label<>::
 Scores.gd::GDScript::-1::1698906263::0::1::::<>Node<>::
 soundsAudio.gd::GDScript::-1::1696716514::0::1::::<>Node<>::
 Timer.gd::GDScript::-1::1696723821::0::1::::<>Timer<>::

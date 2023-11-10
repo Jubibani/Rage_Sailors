@@ -20,7 +20,7 @@ func _on_exit_released() -> void:
 
 
 func _on_maps_released() -> void:
-	get_tree().change_scene_to_file("res://scenes/dev.tscn")
+	get_tree( ).change_scene_to_file("res://scenes/dev.tscn")
 
 
 func _on_options_released() -> void:

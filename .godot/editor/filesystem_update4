@@ -14,11 +14,10 @@ res://scenes/hurtbox.tscn
 res://scenes/skins.tscn
 res://scenes/Global_Music.tscn
 res://scenes/Global_lobby_audio.tscn
-res://scripts/score.gd
 res://scripts/Gameover.gd
-res://scripts/player.gd
-res://scripts/level.gd
-res://scripts/coin.gd
-res://scripts/GlobalHighScore.gd
-res://scripts/last_score.gd
+res://scripts/score.gd
 res://scripts/maingame.gd
+res://scripts/last_score.gd
+res://scripts/GlobalHighScore.gd
+res://scripts/player.gd
+res://scripts/control.gd
