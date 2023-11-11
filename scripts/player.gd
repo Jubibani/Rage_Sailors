@@ -46,7 +46,7 @@ func _physics_process(delta):
 	var collision = get_last_slide_collision()
 	if collision:
 		if !collider_disabled:
-			print("Collided with: ", collision.get_collider())
+#			print("Collided with: ", collision.get_collider())
 			#optional: this can be improved with animation or shake
 			$damageAudio.play()
 			$hurt_hud.show()
@@ -54,25 +54,25 @@ func _physics_process(delta):
 			$hurt_hud.hide()
 			player_health -= 1
 			no_health = player_health
-			print_debug("remaining_health: ", no_health)
+#			print_debug("remaining_health: ", no_health)
 			if no_health == 0:
 				print("Gameover!")
-				_on_save_score()
+#				_on_save_score()
 				# optional: put last end highscore
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
-				print("Collided with: ", collision.get_collider())
+#				print("Collided with: ", collision.get_collider())
 				print_debug("your last score from ship.script: ", GlobalHighScore.score)
 
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
 	
-func _on_save_score(): #first solution
-	if GlobalHighScore.score > SaveLoad.highest_record :
-		SaveLoad.highest_record = GlobalHighScore.score
-		$score.text = str(GlobalHighScore.score)
-		print_debug("saved score")
-	SaveLoad.save_score()
+#func _on_save_score(): #first solution
+#	if GlobalHighScore.score > SaveLoad.highest_record :
+#		SaveLoad.highest_record = GlobalHighScore.score
+#		$score.text = str(GlobalHighScore.score)
+#		print_debug("saved score")
+#	SaveLoad.save_score()
 	
 func _on_left_pressed():
 	var left_direction = -transform.basis.x
@@ -88,17 +88,18 @@ func _on_rightt_pressed() -> void:
 	
 var jump :int=0 	#the the default value
 var jump_value :int=1	#the value to be added
+
 func _on_less_jump():
 #	if int(jump) < int(MAX_JUMP):
 	print_debug("jumped!")
 	print("used jump: ", jump)
 	$jumpAudio.play()
 	velocity.y = JUMP_VELOCITY
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(1.2).timeout
 	jump=0
 func _on_more_jump(): # not implemented
 #	if int(jump) > int(MAX_JUMP):
-	await get_tree().create_timer(3.5).timeout
+	await get_tree().create_timer(4.5).timeout
 	print_debug("max jump exceeded!")
 	print("exceeded jump: ", jump)
 	jump = 0

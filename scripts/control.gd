@@ -2,6 +2,7 @@ extends Control
 @onready var buttonAudio = $ColorRect/buttonAudio
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$HUDScoreCoins.hide()
 	#GlobalMusic.play()
 	#GlobalLobbyAudio.play()
 	pass

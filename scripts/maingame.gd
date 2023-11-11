@@ -15,14 +15,10 @@ func _upstart() -> void:
 		done_time = done_time + 1
 		await get_tree().create_timer(0.3).timeout
 		$"shipPlayer".hide()
-		print_debug("done_time: ", upstart_time)
 		await get_tree().create_timer(0.3).timeout
 		$"shipPlayer".show()
-		print_debug("done_time: ", upstart_time)
 		await get_tree().create_timer(0.3).timeout
-		print_debug("done_time: ", upstart_time)
 		if done_time == 3:
-			print_debug("done_time: ", upstart_time)
 			$"shipPlayer".show()	
 			
 func _ready() -> void:

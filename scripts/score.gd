@@ -30,6 +30,7 @@ func _on_score_collected() -> void:
 		await get_tree().create_timer(1.5, false).timeout
 		# 'false' what is a couroutine?
 		score = score + 1
+		GlobalHighScore.score = last_score
 		print_debug("score: ", last_score)
 		if score >  100000000 :
 			print_debug("you're the king of the pirates!", last_score)
@@ -38,8 +39,8 @@ func _on_score_collected() -> void:
 			print_debug("last_score_printed: ", last_score) #getting the last score
 			if GlobalPlayer.Player_Status == 0:
 				await get_tree().create_timer(10.0, false).timeout
-	print_debug("Highrecord: ", last_score)
+	print_debug("GlobalHighscore.score: ", GlobalHighScore.score)
 	HighRecord = last_score
-	print_debug("HighRecord", last_score)
+	print_debug("HighRecord | last_score", last_score)
 func my_score():
 	print_debug("last_score_printed: ", last_score) 
