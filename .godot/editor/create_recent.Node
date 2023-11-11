@@ -1,3 +1,4 @@
+AnimationPlayer
 AudioStreamPlayer
 ColorRect
 Control
@@ -12,7 +13,6 @@ Node3D
 Node
 Sprite2D
 Sprite3D
-AnimationPlayer
 AnimationTree
 MeshInstance3D
 StaticBody3D

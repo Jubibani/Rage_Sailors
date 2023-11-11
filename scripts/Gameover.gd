@@ -6,12 +6,18 @@ func _ready() -> void:
 	$gameover.play()
 	await get_tree().create_timer(0.9).timeout
 	$yousuckAudio.play()
+	$ColorRect/Highescore_x.text = str(GlobalHighScore.score)
 	$ColorRect/score_x.text = str(GlobalHighScore.score)
 	print("from main: ", GlobalHighScore.score) # this works
 	
 	if GlobalHighScore.score < 5:
 		$"ColorRect/you suck_shadow".show()
 		$"ColorRect/you suck".show()
+	if GlobalHighScore.score > 5:
+		$ColorRect/boullets_shadow.show()
+		$ColorRect/boullets.show()
+		$ColorRect/boullets_white.show()
+		
 func last_score_collected():
 	print_debug("last_score_printed: ", GlobalHighScore.score)
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -66,3 +66,5 @@ func _score_collected(body: Node3D) -> void:
 
 func _on_timer_timeout() -> void:
 	$shipPlayer.show()
+
+#save function

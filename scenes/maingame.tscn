@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=45 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -51,6 +51,31 @@ fog_density = 0.1076
 fog_aerial_perspective = 0.7
 fog_sky_affect = 0.759
 volumetric_fog_enabled = true
+
+[sub_resource type="Animation" id="Animation_q4h6g"]
+resource_name = "weakShake"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.0003, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(5.65685, 1, 1, 1, 1.46409, 1, 1.46409),
+"update": 0,
+"values": [Vector3(0.213, 4.632, -7.493), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.113, 4.932, -5.793), Vector3(-0.113, 6.732, -6.793), Vector3(0.213, 4.632, -7.493)]
+}
+
+[sub_resource type="Animation" id="Animation_j27w8"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsquk"]
+_data = {
+"RESET": SubResource("Animation_j27w8"),
+"weakShake": SubResource("Animation_q4h6g")
+}
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3tsol"]
 size = Vector3(0.620956, 0.249291, 0.585958)
@@ -175,7 +200,7 @@ script = ExtResource("11_m4f8i")
 modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), ExtResource("4_gsb83"), ExtResource("13_oxc55"), ExtResource("14_frpyu"), ExtResource("15_570dw"), ExtResource("16_1xdyq"), ExtResource("17_ufinj"), ExtResource("18_vqm4g"), ExtResource("19_as1pv")])
 
 [node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
-transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 0, -0.9, -1.50996e-07, -7.54979e-08, -14.1373, 0.191373, 0.000805855)
+transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 1.97076e-20, -0.9, -1.50996e-07, -7.54979e-08, -15.137, 2, 0.001)
 script = ExtResource("4_jqq52")
 
 [node name="hurt_hud" type="ColorRect" parent="shipPlayer"]
@@ -185,9 +210,15 @@ offset_right = 904.0
 offset_bottom = 1600.0
 
 [node name="Camera3D" type="Camera3D" parent="shipPlayer"]
-transform = Transform3D(-0.999707, 0.011213, 0.0214475, 0.0213071, 0.828051, 0.560248, 0.0114775, -0.560541, 0.828047, 0.21274, 4.63173, -7.7931)
+transform = Transform3D(-1.11106, -0.0100855, -0.00341582, -0.00898539, 0.776459, 0.630104, 0.00333241, -0.630103, 0.776504, 0.213, 4.632, -7.493)
 current = true
 fov = 90.0
+
+[node name="cameraShake" type="AnimationPlayer" parent="shipPlayer"]
+speed_scale = 3.7
+libraries = {
+"": SubResource("AnimationLibrary_tsquk")
+}
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="shipPlayer"]
 transform = Transform3D(-1, 0, 0, 0, -1, -1.01644e-20, 0, -1.01644e-20, -1, -0.328882, 0.174895, -9.60655)
