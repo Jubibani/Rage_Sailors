@@ -14,10 +14,9 @@ var collider_disabled = false
 
 
 func _on_ready():
-	GlobalHighScore.score
 	#$"../Lobby_sound".play()
-func life_status():
-	no_health
+	pass
+	
 func _physics_process(delta):
 	if collider_disabled:
 		return
@@ -40,6 +39,7 @@ func _physics_process(delta):
 	move_and_slide()
 	var min_position = Vector3(5, 0.2, -1000)
 	var max_position = Vector3(6, 2.5, 1000)
+	
 	global_position = global_position.clamp(min_position, max_position)
 	# game over	
 	await get_tree().create_timer(3.5).timeout #upstart
@@ -48,23 +48,18 @@ func _physics_process(delta):
 	var collision = get_last_slide_collision()
 	if collision:
 		if !collider_disabled:
-			$cameraShake.play("weakShake")
-#			print("Collided with: ", collision.get_collider())
 			#optional: this can be improved with animation or shake
+			$hurt.show()
 			$damageAudio.play()
-			$hurt_hud.show()
-			$hurt_hud.hide()
 			player_health -= 1
 			no_health = player_health
-#			print_debug("remaining_health: ", no_health)
+			$hurt.hide()
+			$cameraShake.play("weakShake")
 			if no_health == 0:
 				print("Gameover!")
-#				_on_save_score()
-				# optional: put last end highscore
-				#get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 #				print("Collided with: ", collision.get_collider())
 				print_debug("your last score from ship.script: ", GlobalHighScore.score)
-
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
@@ -87,7 +82,6 @@ func _on_left_pressed():
 	#global_position = global_position.clamp(min_position, max_position)
 func _on_rightt_pressed() -> void:
 	print("pressed for right")
-	$cameraShake.play("right")
 	await get_tree().create_timer(1.2).timeout
 	
 var jump :int=0 	#the the default value
@@ -113,7 +107,7 @@ func _on_jump_pressed() -> void:
 		_on_less_jump()
 func _on_timer_timeout() -> void:
 	print_debug("invisibility is off!")
-
+# save
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	file.store_var(GlobalHighScore.score)

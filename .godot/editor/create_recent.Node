@@ -1,6 +1,6 @@
 AnimationPlayer
-AudioStreamPlayer
 ColorRect
+AudioStreamPlayer
 Control
 TextureRect
 Timer

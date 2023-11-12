@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=48 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -52,9 +52,49 @@ fog_aerial_perspective = 0.7
 fog_sky_affect = 0.759
 volumetric_fog_enabled = true
 
+[sub_resource type="Animation" id="Animation_lacdm"]
+resource_name = "up_down"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7, 1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-15.137, 2, 0.001), Vector3(-15.137, 2.1, 0.001), Vector3(-15.137, 2, 0.001), Vector3(-15.137, 2.1, 0.001), Vector3(-15.137, 2, 0.001)]
+}
+
+[sub_resource type="Animation" id="Animation_d8jwm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-15.137, 2, 0.001)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0nxb"]
+_data = {
+"RESET": SubResource("Animation_d8jwm"),
+"up_down": SubResource("Animation_lacdm")
+}
+
+[sub_resource type="Animation" id="Animation_j27w8"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_q4h6g"]
 resource_name = "weakShake"
-length = 0.3
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -62,14 +102,11 @@ tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.0003, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(5.65685, 1, 1, 1, 1.46409, 1, 1.46409),
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.0003, 0.0004, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(5.65685, 1, 1, 1, 1, 1.41421, 1.46409, 1, 1.46409, 1),
 "update": 0,
-"values": [Vector3(0.213, 4.632, -7.493), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.113, 4.932, -5.793), Vector3(-0.113, 6.732, -6.793), Vector3(0.213, 4.632, -7.493)]
+"values": [Vector3(0.213, 4.632, -7.493), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.21274, 4.63173, -7.7931), Vector3(0.113, 4.932, -5.793), Vector3(0.213, 4.932, -7.493), Vector3(0.113, 4.932, -5.793), Vector3(-0.113, 5.732, -6.793), Vector3(0.213, 4.632, -7.493), Vector3(0.113, 4.932, -5.793)]
 }
-
-[sub_resource type="Animation" id="Animation_j27w8"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tsquk"]
 _data = {
@@ -203,16 +240,21 @@ modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), 
 transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 1.97076e-20, -0.9, -1.50996e-07, -7.54979e-08, -15.137, 2, 0.001)
 script = ExtResource("4_jqq52")
 
-[node name="hurt_hud" type="ColorRect" parent="shipPlayer"]
+[node name="hurt" type="ColorRect" parent="shipPlayer"]
 visible = false
-modulate = Color(0.713726, 0.129412, 0, 0.635294)
 offset_right = 904.0
 offset_bottom = 1600.0
+color = Color(0.619608, 0.0941176, 0, 0.368627)
 
 [node name="Camera3D" type="Camera3D" parent="shipPlayer"]
-transform = Transform3D(-1.11106, -0.0100855, -0.00341582, -0.00898539, 0.776459, 0.630104, 0.00333241, -0.630103, 0.776504, 0.213, 4.632, -7.493)
+transform = Transform3D(-1.11061, -0.0235613, 0.0235632, -0.0106036, 0.91135, 0.411497, 0.0280528, -0.411087, 0.911165, 0.113, 4.932, -5.793)
 current = true
 fov = 90.0
+
+[node name="boatAnimation" type="AnimationPlayer" parent="shipPlayer"]
+libraries = {
+"": SubResource("AnimationLibrary_u0nxb")
+}
 
 [node name="cameraShake" type="AnimationPlayer" parent="shipPlayer"]
 speed_scale = 3.7
