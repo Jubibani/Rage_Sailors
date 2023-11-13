@@ -6,7 +6,8 @@ const MAX_JUMP:int=2
 var save_path := "user://variable.save"
 
 @onready var player_health = GlobalPlayer.Player_Status
-
+@onready var damageHud = $Camera3D/damageHud
+@onready var animation_pain = $Camera3D/damageHud
 var DAMAGE:int = 1
 var no_health
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -16,7 +17,14 @@ var collider_disabled = false
 func _on_ready():
 	#$"../Lobby_sound".play()
 	pass
-	
+func hit_animation():
+	damageHud.show()
+	$Camera3D/cameraShake.play("weakShake")
+	collider_disabled = true
+	await get_tree().create_timer(0.280).timeout
+	collider_disabled = false
+	print_debug("hit animation")
+	damageHud.hide()
 func _physics_process(delta):
 	if collider_disabled:
 		return
@@ -49,12 +57,11 @@ func _physics_process(delta):
 	if collision:
 		if !collider_disabled:
 			#optional: this can be improved with animation or shake
-			$hurt.show()
 			$damageAudio.play()
+			hit_animation()
 			player_health -= 1
 			no_health = player_health
-			$hurt.hide()
-			$cameraShake.play("weakShake")
+			print_debug("remaining health: ", no_health)
 			if no_health == 0:
 				print("Gameover!")
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func

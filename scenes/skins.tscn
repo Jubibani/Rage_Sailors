@@ -58,12 +58,24 @@ theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
 text = "Dev is trying his best :>"
 
+[node name="mechanics_shadow" type="Label" parent="."]
+modulate = Color(0.243137, 0.105882, 0.137255, 1)
+layout_mode = 0
+offset_left = 72.0
+offset_top = 896.0
+offset_right = 959.0
+offset_bottom = 1092.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "- More Gaming Mechanics"
+
 [node name="mechanics" type="Label" parent="."]
 layout_mode = 0
 offset_left = 80.0
-offset_top = 1168.0
+offset_top = 896.0
 offset_right = 967.0
-offset_bottom = 1364.0
+offset_bottom = 1092.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
@@ -72,10 +84,10 @@ text = "- More Gaming Mechanics
 
 [node name="coins" type="Label" parent="."]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 736.0
-offset_right = 1050.0
-offset_bottom = 1128.0
+offset_left = 64.0
+offset_top = 424.0
+offset_right = 1034.0
+offset_bottom = 816.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
@@ -119,13 +131,38 @@ theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
 text = "coming soon !"
 
+[node name="Improvements_shadow" type="Label" parent="."]
+modulate = Color(0.898039, 0.113725, 0, 1)
+layout_mode = 0
+offset_left = 72.0
+offset_top = 1088.0
+offset_right = 905.0
+offset_bottom = 1210.0
+theme_override_colors/font_color = Color(0.192157, 0.317647, 0.466667, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "- More Improvements"
+
+[node name="Improvements" type="Label" parent="."]
+modulate = Color(1, 0.780392, 0.615686, 1)
+layout_mode = 0
+offset_left = 72.0
+offset_top = 1080.0
+offset_right = 905.0
+offset_bottom = 1202.0
+theme_override_colors/font_color = Color(0.901961, 0.67451, 0, 1)
+theme_override_fonts/font = ExtResource("3_yxbka")
+theme_override_font_sizes/font_size = 120
+text = "- More Improvements"
+
 [node name="colored skins" type="Label" parent="."]
 modulate = Color(0.443137, 0.27451, 0.0392157, 1)
 layout_mode = 0
-offset_left = 354.0
-offset_top = 836.0
-offset_right = 506.0
-offset_bottom = 940.0
+offset_left = 338.0
+offset_top = 521.0
+offset_right = 490.0
+offset_bottom = 625.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
@@ -134,10 +171,10 @@ text = "skins"
 [node name="colored maps" type="Label" parent="."]
 modulate = Color(0.0784314, 0.356863, 0.403922, 1)
 layout_mode = 0
-offset_left = 559.0
-offset_top = 835.0
-offset_right = 711.0
-offset_bottom = 939.0
+offset_left = 543.0
+offset_top = 520.0
+offset_right = 695.0
+offset_bottom = 624.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
@@ -146,10 +183,10 @@ text = "maps"
 [node name="colored char" type="Label" parent="."]
 modulate = Color(1, 0, 0.32549, 1)
 layout_mode = 0
-offset_left = 80.0
-offset_top = 936.0
-offset_right = 380.0
-offset_bottom = 1040.0
+offset_left = 64.0
+offset_top = 621.0
+offset_right = 364.0
+offset_bottom = 725.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120
@@ -158,10 +195,10 @@ text = "characters"
 [node name="colored items" type="Label" parent="."]
 modulate = Color(1, 0.498039, 0.168627, 1)
 layout_mode = 0
-offset_left = 440.0
-offset_top = 936.0
-offset_right = 740.0
-offset_bottom = 1040.0
+offset_left = 424.0
+offset_top = 621.0
+offset_right = 724.0
+offset_bottom = 725.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yxbka")
 theme_override_font_sizes/font_size = 120

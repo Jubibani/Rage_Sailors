@@ -1,5 +1,5 @@
-res://scenes/control.tscn
 res://scenes/maingame.tscn
+res://scenes/control.tscn
 res://scenes/Gameover.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
@@ -15,5 +15,4 @@ res://scenes/skins.tscn
 res://scenes/Global_Music.tscn
 res://scenes/Global_lobby_audio.tscn
 res://scripts/player.gd
-res://scripts/maingame.gd
-res://scripts/Gameover.gd
+res://scripts/Global_Player.gd
