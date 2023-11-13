@@ -6,7 +6,7 @@ var done_time:int=0
 var score :int=0:
 	set(value):
 		score = value
-		score = GlobalHighScore.score
+		score = GlobalScore.score
 		
 func _upstart() -> void:
 	$splashSound.play()
@@ -23,7 +23,7 @@ func _upstart() -> void:
 			
 func _ready() -> void:
 	$CanvasLayer/PauseUnpause/PauseTimer.start() #upstart
-	GlobalHighScore.score_collected.emit()
+	GlobalScore.score_collected.emit()
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	_upstart()
 	
@@ -61,7 +61,7 @@ func _on_continue_released():
 
 	
 func _score_collected(body: Node3D) -> void:
-	GlobalHighScore.score_collected.emit()
+	GlobalScore.score_collected.emit()
 	print_debug("score_gained!")
 
 func _on_timer_timeout() -> void:

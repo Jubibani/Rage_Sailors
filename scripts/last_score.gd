@@ -9,9 +9,9 @@ var score:int = 0:
 var last_score:int=0
 		
 func _ready() -> void:
-	$".".text = str(GlobalHighScore.score_collected.connect(_on_label_score_collected))
+	$".".text = str(GlobalScore.score_collected.connect(_on_label_score_collected))
 #	$".".text = str(GlobalHighScore.score_collected.connect(_on_last_score))
-	GlobalHighScore.score_collected.emit()
+	GlobalScore.score_collected.emit()
 	
 
 func _process(delta: float) -> void:

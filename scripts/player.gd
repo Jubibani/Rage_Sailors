@@ -66,7 +66,7 @@ func _physics_process(delta):
 				print("Gameover!")
 				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 #				print("Collided with: ", collision.get_collider())
-				print_debug("your last score from ship.script: ", GlobalHighScore.score)
+				print_debug("your last score from ship.script: ", GlobalScore.score)
 # some buttons
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://scenes/control.tscan")
@@ -117,11 +117,11 @@ func _on_timer_timeout() -> void:
 # save
 func save():
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
-	file.store_var(GlobalHighScore.score)
+	file.store_var(GlobalScore.score)
 	
 func load_data():
 	if FileAccess.file_exists(save_path):
 		var file = FileAccess.open(save_path, FileAccess.READ)
-		GlobalHighScore.score = file.get_var(GlobalHighScore.score)	
+		GlobalScore.score = file.get_var(GlobalScore.score)	
 	else:
 		print("no data saved..")

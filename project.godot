@@ -22,11 +22,11 @@ config/icon="res://assets/grey mountains with red boat.png"
 
 Global_Coin="*res://scripts/GlobalScript.gd"
 CollectedCoins="*res://scripts/CollectedCoins.gd"
-GlobalHighScore="*res://scripts/GlobalHighScore.gd"
+GlobalScore="*res://scripts/GlobalScore.gd"
 GlobalPlayer="*res://scripts/Global_Player.gd"
 GetLastScore="*res://scripts/get_last_score.gd"
 SaveLoad="*res://scripts/save_load.gd"
-HighestRecord="*res://scripts/Highest_Record.gd"
+GlobalHighscore="*res://scripts/GlobalHighScore.gd"
 
 [display]
 

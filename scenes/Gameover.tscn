@@ -9,7 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="6_sddhr"]
 [ext_resource type="Script" path="res://scripts/last_score.gd" id="6_v1tyu"]
 [ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="8_gtnx0"]
-[ext_resource type="AudioStream" uid="uid://duiyiayrfvvjr" path="res://sounds/you suck + oh slap .mp3" id="9_j7ysl"]
+[ext_resource type="AudioStream" uid="uid://dx8sxfjt6voie" path="res://sounds/crashSuckSlap.MP3" id="10_ooogo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s56n7"]
 size = Vector2(48, 48)
@@ -245,7 +245,7 @@ stream = ExtResource("6_sddhr")
 layout_mode = 1
 
 [node name="yousuckAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_j7ysl")
+stream = ExtResource("10_ooogo")
 
 [node name="Timer" type="Timer" parent="."]
 

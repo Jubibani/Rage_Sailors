@@ -1,8 +1,7 @@
 extends Label
 
 
-var HighRecord = HighestRecord.record
-var last = GlobalHighScore.score
+var last = GlobalScore.score
 var score:int = 0:
 	set (mod_value):
 		score = mod_value
@@ -10,7 +9,7 @@ var score:int = 0:
 var last_score
 
 func _ready() -> void:
-	$".".text = str(GlobalHighScore.score_collected.connect(_on_score_collected))
+	$".".text = str(GlobalScore.score_collected.connect(_on_score_collected))
 
 
 func _process(delta: float) -> void:
@@ -30,7 +29,7 @@ func _on_score_collected() -> void:
 		await get_tree().create_timer(1.5, false).timeout
 		# 'false' what is a couroutine?
 		score = score + 1
-		GlobalHighScore.score = last_score
+		GlobalScore.score = last_score
 		print_debug("score: ", last_score)
 		if score >  100000000 :
 			print_debug("you're the king of the pirates!", last_score)
@@ -39,8 +38,6 @@ func _on_score_collected() -> void:
 			print_debug("last_score_printed: ", last_score) #getting the last score
 			if GlobalPlayer.Player_Status == 0:
 				await get_tree().create_timer(10.0, false).timeout
-	print_debug("GlobalHighscore.score: ", GlobalHighScore.score)
-	HighRecord = last_score
-	print_debug("HighRecord | last_score", last_score)
+	print_debug("GlobalHighscore.score: ", GlobalScore.score)
 func my_score():
 	print_debug("last_score_printed: ", last_score) 
