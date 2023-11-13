@@ -1,8 +1,11 @@
 extends Control
+#	save function (highscore)
 @onready var highscore = GlobalHighscore.highscore
 @onready var score = GlobalScore.score
 @onready var buttonAudio = $ColorRect/buttonAudio
-# Called when the node enters the scene tree for the first time.
+
+var save_path := "user://variable.save"
+
 func _ready() -> void:
 	$HUDScoreCoins.hide()
 	#GlobalMusic.play()
@@ -29,33 +32,33 @@ func _process(delta: float) -> void:
 	
 func player_score():
 	highscore = score
-	$ColorRect/score_x.text = str(GlobalHighscore.highscore)
+	$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
 	$ColorRect/score_x.text = str(GlobalScore.score)
 	_set_highscore()
 	
 func set_new_highscore():
 	GlobalHighscore.highscore = GlobalScore.score
+	$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
 	_set_highscore()
-	var file = FileAccess.open("user://high-score.txt", FileAccess.WRITE)
-	file.store_string(highscore)
+	var file = FileAccess.open("user://highscore.txt", FileAccess.WRITE)
+	file.store_string("%s" % GlobalHighscore.highscore)
 	
 func _set_highscore():
 	if GlobalHighscore.highscore < GlobalScore.score:
 		GlobalHighscore.highscore = GlobalScore.score
-		$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
+		set_new_highscore()
 		
-#func load_highscore():
-#	var file = FileAccess.open("user://high-score.txt", FileAccess.READ)
-##	highscore = file.get_as_text(true).to_int()
-#	highscore = file.get_var(10)	
+func load_highscore():
+#	var file = FileAccess.open("user://highscore.txt", FileAccess.READ)
+#	highscore = file.get_as_text(true).to_int()
 #	_set_highscore()
-#
-#
-#func _idle_highscore():
-#		if GlobalHighscore.highscore > GlobalScore.score:
-#		GlobalHighscore.highscore = GlobalScore.score
-#		$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
-	
+	if FileAccess.file_exists("user://highscore.txt"):
+		var file = FileAccess.open("user://highscore.txt", FileAccess.READ)
+		GlobalHighscore.highscore = file.get_as_text(true).to_int()
+		_set_highscore()
+	else:
+		print("no data saved..")
+
 # -------------------button for scenes------------------
 func _on_start_released() -> void:
 	get_tree().change_scene_to_file("res://scenes/maingame.tscn")

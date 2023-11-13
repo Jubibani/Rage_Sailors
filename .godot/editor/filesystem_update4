@@ -15,3 +15,5 @@ res://scenes/skins.tscn
 res://scenes/Global_Music.tscn
 res://scenes/Global_lobby_audio.tscn
 res://scripts/control.gd
+res://scripts/maingame.gd
+res://scripts/Gameover.gd
