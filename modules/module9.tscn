@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bn7jf803mnduo"]
+[gd_scene load_steps=15 format=3 uid="uid://bn7jf803mnduo"]
 
 [ext_resource type="Script" path="res://scripts/module.gd" id="1_kbkqr"]
 [ext_resource type="PackedScene" uid="uid://biyjuy2pp5hg8" path="res://Collision models/formation_large_stone.tscn" id="2_i5ogw"]
 [ext_resource type="PackedScene" uid="uid://bx02453k4bjfp" path="res://Collision models/formation_stone.tscn" id="3_2lkrw"]
 [ext_resource type="ArrayMesh" uid="uid://52cjws3lrhm7" path="res://assets/kenney_pirate-kit/Models/OBJ format/formation_stone.obj" id="4_xu6hl"]
 [ext_resource type="ArrayMesh" uid="uid://dl1byj5susni2" path="res://assets/kenney_nature-kit/Models/OBJ format/stone_tallB.obj" id="5_2pf6g"]
+[ext_resource type="PackedScene" uid="uid://bbtkjg8vhtfuq" path="res://scenes/Global_Physical_Coin.tscn" id="6_ru0nx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o3sun"]
 albedo_color = Color(0.211765, 0.560784, 0.768627, 1)
@@ -81,3 +82,6 @@ mesh = ExtResource("5_2pf6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="mountain2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hsmtx")
+
+[node name="Node3D" parent="." instance=ExtResource("6_ru0nx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65795, 2.27639)

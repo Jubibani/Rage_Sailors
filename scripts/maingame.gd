@@ -30,18 +30,19 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-#func _on_save_score():
-#	if GlobalHighScore.score > SaveLoad.highest_record :
-#		SaveLoad.highest_record = GlobalHighScore.score
-#		$score.text = str(GlobalHighScore.score)
-#		print_debug("saved score")
-#	SaveLoad.save_score()
+func _reset_score(): #my previous fix to reset the score system and display 0  when menu is pressed
+	GlobalHighscore.highscore = 0
+	GlobalScore.score = 0
+	print("resetglobal_highscore: ", GlobalHighscore.highscore)
+	print("resetglobal_score: ", GlobalScore.score)
+	
 	
 func _on_menu_released() -> void:
 	$shipPlayer/menuAudio.play() # this is for the audio button
 	get_tree().paused = true
 	$"CanvasLayer/PauseUnpause".show()
 	$huhAudio.play()
+	_reset_score()
 	
 func _on_continue_released():
 	print("pressed continue")

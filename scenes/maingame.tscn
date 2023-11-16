@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://bxby1dcpjypq1"]
+[gd_scene load_steps=48 format=3 uid="uid://bxby1dcpjypq1"]
 
 [ext_resource type="Script" path="res://scripts/maingame.gd" id="1_wnv5v"]
 [ext_resource type="PackedScene" uid="uid://d2q8y0rtu2njt" path="res://modules/module3.tscn" id="4_gsb83"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://p71xwawyruxj" path="res://modules/module1.tscn" id="10_lvdis"]
 [ext_resource type="PackedScene" uid="uid://3sve2nrss2io" path="res://modules/module2.tscn" id="11_5k1nh"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="11_m4f8i"]
-[ext_resource type="PackedScene" uid="uid://c78ayj4g08730" path="res://modules/module4.tscn" id="13_oxc55"]
 [ext_resource type="Texture2D" uid="uid://cp2rb13t1lvpo" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/brown.png" id="14_dl5ge"]
 [ext_resource type="PackedScene" uid="uid://c00c43s6bd7vd" path="res://modules/module5.tscn" id="14_frpyu"]
 [ext_resource type="PackedScene" uid="uid://bwcd0ddn06jlj" path="res://modules/module6.tscn" id="15_570dw"]
@@ -235,7 +234,7 @@ environment = SubResource("Environment_0n70x")
 
 [node name="level" type="Node3D" parent="."]
 script = ExtResource("11_m4f8i")
-modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), ExtResource("4_gsb83"), ExtResource("13_oxc55"), ExtResource("14_frpyu"), ExtResource("15_570dw"), ExtResource("16_1xdyq"), ExtResource("17_ufinj"), ExtResource("18_vqm4g"), ExtResource("19_as1pv")])
+modules = Array[PackedScene]([ExtResource("10_lvdis"), ExtResource("11_5k1nh"), ExtResource("4_gsb83"), ExtResource("14_frpyu"), ExtResource("15_570dw"), ExtResource("16_1xdyq"), ExtResource("17_ufinj"), ExtResource("18_vqm4g"), ExtResource("19_as1pv")])
 
 [node name="shipPlayer" parent="." instance=ExtResource("4_uw0nc")]
 transform = Transform3D(6.79481e-08, 1.13999e-14, -1, -1.35896e-07, 1, 1.97076e-20, -0.9, -1.50996e-07, -7.54979e-08, -15.137, 2, 0.001)

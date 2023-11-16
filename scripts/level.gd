@@ -6,6 +6,7 @@ var rng = RandomNumberGenerator.new()
 const offset = 6
 const maxSpeed = 5
 var speed = 3
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for n in amnt:

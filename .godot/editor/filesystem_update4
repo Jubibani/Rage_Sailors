@@ -1,6 +1,7 @@
+res://scenes/Gameover.tscn
+res://scripts/Gameover.gd
 res://scenes/control.tscn
 res://scenes/maingame.tscn
-res://scenes/Gameover.tscn
 res://modules/module4.tscn
 res://scenes/coin.tscn
 res://Collision models/ship_player.tscn
@@ -14,6 +15,15 @@ res://scenes/hurtbox.tscn
 res://scenes/skins.tscn
 res://scenes/Global_Music.tscn
 res://scenes/Global_lobby_audio.tscn
-res://scripts/control.gd
+res://scripts/level.gd
+res://scenes/Global_Physical_Coin.tscn
+res://modules/module5.tscn
+res://modules/module3.tscn
+res://modules/module10.tscn
+res://modules/module9.tscn
+res://modules/module8.tscn
+res://modules/module7.tscn
+res://modules/module6.tscn
+res://scripts/player.gd
+res://scripts/pause_unpause.gd
 res://scripts/maingame.gd
-res://scripts/Gameover.gd

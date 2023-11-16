@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbtkjg8vhtfuq"]
+
+[ext_resource type="PackedScene" uid="uid://rb2avqbm8mk1" path="res://scenes/coin.tscn" id="1_spi64"]
+[ext_resource type="Script" path="res://scripts/coin.gd" id="2_elh66"]
+[ext_resource type="AudioStream" uid="uid://bdbs6vti44eic" path="res://sounds/game coin sound.mp3" id="3_4bugs"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Coins" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07871, 0.150281, -0.933649)
+
+[node name="coin" parent="Coins" instance=ExtResource("1_spi64")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.673341, 0)
+script = ExtResource("2_elh66")
+
+[node name="coinAudio" type="AudioStreamPlayer" parent="Coins"]
+stream = ExtResource("3_4bugs")
+
+[connection signal="body_entered" from="Coins/coin" to="Coins/coin" method="_coin_collected"]

@@ -65,7 +65,6 @@ func _set_highscore():
 	if GlobalHighscore.highscore < GlobalScore.score:
 		GlobalHighscore.highscore = GlobalScore.score
 		set_new_highscore()
-		
 func load_highscore():
 #	var file = FileAccess.open("user://highscore.txt", FileAccess.READ)
 #	highscore = file.get_as_text(true).to_int()
