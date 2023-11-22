@@ -19,3 +19,11 @@ func _on_menu_released() -> void:
 # from overvation: The node ButtonAudio properties is set to "autoplay" That is why there
 # is a sound after button click not because of the func you set but because of auto play.
 # so therefore, your code needs mmore polishing and checking.
+
+
+func _on_on_released() -> void:
+	GlobalLobbyAudio.play()
+
+
+func _on_off_released() -> void:
+	GlobalLobbyAudio.stop()

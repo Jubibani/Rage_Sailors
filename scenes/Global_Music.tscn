@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ed7ftb6kxg1s"]
-
-[ext_resource type="AudioStream" uid="uid://dl20i40fpokts" path="res://sounds/game_lobby_music.mp3" id="1_mf62t"]
+[gd_scene load_steps=2 format=3 uid="uid://ed7ftb6kxg1s"]
 
 [sub_resource type="GDScript" id="GDScript_bwtib"]
 script/source = "extends AudioStreamPlayer
@@ -17,6 +15,5 @@ func _process(delta: float) -> void:
 "
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-stream = ExtResource("1_mf62t")
 autoplay = true
 script = SubResource("GDScript_bwtib")

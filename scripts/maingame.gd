@@ -10,6 +10,8 @@ var score :int=0:
 		
 func _upstart() -> void:
 	$splashSound.play()
+	GlobalLobbyAudio.stop()
+	$Lobby_sound.play()
 	$mainBackgroundSound.play()
 	while done_time < upstart_time:
 		done_time = done_time + 1

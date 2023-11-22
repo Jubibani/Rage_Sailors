@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3xq5semxvhdj"]
+[gd_scene load_steps=12 format=3 uid="uid://3xq5semxvhdj"]
 
 [ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="1_0mgyy"]
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_mff3o"]
@@ -6,9 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cdnd5nd6wgibp" path="res://assets/kenney_pixel-ui-pack/9-Slice/Colored/blue_pressed.png" id="2_xjd5s"]
 [ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="5_c51ai"]
 [ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="6_8mkq1"]
+[ext_resource type="AudioStream" uid="uid://dl20i40fpokts" path="res://sounds/game_lobby_music.mp3" id="7_xxrsp"]
+[ext_resource type="Texture2D" uid="uid://calg1svdjhe8o" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan.png" id="8_j0jkq"]
+[ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="9_mp7lb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvfoo"]
 size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8vnq"]
+size = Vector2(50, 50)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -110,4 +116,71 @@ theme_override_fonts/font = ExtResource("6_8mkq1")
 theme_override_font_sizes/font_size = 80
 text = "! stay tuned !"
 
+[node name="backaudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xxrsp")
+
+[node name="on" type="TouchScreenButton" parent="."]
+z_index = 2
+position = Vector2(440, 360)
+scale = Vector2(3.33333, 2.66667)
+texture_normal = ExtResource("1_0mgyy")
+texture_pressed = ExtResource("8_j0jkq")
+shape = SubResource("RectangleShape2D_g8vnq")
+
+[node name="musicon" type="Label" parent="."]
+z_index = 2
+offset_left = 496.0
+offset_top = 376.0
+offset_right = 609.0
+offset_bottom = 459.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mff3o")
+theme_override_font_sizes/font_size = 90
+text = "on"
+
+[node name="off" type="TouchScreenButton" parent="."]
+z_index = 2
+position = Vector2(672, 360)
+scale = Vector2(3.33333, 2.66667)
+texture_normal = ExtResource("1_0mgyy")
+texture_pressed = ExtResource("9_mp7lb")
+shape = SubResource("RectangleShape2D_g8vnq")
+
+[node name="musicoff" type="Label" parent="."]
+z_index = 2
+offset_left = 720.0
+offset_top = 384.0
+offset_right = 833.0
+offset_bottom = 467.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mff3o")
+theme_override_font_sizes/font_size = 90
+text = "off
+"
+
+[node name="music" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 242.0
+offset_bottom = 467.0
+size_flags_vertical = 1
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_mff3o")
+theme_override_font_sizes/font_size = 90
+text = "Music"
+
+[node name="orange" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 320.0
+offset_right = 856.0
+offset_bottom = 544.0
+color = Color(0.862745, 0.364706, 0.145098, 1)
+
 [connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]
+[connection signal="released" from="on" to="." method="_on_on_released"]
+[connection signal="released" from="off" to="." method="_on_off_released"]

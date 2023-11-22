@@ -27,6 +27,7 @@ GlobalPlayer="*res://scripts/Global_Player.gd"
 GetLastScore="*res://scripts/get_last_score.gd"
 SaveLoad="*res://scripts/save_load.gd"
 GlobalHighscore="*res://scripts/GlobalHighScore.gd"
+GlobalLobbyAudio="*res://scenes/Global_lobby_audio.tscn"
 
 [display]
 
