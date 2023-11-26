@@ -1,0 +1,257 @@
+[gd_scene load_steps=14 format=3 uid="uid://ch35dgapfk8y2"]
+
+[ext_resource type="Texture2D" uid="uid://ctjtu8urxq2i1" path="res://assets/boat_shore.png" id="1_3m43r"]
+[ext_resource type="FontFile" uid="uid://dsi7o2aoknly3" path="res://fonts/pixelfy/Pixelfy.ttf" id="2_iskye"]
+[ext_resource type="Texture2D" uid="uid://bdw4kqayn1xa6" path="res://assets/kenney_pixel-ui-pack/9-Slice/space.png" id="3_asswe"]
+[ext_resource type="Texture2D" uid="uid://c4bpfh6vdxc2j" path="res://assets/kenney_pixel-ui-pack/9-Slice/Ancient/tan_pressed.png" id="4_ii541"]
+[ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="5_au4j8"]
+[ext_resource type="Script" path="res://scripts/last_score.gd" id="6_1fw7e"]
+[ext_resource type="Script" path="res://scripts/soundsAudio.gd" id="7_pge1a"]
+[ext_resource type="AudioStream" uid="uid://denfwm7kr0aos" path="res://sounds/button press.mp3" id="8_wxjl8"]
+[ext_resource type="Texture2D" uid="uid://dd8dg0qo17231" path="res://assets/latest.png" id="9_k5s4o"]
+[ext_resource type="PackedScene" uid="uid://c51ieggojeddq" path="res://scenes/Scores.tscn" id="10_pfhxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmumo"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ar76"]
+size = Vector2(49, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_136ct"]
+size = Vector2(49, 49)
+
+[node name="controlmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0705882, 0.541176, 0.956863, 0.34902)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3m43r")
+expand_mode = 1
+
+[node name="Rage Sailors" type="Label" parent="ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 237.0
+offset_right = 1067.0
+offset_bottom = 546.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 100
+text = "Rage Sailors"
+
+[node name="Rage Sailors2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 233.0
+offset_right = 1080.0
+offset_bottom = 542.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 100
+text = "Rage Sailors"
+
+[node name="Rage" type="Label" parent="ColorRect"]
+modulate = Color(0.74902, 0.0941176, 0.0862745, 1)
+layout_mode = 0
+offset_left = 191.0
+offset_top = 232.0
+offset_right = 1082.0
+offset_bottom = 355.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 100
+text = "Rage"
+
+[node name="start" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(311, 812)
+scale = Vector2(8.9375, 3.39583)
+texture_normal = ExtResource("3_asswe")
+texture_pressed = ExtResource("4_ii541")
+shape = SubResource("RectangleShape2D_mmumo")
+
+[node name="startLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 812.0
+offset_right = 591.0
+offset_bottom = 934.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_au4j8")
+theme_override_font_sizes/font_size = 150
+text = "play"
+
+[node name="exit" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(573, 1420)
+scale = Vector2(6.375, 2.3125)
+texture_normal = ExtResource("3_asswe")
+texture_pressed = ExtResource("4_ii541")
+shape = SubResource("RectangleShape2D_1ar76")
+
+[node name="exitLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 668.0
+offset_top = 1398.0
+offset_right = 801.0
+offset_bottom = 1520.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_au4j8")
+theme_override_font_sizes/font_size = 150
+text = "exit"
+
+[node name="options" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(29, 1418)
+scale = Vector2(3.6875, 2.27083)
+texture_normal = ExtResource("3_asswe")
+texture_pressed = ExtResource("4_ii541")
+shape = SubResource("RectangleShape2D_136ct")
+
+[node name="skins" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(113, 813)
+scale = Vector2(3.72917, 3.39583)
+texture_normal = ExtResource("3_asswe")
+texture_pressed = ExtResource("4_ii541")
+shape = SubResource("RectangleShape2D_136ct")
+
+[node name="skinsLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 836.0
+offset_right = 323.0
+offset_bottom = 958.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_au4j8")
+theme_override_font_sizes/font_size = 110
+text = "boats"
+
+[node name="maps" type="TouchScreenButton" parent="ColorRect"]
+position = Vector2(429, 994)
+scale = Vector2(6.47917, 2.27083)
+texture_normal = ExtResource("3_asswe")
+texture_pressed = ExtResource("4_ii541")
+shape = SubResource("RectangleShape2D_136ct")
+
+[node name="mapsLabel" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 968.0
+offset_right = 672.0
+offset_bottom = 1090.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_au4j8")
+theme_override_font_sizes/font_size = 150
+text = "Maps"
+
+[node name="shadow_of_labelHighScore" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 488.0
+offset_right = 1001.0
+offset_bottom = 591.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "Highscore:"
+
+[node name="color_of_labelHighScore" type="Label" parent="ColorRect"]
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 251.0
+offset_top = 488.0
+offset_right = 1009.0
+offset_bottom = 591.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "Highscore:"
+
+[node name="Highescore_x" type="Label" parent="ColorRect"]
+modulate = Color(0.882353, 0.894118, 0.329412, 1)
+layout_mode = 0
+offset_left = 640.0
+offset_top = 488.0
+offset_right = 1398.0
+offset_bottom = 591.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "x"
+script = ExtResource("6_1fw7e")
+
+[node name="shadow_of_label_Score" type="Label" parent="ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 240.0
+offset_top = 607.0
+offset_right = 998.0
+offset_bottom = 710.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "score:"
+
+[node name="color_of_labelScore" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 607.0
+offset_right = 1003.0
+offset_bottom = 710.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "score:"
+
+[node name="score_x" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 608.0
+offset_right = 1230.0
+offset_bottom = 711.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_iskye")
+theme_override_font_sizes/font_size = 70
+text = "X"
+script = ExtResource("6_1fw7e")
+
+[node name="sounds" type="Node" parent="ColorRect"]
+script = ExtResource("7_pge1a")
+
+[node name="buttonAudio" type="AudioStreamPlayer" parent="ColorRect/sounds"]
+stream = ExtResource("8_wxjl8")
+autoplay = true
+
+[node name="buttonMenuAudio" type="AudioStreamPlayer" parent="ColorRect/sounds"]
+stream = ExtResource("8_wxjl8")
+
+[node name="Latest" type="Sprite2D" parent="."]
+position = Vector2(113, 1470)
+scale = Vector2(0.1105, 0.0847618)
+texture = ExtResource("9_k5s4o")
+
+[node name="HUDScoreCoins" parent="." instance=ExtResource("10_pfhxp")]
+layout_mode = 1
+
+[connection signal="pressed" from="ColorRect/start" to="ColorRect/sounds" method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/options" to="ColorRect/sounds" method="_on_options_pressed"]
+[connection signal="pressed" from="ColorRect/skins" to="ColorRect/sounds" method="_on_skins_pressed"]
+[connection signal="pressed" from="ColorRect/maps" to="ColorRect/sounds" method="_on_maps_pressed"]

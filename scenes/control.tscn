@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dwqxjclbs43m"]
+[gd_scene load_steps=15 format=3 uid="uid://b017hp8u0lgf6"]
 
 [ext_resource type="FontFile" uid="uid://ccvk0qw2cv67s" path="res://fonts/Volt5x5.ttf" id="1_3abb1"]
 [ext_resource type="Script" path="res://scripts/control.gd" id="1_p4ydt"]
@@ -21,13 +21,9 @@ size = Vector2(49, 49)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a63ev"]
 size = Vector2(49, 49)
 
-[node name="Control" type="Control"]
+[node name="control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_p4ydt")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -37,18 +33,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.995933, 1)
 color = Color(0.0705882, 0.541176, 0.956863, 0.34902)
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1536.0
+offset_bottom = 2726.0
+scale = Vector2(0.58931, 0.586837)
 texture = ExtResource("8_r1ond")
-expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Rage Sailors" type="Label" parent="ColorRect"]
 modulate = Color(0, 0, 0, 1)
@@ -251,6 +245,7 @@ scale = Vector2(0.1105, 0.0847618)
 texture = ExtResource("6_us5p0")
 
 [node name="HUDScoreCoins" parent="." instance=ExtResource("9_5geoo")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="ColorRect/start" to="ColorRect/sounds" method="_on_start_pressed"]

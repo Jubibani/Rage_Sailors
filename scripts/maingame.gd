@@ -27,12 +27,25 @@ func _ready() -> void:
 	$CanvasLayer/PauseUnpause/PauseTimer.start() #upstart
 	GlobalScore.score_collected.emit()
 	process_mode = Node.PROCESS_MODE_PAUSABLE
-	_upstart()
+	#_upstart()
+	$splashSound.play()
+	GlobalLobbyAudio.stop()
+	$Lobby_sound.play()
+	$mainBackgroundSound.play()
+	while done_time < upstart_time:
+		done_time = done_time + 1
+		await get_tree().create_timer(0.3).timeout
+		$"shipPlayer".hide()
+		await get_tree().create_timer(0.3).timeout
+		$"shipPlayer".show()
+		await get_tree().create_timer(0.3).timeout
+		if done_time == 3:
+			$"shipPlayer".show()	
 	
 func _process(delta: float) -> void:
 	pass
 	
-func _reset_score(): #my previous fix to reset the score system and display 0  when menu is pressed
+func _reset_score(): #my previous fix to reset the score system and display 0  when m enu is pressed
 	GlobalHighscore.highscore = 0
 	GlobalScore.score = 0
 	print("resetglobal_highscore: ", GlobalHighscore.highscore)

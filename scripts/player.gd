@@ -62,9 +62,9 @@ func _physics_process(delta):
 			player_health -= 1
 			no_health = player_health
 			print_debug("remaining health: ", no_health)
-			if no_health == 0:
+			if no_health <= 0:
 				print("Gameover!")
-				#get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
+				get_tree().change_scene_to_file("res://scenes/Gameover.tscn")# gameover func
 #				print("Collided with: ", collision.get_collider())
 				print_debug("your last score from ship.script: ", GlobalScore.score)
 # some buttons

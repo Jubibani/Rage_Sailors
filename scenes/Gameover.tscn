@@ -17,7 +17,7 @@ size = Vector2(48, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbbho"]
 size = Vector2(48, 48)
 
-[node name="Gameover" type="Control"]
+[node name="gameover" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ypiao")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="colorrect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.0901961, 0, 0.878431)
 
-[node name="bro ded" type="Label" parent="ColorRect"]
+[node name="broded" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 378.0
 offset_top = 617.0
@@ -46,7 +46,7 @@ theme_override_fonts/font = ExtResource("1_gn0o7")
 theme_override_font_sizes/font_size = 90
 text = "bro ded."
 
-[node name="Gameover" type="Label" parent="ColorRect"]
+[node name="gameover" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 271.0
 offset_top = 483.0
@@ -57,14 +57,14 @@ theme_override_fonts/font = ExtResource("1_gn0o7")
 theme_override_font_sizes/font_size = 150
 text = "Game Over"
 
-[node name="retry" type="TouchScreenButton" parent="ColorRect"]
+[node name="retry" type="TouchScreenButton" parent="colorrect"]
 position = Vector2(351, 798)
 scale = Vector2(4.875, 2.45833)
 texture_normal = ExtResource("2_d5slv")
 texture_pressed = ExtResource("4_nrwss")
 shape = SubResource("RectangleShape2D_s56n7")
 
-[node name="again" type="Label" parent="ColorRect"]
+[node name="again" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 413.0
 offset_top = 812.0
@@ -75,14 +75,14 @@ theme_override_font_sizes/font_size = 90
 text = "Again
 "
 
-[node name="menu" type="TouchScreenButton" parent="ColorRect"]
+[node name="menu" type="TouchScreenButton" parent="colorrect"]
 position = Vector2(353, 1001)
 scale = Vector2(4.77083, 2.35417)
 texture_normal = ExtResource("2_d5slv")
 texture_pressed = ExtResource("4_nrwss")
 shape = SubResource("RectangleShape2D_pbbho")
 
-[node name="menu2" type="Label" parent="ColorRect"]
+[node name="menu2" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 418.0
 offset_top = 1009.0
@@ -93,7 +93,7 @@ theme_override_font_sizes/font_size = 90
 text = "Menu
  "
 
-[node name="shadow_of_labelHighScore" type="Label" parent="ColorRect"]
+[node name="shadowoflabelhighscore" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 262.0
@@ -104,7 +104,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "Highscore:"
 
-[node name="color_of_labelHighScore" type="Label" parent="ColorRect"]
+[node name="coloroflabelighscore" type="Label" parent="colorrect"]
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
 offset_left = 48.0
@@ -116,7 +116,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "Highscore:"
 
-[node name="you suck_shadow" type="Label" parent="ColorRect"]
+[node name="yousuckshadow" type="Label" parent="colorrect"]
 visible = false
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
@@ -130,7 +130,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "you suck"
 
-[node name="boullets_shadow" type="Label" parent="ColorRect"]
+[node name="boulletsshadow" type="Label" parent="colorrect"]
 visible = false
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
@@ -145,7 +145,7 @@ theme_override_font_sizes/font_size = 90
 text = "	you need 
 more -- Boullets! "
 
-[node name="boullets" type="Label" parent="ColorRect"]
+[node name="boullets" type="Label" parent="colorrect"]
 visible = false
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
@@ -159,7 +159,7 @@ theme_override_font_sizes/font_size = 90
 text = "	you need 
 more -- "
 
-[node name="boullets_white" type="Label" parent="ColorRect"]
+[node name="boulletswhite" type="Label" parent="colorrect"]
 visible = false
 layout_mode = 0
 offset_left = 433.0
@@ -171,7 +171,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "Boullets!"
 
-[node name="you suck" type="Label" parent="ColorRect"]
+[node name="yousuck" type="Label" parent="colorrect"]
 visible = false
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
@@ -185,7 +185,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "you suck"
 
-[node name="Highescore_x" type="Label" parent="ColorRect"]
+[node name="highescorex" type="Label" parent="colorrect"]
 modulate = Color(0.882353, 0.894118, 0.329412, 1)
 layout_mode = 0
 offset_left = 541.0
@@ -198,7 +198,7 @@ theme_override_font_sizes/font_size = 90
 text = "SHEESH..."
 script = ExtResource("6_v1tyu")
 
-[node name="shadow_of_label_Score" type="Label" parent="ColorRect"]
+[node name="shadowoflabelscore" type="Label" parent="colorrect"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 37.0
@@ -210,7 +210,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "score:"
 
-[node name="color_of_labelScore" type="Label" parent="ColorRect"]
+[node name="coloroflabelscore" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 381.0
@@ -221,7 +221,7 @@ theme_override_fonts/font = ExtResource("5_77ney")
 theme_override_font_sizes/font_size = 90
 text = "score:"
 
-[node name="score_x" type="Label" parent="ColorRect"]
+[node name="scorex" type="Label" parent="colorrect"]
 layout_mode = 0
 offset_left = 342.0
 offset_top = 380.0
@@ -238,19 +238,19 @@ stream = ExtResource("6_ndbrh")
 volume_db = 18.023
 pitch_scale = 1.1
 
-[node name="buttonAudio" type="AudioStreamPlayer" parent="."]
+[node name="buttonaudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_sddhr")
 
-[node name="HUDScoreCoins" parent="." instance=ExtResource("8_gtnx0")]
+[node name="hudscorecoins" parent="." instance=ExtResource("8_gtnx0")]
 layout_mode = 1
 
-[node name="yousuckAudio" type="AudioStreamPlayer" parent="."]
+[node name="yousuckaudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_ooogo")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="timer" type="Timer" parent="."]
 
-[connection signal="pressed" from="ColorRect/retry" to="." method="_on_retry_pressed"]
-[connection signal="released" from="ColorRect/retry" to="." method="_on_retry_released"]
-[connection signal="pressed" from="ColorRect/menu" to="." method="_on_menu_pressed"]
-[connection signal="released" from="ColorRect/menu" to="." method="_on_menu_released"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="colorrect/retry" to="." method="_on_retry_pressed"]
+[connection signal="released" from="colorrect/retry" to="." method="_on_retry_released"]
+[connection signal="pressed" from="colorrect/menu" to="." method="_on_menu_pressed"]
+[connection signal="released" from="colorrect/menu" to="." method="_on_menu_released"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

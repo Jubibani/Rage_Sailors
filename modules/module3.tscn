@@ -127,7 +127,7 @@ mesh = ExtResource("3_ey01k")
 shape = SubResource("ConcavePolygonShape3D_tw2ur")
 
 [node name="mountain2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14541, 0, 14.8875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14541, 0, 14.1169)
 material_override = SubResource("StandardMaterial3D_g80fc")
 mesh = ExtResource("3_ey01k")
 

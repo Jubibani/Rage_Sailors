@@ -129,6 +129,7 @@ shape = SubResource("RectangleShape2D_g8vnq")
 
 [node name="musicon" type="Label" parent="."]
 z_index = 2
+layout_mode = 0
 offset_left = 496.0
 offset_top = 376.0
 offset_right = 609.0
@@ -149,6 +150,7 @@ shape = SubResource("RectangleShape2D_g8vnq")
 
 [node name="musicoff" type="Label" parent="."]
 z_index = 2
+layout_mode = 0
 offset_left = 720.0
 offset_top = 384.0
 offset_right = 833.0

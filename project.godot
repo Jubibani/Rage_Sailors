@@ -16,7 +16,9 @@ run/main_scene="res://scenes/control.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 run/max_fps=90
 boot_splash/image="res://assets/jubi dev.png"
+boot_splash/use_filter=false
 config/icon="res://assets/grey mountains with red boat.png"
+boot_splash/minimum_display_time=2
 
 [autoload]
 
@@ -24,15 +26,19 @@ Global_Coin="*res://scripts/GlobalScript.gd"
 CollectedCoins="*res://scripts/CollectedCoins.gd"
 GlobalScore="*res://scripts/GlobalScore.gd"
 GlobalPlayer="*res://scripts/Global_Player.gd"
-GetLastScore="*res://scripts/get_last_score.gd"
 SaveLoad="*res://scripts/save_load.gd"
 GlobalHighscore="*res://scripts/GlobalHighScore.gd"
 GlobalLobbyAudio="*res://scenes/Global_lobby_audio.tscn"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
 
 [display]
 
 window/size/viewport_width=900
 window/size/viewport_height=1600
+window/size/initial_position_type=0
 window/stretch/mode="viewport"
 window/handheld/orientation=1
 
@@ -43,6 +49,8 @@ enabled=PackedStringArray("res://addons/admob/plugin.cfg")
 [filesystem]
 
 import/fbx/enabled=false
+import/blender/enabled.android=true
+import/fbx/enabled.android=true
 
 [input]
 
@@ -83,7 +91,8 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/screen_space_aa=1

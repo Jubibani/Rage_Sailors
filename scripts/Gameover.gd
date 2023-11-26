@@ -6,10 +6,10 @@ extends Control
 var save_path := "user://variable.save"
 
 func _ready() -> void:
-	$HUDScoreCoins.hide()
-	$yousuckAudio.play()
-	$ColorRect/Highescore_x.text = str(GlobalScore.score)
-	$ColorRect/score_x.text = str(GlobalScore.score)
+	$hudscorecoins.hide()
+	$yousuckaudio.play()
+	$colorrect/highescorex.text = str(GlobalScore.score)
+	$colorrect/scorex.text = str(GlobalScore.score)
 	
 	load_highscore()
 	player_score()
@@ -17,12 +17,12 @@ func _ready() -> void:
 	
 	# commentator
 	if GlobalScore.score <= 5:
-		$"ColorRect/you suck_shadow".show()
-		$"ColorRect/you suck".show()
+		$"colorrect/yousuckshadow".show()
+		$"colorrect/yousuck".show()
 	if GlobalScore.score > 5:
-		$ColorRect/boullets_shadow.show()
-		$ColorRect/boullets.show()
-		$ColorRect/boullets_white.show()
+		$colorrect/boulletsshadow.show()
+		$colorrect/boullets.show()
+		$colorrect/boulletswhite.show()
 		
 	
 func _process(delta: float) -> void:
@@ -37,11 +37,11 @@ func _on_menu_released() -> void:
 	get_tree().change_scene_to_file("res://scenes/control.tscn")
 
 func _on_retry_pressed() -> void:
-	$buttonAudio.play()
+	$buttonaudio.play()
 
 
 func _on_menu_pressed() -> void:
-	$buttonAudio.play()
+	$buttonaudio.play()
 
 
 func _on_timer_timeout() -> void:
@@ -50,13 +50,13 @@ func _on_timer_timeout() -> void:
 #	save function (highscore)
 func player_score():
 	highscore = score
-	$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
-	$ColorRect/score_x.text = str(GlobalScore.score)
+	$colorrect/highescorex.text = str(GlobalHighscore.highscore)
+	$colorrect/scorex.text = str(GlobalScore.score)
 	_set_highscore()
 	
 func set_new_highscore():
 	GlobalHighscore.highscore = GlobalScore.score
-	$ColorRect/Highescore_x.text = str(GlobalHighscore.highscore)
+	$colorrect/highescorex.text = str(GlobalHighscore.highscore)
 	_set_highscore()
 	var file = FileAccess.open("user://highscore.txt", FileAccess.WRITE)
 	file.store_string("%s" % GlobalHighscore.highscore)

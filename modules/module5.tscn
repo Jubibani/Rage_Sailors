@@ -27,7 +27,7 @@ mesh = SubResource("BoxMesh_lrkoo")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94253, -0.0423055, 12.2196)
 
 [node name="mountain" type="MeshInstance3D" parent="."]
-transform = Transform3D(-24.805, 0, 3.11602, 0, 25, 0, -3.11602, 0, -24.805, -0.399834, 0, -12.0583)
+transform = Transform3D(-24.805, 0, 3.11602, 0, 25, 0, -3.11602, 0, -24.805, -0.399834, 0, -11.4985)
 material_override = SubResource("StandardMaterial3D_57lrf")
 mesh = ExtResource("3_f80sr")
 

@@ -1,5 +1,4 @@
 extends Control
-#	save function (highscore)
 @onready var highscore = GlobalHighscore.highscore
 @onready var score = GlobalScore.score
 @onready var buttonAudio = $ColorRect/buttonAudio
@@ -8,25 +7,9 @@ var save_path := "user://variable.save"
 
 func _ready() -> void:
 	$HUDScoreCoins.hide()
-	#GlobalMusic.play()
-	#GlobalLobbyAudio.play()
-#	_set_highscore()
-#	$ColorRect/score_x.text = str(GlobalScore.score)
 	player_score()
 	load_highscore()
-#	var file = File.new()
-#	if file.file_exists("user://high-score.txt"):
-#		file.open("user://high-score.txt", File.READ)
-#		var content = file.get_as_text(true)
-#		if content.is_valid_integer():
-#			highscore = content.to_int()
-#		else:
-#			print("Error: Invalid highscore value.")
-#		file.close()
-#	else:
-#		print("Error: Highscore file not found.")
-#
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
 	pass
 	
@@ -49,9 +32,6 @@ func _set_highscore():
 		set_new_highscore()
 		
 func load_highscore():
-#	var file = FileAccess.open("user://highscore.txt", FileAccess.READ)
-#	highscore = file.get_as_text(true).to_int()
-#	_set_highscore()
 	if FileAccess.file_exists("user://highscore.txt"):
 		var file = FileAccess.open("user://highscore.txt", FileAccess.READ)
 		GlobalHighscore.highscore = file.get_as_text(true).to_int()
@@ -65,6 +45,7 @@ func _on_start_released() -> void:
 
 
 func _on_exit_released() -> void:
+	
 	get_tree().quit()
 
 
